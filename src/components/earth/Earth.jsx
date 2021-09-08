@@ -25,7 +25,7 @@ export default function Earth() {
         const elapsedTime = clock.getElapsedTime();
         earthRef.current.rotation.y = elapsedTime / 8;
         cloudsRef.current.rotation.y = elapsedTime / 8;
-        moonRef.current.rotation.y = elapsedTime / 4;
+        moonRef.current.rotation.y = elapsedTime / 2;
     });
 
     return (
