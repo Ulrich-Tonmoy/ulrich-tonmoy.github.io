@@ -1,0 +1,177 @@
+@import url("https://use.typekit.net/jmk3xov.css");
+
+:root {
+    --dark-bg: rgba(15, 15, 15, 0.5);
+    --spacing: 350px;
+    font-family: brandon-grotesque, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+main {
+    width: 100vw;
+    color: white;
+    position: absolute;
+    width: 100%;
+    margin: 0px auto;
+    padding: 120px 0px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote {
+    font-family: elevon, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/*==================== Header ====================*/
+header {
+    position: relative;
+    background: var(--dark-bg);
+    grid-column: 2 / span 5;
+    font-size: 2.5rem;
+    padding: 1rem;
+    margin-bottom: var(--spacing);
+}
+.title {
+    padding: 0.2rem;
+    margin: 0;
+}
+.subtitle {
+    font-family: elevon, sans-serif;
+    font-style: normal;
+    padding: 0.2rem;
+    margin: 0;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: aqua;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid aqua;
+    animation: nameTyping 20s steps(24) infinite;
+}
+@keyframes nameTyping {
+    0% {
+        width: 0ch;
+    }
+    25% {
+        width: 12ch;
+    }
+    50% {
+        width: 21ch;
+    }
+    75% {
+        width: 21ch;
+    }
+    100% {
+        width: 0ch;
+    }
+}
+
+section {
+    grid-column: 2 / 8;
+    padding: 1rem;
+    background: var(--dark-bg);
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-bottom: var(--spacing);
+}
+
+blockquote {
+    margin: 0;
+    padding: 0;
+    grid-column: 2 / span 9;
+    margin-bottom: var(--spacing);
+}
+
+blockquote p {
+    color: black;
+    background-color: rgb(226, 226, 226);
+    font-size: 4rem;
+    display: inline;
+    line-height: 1;
+}
+
+.left {
+    grid-column: 6 / 12;
+}
+
+blockquote .social__icons {
+    position: relative;
+    background: var(--dark-bg);
+    width: 350px;
+    padding: 1rem;
+    z-index: 999;
+}
+a {
+    color: inherit;
+    cursor: pointer;
+}
+.social__icons .social__icon {
+    padding: 0.1rem 0.5rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/*==================== About ====================*/
+.about__buttons {
+    display: flex;
+    justify-content: center;
+}
+.button {
+    display: inline-block;
+    background-color: rgba(0, 255, 255, 0.507);
+    color: #fff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    z-index: 999;
+}
+.button:hover {
+    background-color: rgba(0, 255, 255, 0.26);
+}
+.button__icon {
+    font-size: 1.25rem;
+    margin-left: 0.5rem;
+    transition: 0.3s;
+}
+.button--flex {
+    display: inline-flex;
+    align-items: center;
+}
+
+/*===== SCROLL TOP =====*/
+.scroll__top {
+    position: fixed;
+    right: 1rem;
+    bottom: -20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    background: rgba(123, 111, 113, 0.507);
+    border-radius: 0.5rem;
+    z-index: 999;
+    transition: 0.4;
+    visibility: hidden;
+}
+.scroll__top:hover {
+    background: rgba(0, 255, 255, 0.507);
+}
+
+.scroll__top-icon {
+    font-size: 1.5rem;
+}
+
+.show-scroll {
+    visibility: visible;
+    bottom: 1.5rem;
+}

@@ -1,113 +1,172 @@
 import "./Portfolio.css";
+import mixitup from "mixitup";
 
 export default function Portfolio() {
+    setTimeout(function () {
+        const mixer = mixitup(".portfolio__container", {
+            selectors: {
+                target: ".portfolio__content",
+            },
+            animation: {
+                duration: 400,
+            },
+        });
+    }, 5000);
+
     return (
-        <main>
-            <header>
-                <h1>Ulrich Tonmoy</h1>
-                <p>🚀 Welcome to my website!</p>
-            </header>
+        <>
+            <div className="portfolio__nav">
+                <span className="portfolio__item active-portfolio" data-filter="all">
+                    All
+                </span>
+                <span className="portfolio__item" data-filter=".web">
+                    Web
+                </span>
+                <span className="portfolio__item" data-filter=".ai">
+                    AI/ML
+                </span>
+                <span className="portfolio__item" data-filter=".game">
+                    Game
+                </span>
+            </div>
 
-            <blockquote>
-                <p>I like making stuff and putting it on the internet</p>
-            </blockquote>
+            <div className="portfolio__container grid">
+                <div className="portfolio__content web">
+                    <div className="portfolio__data">
+                        <h2 className="portfolio__title">Websites</h2>
+                        <span className="portfolio_subtitle">
+                            Some websites and tools build with html css js bootstrap and APIs
+                        </span>
+                        <hr />
+                        <a
+                            href="https://ulrich-tonmoy.github.io/website-html-css-js/"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="button-link"
+                        >
+                            Live
+                        </a>
+                        ||
+                        <a
+                            href="https://github.com/Ulrich-Tonmoy/website-html-css-js"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="button-link"
+                        >
+                            Source
+                        </a>
+                    </div>
+                </div>
 
-            <section>
-                <h2>📜 Manifesto</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.
-                </p>
+                <div className="portfolio__content web">
+                    <div className="portfolio__data">
+                        <h2 className="portfolio__title">React Websites</h2>
+                        <span className="portfolio_subtitle">
+                            Websites build with react and APIs
+                        </span>
+                        <hr />
+                        <a
+                            href="https://ulrich-tonmoy.github.io/website-reactjs/"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="button-link"
+                        >
+                            Live
+                        </a>
+                        ||
+                        <a
+                            href="https://github.com/Ulrich-Tonmoy/website-reactjs"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="button-link"
+                        >
+                            Source
+                        </a>
+                    </div>
+                </div>
 
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.
-                </p>
+                <div className="portfolio__content web">
+                    <div className="portfolio__data">
+                        <h2 className="portfolio__title">Blackjack Game</h2>
+                        <span className="portfolio_subtitle">
+                            Blackjack game made with html css and js
+                        </span>
+                        <hr />
+                        <a
+                            href="https://ulrich-tonmoy.github.io/blackjack/"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="button-link"
+                        >
+                            Live
+                        </a>
+                        ||
+                        <a
+                            href="https://github.com/Ulrich-Tonmoy/blackjack"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="button-link"
+                        >
+                            Source
+                        </a>
+                    </div>
+                </div>
 
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-            </section>
+                <div className="portfolio__content ai">
+                    <div className="portfolio__data">
+                        <h2 className="portfolio__title">GAN anime face generator</h2>
+                        <span className="portfolio_subtitle">
+                            Using ml gan model to generate anime face
+                        </span>
+                        <hr />
+                        <a
+                            href="https://github.com/Ulrich-Tonmoy/cvpr"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="button-link"
+                        >
+                            Source
+                        </a>
+                    </div>
+                </div>
 
-            <section className="light">
-                <h2>👩🏽‍🚀 Projects</h2>
+                <div className="portfolio__content web">
+                    <div className="portfolio__data">
+                        <h2 className="portfolio__title">Friend-Finder</h2>
+                        <span className="portfolio_subtitle">
+                            A Facebook like web app can do realtime messaging and video chat
+                        </span>
+                        <hr />
+                        <a
+                            href="https://github.com/Ulrich-Tonmoy/website-reactjs"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="button-link"
+                        >
+                            Source
+                        </a>
+                    </div>
+                </div>
 
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-
-                <h2>🏆 Accomplishments</h2>
-
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-            </section>
-
-            <blockquote>
-                <p>
-                    The best way out is always through <br />
-                    -Robert Frost
-                </p>
-            </blockquote>
-
-            <section className="left">
-                <h2>🌮 Work History</h2>
-
-                <h3>McDonalds</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-                <h3>Burger King</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-                <h3>Taco Bell</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-            </section>
-
-            <blockquote>
-                <p>Thanks for visiting!</p>
-            </blockquote>
-        </main>
+                <div className="portfolio__content web">
+                    <div className="portfolio__data">
+                        <h2 className="portfolio__title">Employee Management</h2>
+                        <span className="portfolio_subtitle">
+                            A simple employee management web app with aps.net and react class
+                            component
+                        </span>
+                        <hr />
+                        <a
+                            href="https://github.com/Ulrich-Tonmoy/employee-management"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="button-link"
+                        >
+                            Source
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </>
     );
 }

@@ -4,7 +4,7 @@ const particlesConfig = {
             value: 100,
             density: {
                 enable: true,
-                value_area: 700,
+                value_area: 1200,
             },
         },
         color: {
@@ -27,9 +27,9 @@ const particlesConfig = {
         },
         opacity: {
             value: 0.5,
-            random: false,
+            random: true,
             anim: {
-                enable: false,
+                enable: true,
                 speed: 1,
                 opacity_min: 0.1,
                 sync: false,

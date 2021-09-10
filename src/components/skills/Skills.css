@@ -1,0 +1,31 @@
+/*==================== SKILLS ====================*/
+.b-grid {
+    max-width: 1024px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-column-gap: 2rem;
+    width: calc(100% - 2rem);
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.skills__box {
+    z-index: 999;
+}
+.skills__container {
+    row-gap: 2rem;
+}
+.skills__subtitle {
+    margin-bottom: 1.5rem;
+}
+.skills__name {
+    display: inline-block;
+    font-size: 0.875rem;
+    margin-right: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 0.25rem 0.5rem;
+    background-color: rgba(0, 255, 255, 0.507);
+    border-radius: 0.25rem;
+}
+.skills__name:hover {
+    background-color: rgba(0, 255, 255, 0.26);
+}
