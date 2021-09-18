@@ -32,7 +32,7 @@ blockquote {
 }
 
 /*==================== Header ====================*/
-header {
+.home {
     position: relative;
     background: var(--dark-bg);
     grid-column: 2 / span 5;
@@ -52,27 +52,6 @@ header {
     font-weight: 500;
     font-size: 1.5rem;
     color: aqua;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 4px solid aqua;
-    animation: nameTyping 20s steps(24) infinite;
-}
-@keyframes nameTyping {
-    0% {
-        width: 0ch;
-    }
-    25% {
-        width: 12ch;
-    }
-    50% {
-        width: 21ch;
-    }
-    75% {
-        width: 21ch;
-    }
-    100% {
-        width: 0ch;
-    }
 }
 
 section {
@@ -106,7 +85,7 @@ blockquote p {
 blockquote .social__icons {
     position: relative;
     background: var(--dark-bg);
-    width: 350px;
+    width: 390px;
     padding: 1rem;
     z-index: 999;
 }
@@ -125,11 +104,15 @@ a {
     display: flex;
     justify-content: center;
 }
+.about__buttons a {
+    text-decoration: none;
+}
 .button {
     display: inline-block;
     background-color: rgba(0, 255, 255, 0.507);
     color: #fff;
-    padding: 1rem;
+    padding: 0.5rem;
+    margin-top: 1rem;
     border-radius: 0.5rem;
     font-weight: 500;
     cursor: pointer;
@@ -174,4 +157,56 @@ a {
 .show-scroll {
     visibility: visible;
     bottom: 1.5rem;
+}
+
+/*==================== MEDIA QUERIES ====================*/
+/* For small devices */
+@media screen and (max-width: 350px) {
+    .home {
+        font-size: 1.5rem;
+        padding: 0.5rem;
+    }
+
+    section {
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+
+    blockquote {
+        grid-column: 1 / span 9;
+    }
+
+    blockquote p {
+        font-size: 2rem;
+    }
+
+    blockquote .social__icons {
+        width: 245px;
+    }
+
+    .social__icons .social__icon {
+        padding: 0.1rem 0.2rem;
+        font-size: 1.5rem;
+    }
+}
+
+/* For medium devices */
+@media screen and (min-width: 360px) and (max-width: 568px) {
+    blockquote .social__icons {
+        width: 300px;
+    }
+
+    .social__icons .social__icon {
+        padding: 0.1rem 0.3rem;
+        font-size: 1.7rem;
+    }
+}
+
+/* For large devices */
+@media screen and (max-width: 1024px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }

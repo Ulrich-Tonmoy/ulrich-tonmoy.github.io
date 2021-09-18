@@ -13,11 +13,14 @@ import {
     FaLaptopCode,
     FaEnvelope,
     FaArrowUp,
+    FaArtstation,
 } from "react-icons/fa";
 import CV from "../../assets/pdf/My CV.pdf";
 import Skills from "../../components/skills/Skills";
 import Portfolio from "../../components/portfolio/Portfolio";
 import { scroller } from "react-scroll";
+import Typed from "react-typed";
+import Contact from "../../components/contact/Contact";
 
 export default function Home() {
     const scrollTop = () => {
@@ -29,24 +32,31 @@ export default function Home() {
 
     const scrollToHome = () => {
         scroller.scrollTo("home", {
-            duration: 800,
-            delay: 0,
-            smooth: "easeInOutQuart",
+            duration: 200,
         });
     };
 
     return (
         <main>
-            <header className="home">
+            <section className="home" id="home">
                 <h3 className="title">
                     Hi, I'm <span className="name">Ulrich Tonmoy</span>
                 </h3>
                 <div className="subtitle">
-                    <span>A Web </span>
-                    <span>and Game Developer</span>
+                    <Typed
+                        strings={[
+                            "Front-End Developer",
+                            "Back-End Developer",
+                            "Game Developer",
+                            "AI/ML Dev",
+                        ]}
+                        typeSpeed={100}
+                        backSpeed={120}
+                        loop
+                    />
                 </div>
                 <p>👨‍💻 Welcome to my website!</p>
-            </header>
+            </section>
 
             <blockquote>
                 <div className="social__icons">
@@ -87,12 +97,19 @@ export default function Home() {
                     >
                         <FaInstagram className="social__icon" />
                     </a>
+                    <a
+                        href="https://www.artstation.com/ulrich_tonmoy"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <FaArtstation className="social__icon" />
+                    </a>
                 </div>
                 <br />
                 <p>I like making stuff and putting it on the internet</p>
             </blockquote>
 
-            <section className="about">
+            <section className="left about" id="about">
                 <h2>
                     <FaUserAlt /> About me
                 </h2>
@@ -111,7 +128,7 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className="light skills">
+            <section className="light skills" id="skills">
                 <h2>
                     <FaCode /> Skills
                 </h2>
@@ -122,7 +139,7 @@ export default function Home() {
                 <p>Fight for your fairytales</p>
             </blockquote>
 
-            <section className="left portfolio">
+            <section className="left portfolio" id="portfolio">
                 <h2>
                     <FaLaptopCode /> Portfolio
                 </h2>
@@ -133,6 +150,7 @@ export default function Home() {
                 <h2>
                     <FaEnvelope /> Contact Me
                 </h2>
+                <Contact />
             </section>
 
             <blockquote>

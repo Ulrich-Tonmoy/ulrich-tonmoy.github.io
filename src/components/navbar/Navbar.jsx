@@ -9,37 +9,27 @@ export default function Navbar({ callback }) {
 
     const scrollToHome = () => {
         scroller.scrollTo("home", {
-            duration: 800,
-            delay: 0,
-            smooth: "easeInOutQuart",
+            duration: 200,
         });
     };
     const scrollToAbout = () => {
         scroller.scrollTo("about", {
-            duration: 800,
-            delay: 0,
-            smooth: "easeInOutQuart",
+            duration: 200,
         });
     };
     const scrollToSkills = () => {
         scroller.scrollTo("skills", {
-            duration: 800,
-            delay: 0,
-            smooth: "easeInOutQuart",
+            duration: 200,
         });
     };
     const scrollToPortfolio = () => {
         scroller.scrollTo("portfolio", {
-            duration: 800,
-            delay: 0,
-            smooth: "easeInOutQuart",
+            duration: 200,
         });
     };
     const scrollToContact = () => {
         scroller.scrollTo("contact", {
-            duration: 800,
-            delay: 0,
-            smooth: "easeInOutQuart",
+            duration: 200,
         });
     };
 
