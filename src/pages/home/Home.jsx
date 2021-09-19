@@ -32,7 +32,7 @@ export default function Home() {
 
     const scrollToHome = () => {
         scroller.scrollTo("home", {
-            duration: 200,
+            duration: 100,
         });
     };
 
@@ -111,7 +111,8 @@ export default function Home() {
 
             <section className="left about" id="about">
                 <h2>
-                    <FaUserAlt /> About me
+                    <FaUserAlt />
+                    <span className="section__title">About me</span>
                 </h2>
                 <p>
                     Hi, there i'm Tonmoy. I am currently doing my BSc in CSE at AIUB. I have many
@@ -121,16 +122,17 @@ export default function Home() {
                     recognition for fun now i am learning Full-Stack Web Development.
                 </p>
                 <div className="about__buttons">
-                    <a download="" href={CV} className="button button--flex">
+                    <a download="" href={CV} className="about__button">
                         Download CV
-                        <FaFileDownload className="button__icon" />
+                        <FaFileDownload className="about__button-icon" />
                     </a>
                 </div>
             </section>
 
             <section className="light skills" id="skills">
                 <h2>
-                    <FaCode /> Skills
+                    <FaCode />
+                    <span className="section__title"> Skills</span>
                 </h2>
                 <Skills />
             </section>
@@ -141,14 +143,15 @@ export default function Home() {
 
             <section className="left portfolio" id="portfolio">
                 <h2>
-                    <FaLaptopCode /> Portfolio
+                    <FaLaptopCode />
+                    <span className="section__title">Portfolio</span>
                 </h2>
                 <Portfolio />
             </section>
 
             <section className="light contact" id="contact">
                 <h2>
-                    <FaEnvelope /> Contact Me
+                    <FaEnvelope /> <span className="section__title">Contact Me</span>
                 </h2>
                 <Contact />
             </section>

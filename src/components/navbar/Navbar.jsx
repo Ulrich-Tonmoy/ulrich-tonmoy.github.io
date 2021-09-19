@@ -9,27 +9,27 @@ export default function Navbar({ callback }) {
 
     const scrollToHome = () => {
         scroller.scrollTo("home", {
-            duration: 200,
+            duration: 100,
         });
     };
     const scrollToAbout = () => {
         scroller.scrollTo("about", {
-            duration: 200,
+            duration: 100,
         });
     };
     const scrollToSkills = () => {
         scroller.scrollTo("skills", {
-            duration: 200,
+            duration: 100,
         });
     };
     const scrollToPortfolio = () => {
         scroller.scrollTo("portfolio", {
-            duration: 200,
+            duration: 100,
         });
     };
     const scrollToContact = () => {
         scroller.scrollTo("contact", {
-            duration: 200,
+            duration: 100,
         });
     };
 

@@ -35,7 +35,7 @@
     cursor: pointer;
 }
 .icons .icon:hover {
-    color: wheat;
+    color: rgba(10, 252, 10, 0.9);
 }
 
 @media screen and (max-width: 1024px) {

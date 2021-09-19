@@ -51,7 +51,7 @@ blockquote {
     margin: 0;
     font-weight: 500;
     font-size: 1.5rem;
-    color: aqua;
+    color: rgba(10, 252, 10, 0.9);
 }
 
 section {
@@ -61,6 +61,16 @@ section {
     font-size: 1.25rem;
     line-height: 1.5;
     margin-bottom: var(--spacing);
+}
+
+section h2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.section__title {
+    margin-left: 1rem;
 }
 
 blockquote {
@@ -89,14 +99,19 @@ blockquote .social__icons {
     padding: 1rem;
     z-index: 999;
 }
+
 a {
     color: inherit;
     cursor: pointer;
 }
+
 .social__icons .social__icon {
     padding: 0.1rem 0.5rem;
     font-size: 2rem;
     cursor: pointer;
+}
+.social__icon:hover {
+    color: rgba(10, 252, 10, 0.9);
 }
 
 /*==================== About ====================*/
@@ -107,9 +122,9 @@ a {
 .about__buttons a {
     text-decoration: none;
 }
-.button {
+.about__button {
     display: inline-block;
-    background-color: rgba(0, 255, 255, 0.507);
+    background-color: rgba(10, 252, 10, 0.6);
     color: #fff;
     padding: 0.5rem;
     margin-top: 1rem;
@@ -117,18 +132,16 @@ a {
     font-weight: 500;
     cursor: pointer;
     z-index: 999;
+    display: inline-flex;
+    align-items: center;
 }
-.button:hover {
-    background-color: rgba(0, 255, 255, 0.26);
+.about__button:hover {
+    background-color: rgba(10, 252, 10, 0.4);
 }
-.button__icon {
+.about__button-icon {
     font-size: 1.25rem;
     margin-left: 0.5rem;
     transition: 0.3s;
-}
-.button--flex {
-    display: inline-flex;
-    align-items: center;
 }
 
 /*===== SCROLL TOP =====*/
@@ -145,9 +158,10 @@ a {
     z-index: 999;
     transition: 0.4;
     visibility: hidden;
+    cursor: pointer;
 }
 .scroll__top:hover {
-    background: rgba(0, 255, 255, 0.507);
+    background: rgba(10, 252, 10, 0.9);
 }
 
 .scroll__top-icon {
