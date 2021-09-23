@@ -52,7 +52,7 @@ hr {
     transition: 0.4s;
     text-decoration: none;
     margin: 1rem;
-    border-radius: 0.5rem;
+    border-radius: 0.25rem;
     padding: 0 0.5rem 0.3rem 0.5rem;
 }
 .button-link:hover {

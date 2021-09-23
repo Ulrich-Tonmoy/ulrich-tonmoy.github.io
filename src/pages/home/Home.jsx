@@ -115,11 +115,12 @@ export default function Home() {
                     <span className="section__title">About me</span>
                 </h2>
                 <p>
-                    Hi, there i'm Tonmoy. I am currently doing my BSc in CSE at AIUB. I have many
-                    hobbies such a reading novels and manhuas watching animes and k-dramas playing
-                    games. But my technical hobbies are making games, researching and playing with
-                    AI. I had made some small games with Unity engine and ml models for image
-                    recognition for fun now i am learning Full-Stack Web Development.
+                    Hi, there i'm Tonmoy. I am currently doing my BSc in CSE at AIUB. I am learning
+                    web development i have knowledge of working with react, laravel, dotNet, nodejs,
+                    firebase, MySQL, MongoDB. I also have knowledge of game development with Unity
+                    game engine and i like to research and play with AI/Ml. I have built some small
+                    games with Unity engine and ml models for GAN(Generative Adversarial Network)
+                    for fun.
                 </p>
                 <div className="about__buttons">
                     <a download="" href={CV} className="about__button">

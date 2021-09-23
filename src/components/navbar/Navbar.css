@@ -49,4 +49,8 @@
         padding: 0.2rem;
         font-size: 1.5rem;
     }
+
+    .icon.earth {
+        display: none;
+    }
 }

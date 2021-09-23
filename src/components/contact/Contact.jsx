@@ -1,6 +1,6 @@
 import "./Contact.css";
 import { FaMobileAlt, FaRegEnvelope } from "react-icons/fa";
-import { BiCurrentLocation, BiSend } from "react-icons/bi";
+import { BiCurrentLocation } from "react-icons/bi";
 import { useState } from "react";
 
 export default function Contact() {

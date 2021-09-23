@@ -87,6 +87,54 @@ export default function Portfolio() {
 
                 <div className="portfolio__content web">
                     <div className="portfolio__data">
+                        <h2 className="portfolio__title">WhatsApp-clone</h2>
+                        <span className="portfolio_subtitle">
+                            Whats app clone build using react and firebase. It has google auth and
+                            the user can create groups and can sent messages to the groups its a
+                            public group system so anyone can create and group and sent message to
+                            any existing group
+                        </span>
+                        <hr />
+                        <a
+                            href="https://whatsapp-703f4.web.app/"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="button-link"
+                        >
+                            Live
+                        </a>
+                        ||
+                        <a
+                            href="https://github.com/Ulrich-Tonmoy/website-clones/tree/main/whatsapp"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="button-link"
+                        >
+                            Source
+                        </a>
+                    </div>
+                </div>
+
+                <div className="portfolio__content ai">
+                    <div className="portfolio__data">
+                        <h2 className="portfolio__title">GAN anime face generator</h2>
+                        <span className="portfolio_subtitle">
+                            Using Ml GAN model and pytorch to generate anime face.
+                        </span>
+                        <hr />
+                        <a
+                            href="https://github.com/Ulrich-Tonmoy/cvpr/tree/main/project"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="button-link"
+                        >
+                            Source
+                        </a>
+                    </div>
+                </div>
+
+                <div className="portfolio__content web">
+                    <div className="portfolio__data">
                         <h2 className="portfolio__title">Blackjack Game</h2>
                         <span className="portfolio_subtitle">
                             Blackjack game made with html css and js
@@ -112,29 +160,12 @@ export default function Portfolio() {
                     </div>
                 </div>
 
-                <div className="portfolio__content ai">
-                    <div className="portfolio__data">
-                        <h2 className="portfolio__title">GAN anime face generator</h2>
-                        <span className="portfolio_subtitle">
-                            Using ml gan model to generate anime face
-                        </span>
-                        <hr />
-                        <a
-                            href="https://github.com/Ulrich-Tonmoy/cvpr"
-                            target="_blank"
-                            rel="noreferrer"
-                            className="button-link"
-                        >
-                            Source
-                        </a>
-                    </div>
-                </div>
-
                 <div className="portfolio__content web">
                     <div className="portfolio__data">
                         <h2 className="portfolio__title">Friend-Finder</h2>
                         <span className="portfolio_subtitle">
-                            A Facebook like web app can do realtime messaging and video chat
+                            A Facebook like web app can do realtime messaging and video chat and
+                            create post.
                         </span>
                         <hr />
                         <a

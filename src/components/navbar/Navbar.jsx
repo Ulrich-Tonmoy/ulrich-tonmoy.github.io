@@ -41,7 +41,7 @@ export default function Navbar({ callback }) {
                 <FaCode className="icon" onClick={scrollToSkills} />
                 <FaLaptopCode className="icon" onClick={scrollToPortfolio} />
                 <FaEnvelope className="icon" onClick={scrollToContact} />
-                <FaCog className="icon" onClick={loadEarth} />
+                <FaCog className="icon earth" onClick={loadEarth} />
             </div>
         </div>
     );
