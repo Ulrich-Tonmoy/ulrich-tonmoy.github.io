@@ -116,16 +116,16 @@ export default function Home() {
                 </h2>
                 <p>
                     Hi, there i'm Tonmoy. I am currently doing my BSc in CSE at AIUB. I am learning
-                    web development i have knowledge of working with react, laravel, dotNet, nodejs,
-                    firebase, MySQL, MongoDB. I also have knowledge of game development with Unity
-                    game engine and i like to research and play with AI/Ml. I have built some small
-                    games with Unity engine and ml models for GAN(Generative Adversarial Network)
-                    for fun.
+                    web development. I also have knowledge of game development with Unity game
+                    engine and i like to research and play with AI/Ml. I have built some small games
+                    with Unity engine and ml models with GAN(Generative Adversarial Network) for
+                    fun.
                 </p>
-                <div className="about__buttons">
+                <div className="about__button-container">
                     <a download="" href={CV} className="about__button">
-                        Download CV
-                        <FaFileDownload className="about__button-icon" />
+                        <span>
+                            Download CV <FaFileDownload className="about__button-icon" />
+                        </span>
                     </a>
                 </div>
             </section>
@@ -139,6 +139,12 @@ export default function Home() {
             </section>
 
             <blockquote>
+                <p>
+                    "Someday" is disease that will take your dreams to the grave with you
+                    <br />
+                    -Tim Ferriss
+                </p>
+                <br /> <br /> <br />
                 <p>Fight for your fairytales</p>
             </blockquote>
 

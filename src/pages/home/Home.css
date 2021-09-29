@@ -51,7 +51,7 @@ blockquote {
     margin: 0;
     font-weight: 500;
     font-size: 1.5rem;
-    color: rgba(10, 252, 10, 0.9);
+    color: rgba(6, 255, 6, 0.9);
 }
 
 section {
@@ -115,29 +115,71 @@ a {
 }
 
 /*==================== About ====================*/
-.about__buttons {
+.about__button-container {
     display: flex;
     justify-content: center;
 }
-.about__buttons a {
-    text-decoration: none;
-}
+
 .about__button {
-    display: inline-block;
-    background-color: rgba(10, 252, 10, 0.6);
-    color: #fff;
     padding: 0.5rem;
-    margin-top: 1rem;
-    border-radius: 0.5rem;
-    font-weight: 500;
+    transition: 0.5s;
+    margin: 1rem;
+    position: relative;
+    width: 180px;
+    height: 30px;
+    display: inline-block;
+    margin: 20px;
     cursor: pointer;
     z-index: 999;
-    display: inline-flex;
+}
+
+.about__button::before,
+.about__button::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    transition: 0.5s;
+    background: linear-gradient(45deg, #ff075b, #0e1538, #0e1538, #1aff22);
+}
+.about__button:hover:before {
+    inset: -3px;
+}
+.about__button:hover:after {
+    inset: -3px;
+    filter: blur(10px);
+}
+.about__button span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background: #0e1538;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
     align-items: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+    border: 1px solid #040a29;
+    overflow: hidden;
 }
-.about__button:hover {
-    background-color: rgba(10, 252, 10, 0.4);
+
+.about__button span::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.075);
+    transform: skew(25deg);
 }
+
 .about__button-icon {
     font-size: 1.25rem;
     margin-left: 0.5rem;

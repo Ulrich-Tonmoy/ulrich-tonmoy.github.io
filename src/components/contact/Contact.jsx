@@ -76,7 +76,9 @@ export default function Contact() {
                     <textarea cols="0" rows="7" className="contact__input"></textarea>
                 </div>
                 <div>
-                    <div className="contact__button">Send Message</div>
+                    <div className="contact__button">
+                        <span>Send Message</span>
+                    </div>
                 </div>
             </form>
         </div>

@@ -42,18 +42,17 @@ export default function Portfolio() {
                             href="https://ulrich-tonmoy.github.io/website-html-css-js/"
                             target="_blank"
                             rel="noreferrer"
-                            className="button-link"
+                            className="button__link-live"
                         >
-                            Live
+                            <span>Live</span>
                         </a>
-                        ||
                         <a
                             href="https://github.com/Ulrich-Tonmoy/website-html-css-js"
                             target="_blank"
                             rel="noreferrer"
-                            className="button-link"
+                            className="button__link-source"
                         >
-                            Source
+                            <span>Source</span>
                         </a>
                     </div>
                 </div>
@@ -69,18 +68,17 @@ export default function Portfolio() {
                             href="https://ulrich-tonmoy.github.io/website-reactjs/"
                             target="_blank"
                             rel="noreferrer"
-                            className="button-link"
+                            className="button__link-live"
                         >
-                            Live
+                            <span>Live</span>
                         </a>
-                        ||
                         <a
                             href="https://github.com/Ulrich-Tonmoy/website-reactjs"
                             target="_blank"
                             rel="noreferrer"
-                            className="button-link"
+                            className="button__link-source"
                         >
-                            Source
+                            <span>Source</span>
                         </a>
                     </div>
                 </div>
@@ -99,18 +97,17 @@ export default function Portfolio() {
                             href="https://whatsapp-703f4.web.app/"
                             target="_blank"
                             rel="noreferrer"
-                            className="button-link"
+                            className="button__link-live"
                         >
-                            Live
+                            <span>Live</span>
                         </a>
-                        ||
                         <a
                             href="https://github.com/Ulrich-Tonmoy/website-clones/tree/main/whatsapp"
                             target="_blank"
                             rel="noreferrer"
-                            className="button-link"
+                            className="button__link-source"
                         >
-                            Source
+                            <span>Source</span>
                         </a>
                     </div>
                 </div>
@@ -126,9 +123,9 @@ export default function Portfolio() {
                             href="https://github.com/Ulrich-Tonmoy/cvpr/tree/main/project"
                             target="_blank"
                             rel="noreferrer"
-                            className="button-link"
+                            className="button__link-source"
                         >
-                            Source
+                            <span>Source</span>
                         </a>
                     </div>
                 </div>
@@ -144,18 +141,17 @@ export default function Portfolio() {
                             href="https://ulrich-tonmoy.github.io/blackjack/"
                             target="_blank"
                             rel="noreferrer"
-                            className="button-link"
+                            className="button__link-live"
                         >
-                            Live
+                            <span>Live</span>
                         </a>
-                        ||
                         <a
                             href="https://github.com/Ulrich-Tonmoy/blackjack"
                             target="_blank"
                             rel="noreferrer"
-                            className="button-link"
+                            className="button__link-source"
                         >
-                            Source
+                            <span>Source</span>
                         </a>
                     </div>
                 </div>
@@ -172,9 +168,9 @@ export default function Portfolio() {
                             href="https://github.com/Ulrich-Tonmoy/website-reactjs"
                             target="_blank"
                             rel="noreferrer"
-                            className="button-link"
+                            className="button__link-source"
                         >
-                            Source
+                            <span>Source</span>
                         </a>
                     </div>
                 </div>
@@ -191,9 +187,9 @@ export default function Portfolio() {
                             href="https://github.com/Ulrich-Tonmoy/employee-management"
                             target="_blank"
                             rel="noreferrer"
-                            className="button-link"
+                            className="button__link-source"
                         >
-                            Source
+                            <span>Source</span>
                         </a>
                     </div>
                 </div>
