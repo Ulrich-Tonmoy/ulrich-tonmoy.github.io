@@ -13,6 +13,7 @@ export default function Skills() {
                 <span className="skills__name">Jquery</span>
                 <span className="skills__name">Bootstrap</span>
                 <span className="skills__name">Tailwind</span>
+                <span className="skills__name">Netlify</span>
 
                 <h3 className="skills__subtitle">Back-End</h3>
                 <span className="skills__name">Asp.Net</span>

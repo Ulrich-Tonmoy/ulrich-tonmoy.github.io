@@ -51,28 +51,20 @@ export default function Contact() {
             <form action="#" className="contact__form grid">
                 <div className="contact__inputs grid">
                     <div className="contact__content">
-                        <label for="" className="contact__label">
-                            Name
-                        </label>
+                        <label className="contact__label">Name</label>
                         <input type="text" className="contact__input" />
                     </div>
                     <div className="contact__content">
-                        <label for="" className="contact__label">
-                            Email
-                        </label>
+                        <label className="contact__label">Email</label>
                         <input type="email" className="contact__input" />
                     </div>
                 </div>
                 <div className="contact__content">
-                    <label for="" className="contact__label">
-                        Project
-                    </label>
+                    <label className="contact__label">Project</label>
                     <input type="text" className="contact__input" />
                 </div>
                 <div className="contact__content">
-                    <label for="" className="contact__label">
-                        Message
-                    </label>
+                    <label className="contact__label">Message</label>
                     <textarea cols="0" rows="7" className="contact__input"></textarea>
                 </div>
                 <div>
