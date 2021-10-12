@@ -106,13 +106,13 @@ a {
 }
 
 .social__icons .social__icon {
-    padding: 0.1rem 0.5rem;
+    padding: 0.5rem;
     font-size: 2rem;
     cursor: pointer;
     transition: all 0.5s ease-in-out;
 }
 .social__icon:hover {
-    color: rgba(10, 252, 10, 0.9);
+    box-shadow: 0 0 15px 3px rgba(1, 255, 43, 0.8);
 }
 
 /*==================== About ====================*/
