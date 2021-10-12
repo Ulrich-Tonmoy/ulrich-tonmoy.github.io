@@ -33,6 +33,44 @@ export default function Portfolio() {
             <div className="portfolio__container grid">
                 <div className="portfolio__content web">
                     <div className="portfolio__data">
+                        <h2 className="portfolio__title">Chat-Rooms</h2>
+                        <span className="portfolio_subtitle">
+                            A chat application where you can sent dm and create channels and group
+                            chats. sent image video files gif emojis and many more.
+                        </span>
+                        <a
+                            href="https://raw.githubusercontent.com/Ulrich-Tonmoy/chat-rooms/main/demo/chat.png"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <img
+                                className="portfolio__img"
+                                src="https://raw.githubusercontent.com/Ulrich-Tonmoy/chat-rooms/main/demo/chat.png"
+                                alt=""
+                            />
+                        </a>
+                        <hr />
+                        <a
+                            href="https://chats-room.netlify.app/"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="button__link-live"
+                        >
+                            <span>Live</span>
+                        </a>
+                        <a
+                            href="https://github.com/Ulrich-Tonmoy/chat-rooms"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="button__link-source"
+                        >
+                            <span>Source</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div className="portfolio__content web">
+                    <div className="portfolio__data">
                         <h2 className="portfolio__title">Websites</h2>
                         <span className="portfolio_subtitle">
                             Some websites and tools build with html css js bootstrap and APIs
