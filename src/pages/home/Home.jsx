@@ -140,7 +140,7 @@ export default function Home() {
 
             <blockquote>
                 <p>
-                    "Someday" is disease that will take your dreams to the grave with you
+                    "Someday" is a disease that will take your dreams to the grave with you
                     <br />
                     -Tim Ferriss
                 </p>
