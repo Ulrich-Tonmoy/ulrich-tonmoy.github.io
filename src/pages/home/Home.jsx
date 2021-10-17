@@ -14,8 +14,9 @@ import {
     FaEnvelope,
     FaArrowUp,
     FaArtstation,
+	FaDiscord,
 } from "react-icons/fa";
-import CV from "../../assets/pdf/My CV.pdf";
+import CV from "../../assets/pdf/Tonmoy's_CV.pdf";
 import Skills from "../../components/skills/Skills";
 import Portfolio from "../../components/portfolio/Portfolio";
 import { scroller } from "react-scroll";
@@ -45,6 +46,7 @@ export default function Home() {
                 <div className="subtitle">
                     <Typed
                         strings={[
+							"MERN Stack Developer",
                             "Front-End Developer",
                             "Back-End Developer",
                             "Game Developer",
@@ -103,6 +105,20 @@ export default function Home() {
                         rel="noreferrer"
                     >
                         <FaArtstation className="social__icon" />
+                    </a>
+					<a
+                        href="https://discord.com/invite/BgfsG8SfEe"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <FaDiscord className="social__icon" />
+                    </a>
+					<a
+                        href="https://www.codingame.com/profile/e339ef2fa4a2fad06cb1ebb56aaed99c2582053"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <FaCode className="social__icon" />
                     </a>
                 </div>
                 <br />
