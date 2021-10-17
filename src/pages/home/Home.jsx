@@ -15,6 +15,7 @@ import {
     FaArrowUp,
     FaArtstation,
 	FaDiscord,
+	FaItchIo,
 } from "react-icons/fa";
 import CV from "../../assets/pdf/Tonmoy's_CV.pdf";
 import Skills from "../../components/skills/Skills";
@@ -119,6 +120,13 @@ export default function Home() {
                         rel="noreferrer"
                     >
                         <FaCode className="social__icon" />
+                    </a>
+					<a
+                        href="https://ulrich-tonmoy.itch.io/"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <FaItchIo className="social__icon" />
                     </a>
                 </div>
                 <br />
