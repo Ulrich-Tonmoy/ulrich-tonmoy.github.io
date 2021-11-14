@@ -71,6 +71,43 @@ export default function Portfolio() {
 
                 <div className="portfolio__content web">
                     <div className="portfolio__data">
+                        <h2 className="portfolio__title">Doogle</h2>
+                        <span className="portfolio_subtitle">
+                            A search engine built with google search api.
+                        </span>
+                        <a
+                            href="https://raw.githubusercontent.com/Ulrich-Tonmoy/doogle/main/demo/doogle.png"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <img
+                                className="portfolio__img"
+                                src="https://raw.githubusercontent.com/Ulrich-Tonmoy/doogle/main/demo/doogle.png"
+                                alt=""
+                            />
+                        </a>
+                        <hr />
+                        <a
+                            href="https://search-doogle.netlify.app/search"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="button__link-live"
+                        >
+                            <span>Live</span>
+                        </a>
+                        <a
+                            href="https://github.com/Ulrich-Tonmoy/doogle"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="button__link-source"
+                        >
+                            <span>Source</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div className="portfolio__content web">
+                    <div className="portfolio__data">
                         <h2 className="portfolio__title">Websites</h2>
                         <span className="portfolio_subtitle">
                             Some websites and tools build with html css js bootstrap and APIs
@@ -258,6 +295,36 @@ export default function Portfolio() {
                     </div>
                 </div>
 
+                <div className="portfolio__content web">
+                    <div className="portfolio__data">
+                        <h2 className="portfolio__title">Friend-Finder</h2>
+                        <span className="portfolio_subtitle">
+                            A Facebook like web app can do realtime messaging and video chat and
+                            create post.
+                        </span>
+                        <a
+                            href="https://raw.githubusercontent.com/Ulrich-Tonmoy/friend-finder/main/user/assets/2.png"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <img
+                                className="portfolio__img"
+                                src="https://raw.githubusercontent.com/Ulrich-Tonmoy/friend-finder/main/user/assets/2.png"
+                                alt=""
+                            />
+                        </a>
+                        <hr />
+                        <a
+                            href="https://github.com/Ulrich-Tonmoy/friend-finder/tree/main/user"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="button__link-source"
+                        >
+                            <span>Source</span>
+                        </a>
+                    </div>
+                </div>
+
                 <div className="portfolio__content ai">
                     <div className="portfolio__data">
                         <h2 className="portfolio__title">GAN anime face generator</h2>
@@ -293,36 +360,6 @@ export default function Portfolio() {
                         </a>
                         <a
                             href="https://github.com/Ulrich-Tonmoy/blackjack"
-                            target="_blank"
-                            rel="noreferrer"
-                            className="button__link-source"
-                        >
-                            <span>Source</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div className="portfolio__content web">
-                    <div className="portfolio__data">
-                        <h2 className="portfolio__title">Friend-Finder</h2>
-                        <span className="portfolio_subtitle">
-                            A Facebook like web app can do realtime messaging and video chat and
-                            create post.
-                        </span>
-                        <a
-                            href="https://raw.githubusercontent.com/Ulrich-Tonmoy/friend-finder/main/user/assets/2.png"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            <img
-                                className="portfolio__img"
-                                src="https://raw.githubusercontent.com/Ulrich-Tonmoy/friend-finder/main/user/assets/2.png"
-                                alt=""
-                            />
-                        </a>
-                        <hr />
-                        <a
-                            href="https://github.com/Ulrich-Tonmoy/friend-finder/tree/main/user"
                             target="_blank"
                             rel="noreferrer"
                             className="button__link-source"
