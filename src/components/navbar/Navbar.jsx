@@ -23,7 +23,7 @@ export default function Navbar({ callback }) {
         });
     };
     const scrollToPortfolio = () => {
-        scroller.scrollTo("portfolio", {
+        scroller.scrollTo("projects", {
             duration: 100,
         });
     };

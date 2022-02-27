@@ -14,12 +14,12 @@ import {
     FaEnvelope,
     FaArrowUp,
     FaArtstation,
-	FaDiscord,
-	FaItchIo,
+    FaDiscord,
+    FaItchIo,
 } from "react-icons/fa";
 import CV from "../../assets/pdf/Tonmoy's_CV.pdf";
 import Skills from "../../components/skills/Skills";
-import Portfolio from "../../components/portfolio/Portfolio";
+import Projects from "../../components/projects/Projects";
 import { scroller } from "react-scroll";
 import Typed from "react-typed";
 import Contact from "../../components/contact/Contact";
@@ -47,7 +47,7 @@ export default function Home() {
                 <div className="subtitle">
                     <Typed
                         strings={[
-							"MERN Stack Developer",
+                            "MERN Stack Developer",
                             "Front-End Developer",
                             "Back-End Developer",
                             "Game Developer",
@@ -107,25 +107,21 @@ export default function Home() {
                     >
                         <FaArtstation className="social__icon" />
                     </a>
-					<a
+                    <a
                         href="https://discord.com/invite/BgfsG8SfEe"
                         target="_blank"
                         rel="noreferrer"
                     >
                         <FaDiscord className="social__icon" />
                     </a>
-					<a
+                    <a
                         href="https://www.codingame.com/profile/e339ef2fa4a2fad06cb1ebb56aaed99c2582053"
                         target="_blank"
                         rel="noreferrer"
                     >
                         <FaCode className="social__icon" />
                     </a>
-					<a
-                        href="https://ulrich-tonmoy.itch.io/"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
+                    <a href="https://ulrich-tonmoy.itch.io/" target="_blank" rel="noreferrer">
                         <FaItchIo className="social__icon" />
                     </a>
                 </div>
@@ -172,12 +168,12 @@ export default function Home() {
                 <p>Fight for your fairytales</p>
             </blockquote>
 
-            <section className="left portfolio" id="portfolio">
+            <section className="left projects" id="projects">
                 <h2>
                     <FaLaptopCode />
-                    <span className="section__title">Portfolio</span>
+                    <span className="section__title">Projects</span>
                 </h2>
-                <Portfolio />
+                <Projects />
             </section>
 
             <section className="light contact" id="contact">

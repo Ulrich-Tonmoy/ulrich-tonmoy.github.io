@@ -1,0 +1,148 @@
+/*===== projects =====*/
+.grid {
+    display: grid;
+    gap: 0.5rem;
+}
+.projects {
+    z-index: 999;
+}
+
+.projects__nav {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+.projects__item {
+    margin: 0 1rem;
+    padding: 0 0.5rem 0.2rem 0.5rem;
+    cursor: pointer;
+    box-shadow: 0px 0px 4px rgba(1, 255, 43, 0.7);
+    transition: all 0.5s ease-in-out;
+}
+.projects__item:hover {
+    box-shadow: 0 0 15px 3px rgba(1, 255, 43, 0.8);
+}
+
+.projects__container {
+    grid-template-columns: repeat(2, 1fr);
+}
+.projects__content {
+    width: 350px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0px 0px 4px rgba(1, 255, 43, 0.7);
+    transition: all 0.5s ease-in-out;
+}
+.projects__content:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 15px 3px rgba(1, 255, 43, 0.8);
+}
+
+.projects__data {
+    padding: 1.5rem;
+}
+
+.projects__subtitle {
+    font-size: 0.813rem;
+}
+
+.projects__title {
+    font-size: 1.125rem;
+    margin: 1rem 0;
+}
+
+.projects__img {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+hr {
+    margin: 1rem 0;
+}
+
+.button__link-live,
+.button__link-source {
+    padding: 0 0.5rem 0.3rem 0.5rem;
+    transition: 0.5s;
+    margin: 1rem;
+    position: relative;
+    width: 80px;
+    height: 30px;
+    display: inline-block;
+    margin: 20px;
+}
+
+.button__link-live::before,
+.button__link-live::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    transition: 0.5s;
+    background: linear-gradient(45deg, #00ccff, #0e1538, #0e1538, #d400d4);
+}
+.button__link-source::before,
+.button__link-source::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    transition: 0.5s;
+    background: linear-gradient(45deg, #ff075b, #0e1538, #0e1538, #1aff22);
+}
+.button__link-live:hover:before,
+.button__link-source:hover:before {
+    inset: -3px;
+}
+.button__link-live:hover:after,
+.button__link-source:hover:after {
+    inset: -3px;
+    filter: blur(10px);
+}
+.button__link-live span,
+.button__link-source span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background: #0e1538;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+    border: 1px solid #040a29;
+    overflow: hidden;
+}
+
+.button__link-live span::before,
+.button__link-source span::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.075);
+    transform: skew(25deg);
+}
+
+@media screen and (max-width: 767px) {
+    .projects__container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .projects__content {
+        width: 245px;
+    }
+}
+
+@media screen and (min-width: 360px) and (max-width: 568px) {
+    .projects__content {
+        width: 320px;
+    }
+}
