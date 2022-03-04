@@ -8,7 +8,8 @@ export default function Skills() {
                 <span className="skills__name">HTML</span>
                 <span className="skills__name">CSS</span>
                 <span className="skills__name">JavaScript</span>
-                <span className="skills__name">React</span>
+                <span className="skills__name">React JS</span>
+				<span className="skills__name">Redux</span>
                 <span className="skills__name">Firebase</span>
                 <span className="skills__name">Sass</span>
                 <span className="skills__name">Jquery</span>
@@ -17,9 +18,9 @@ export default function Skills() {
                 <span className="skills__name">Netlify</span>
 
                 <h3 className="skills__subtitle">Back-End</h3>
+                <span className="skills__name">Node Express</span>
                 <span className="skills__name">Asp.Net</span>
                 <span className="skills__name">Laravel</span>
-                <span className="skills__name">Node Express</span>
 				<span className="skills__name">MSSQL</span>
                 <span className="skills__name">My SQL</span>
                 <span className="skills__name">MongoDB</span>
