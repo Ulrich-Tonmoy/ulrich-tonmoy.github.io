@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/static/css/main.4c1b528b.chunk.css",
-    "main.js": "/static/js/main.be97ad37.chunk.js",
-    "main.js.map": "/static/js/main.be97ad37.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.2e649410.js",
-    "runtime-main.js.map": "/static/js/runtime-main.2e649410.js.map",
-    "static/js/2.185940be.chunk.js": "/static/js/2.185940be.chunk.js",
-    "static/js/2.185940be.chunk.js.map": "/static/js/2.185940be.chunk.js.map",
-    "static/js/3.7d449f1f.chunk.js": "/static/js/3.7d449f1f.chunk.js",
-    "static/js/3.7d449f1f.chunk.js.map": "/static/js/3.7d449f1f.chunk.js.map",
+    "main.css": "/static/css/main.46b85d1d.chunk.css",
+    "main.js": "/static/js/main.bbfc54e0.chunk.js",
+    "main.js.map": "/static/js/main.bbfc54e0.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.bdba52ce.js",
+    "runtime-main.js.map": "/static/js/runtime-main.bdba52ce.js.map",
+    "static/js/2.565ad84e.chunk.js": "/static/js/2.565ad84e.chunk.js",
+    "static/js/2.565ad84e.chunk.js.map": "/static/js/2.565ad84e.chunk.js.map",
+    "static/js/3.fc34200a.chunk.js": "/static/js/3.fc34200a.chunk.js",
+    "static/js/3.fc34200a.chunk.js.map": "/static/js/3.fc34200a.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.4c1b528b.chunk.css.map": "/static/css/main.4c1b528b.chunk.css.map",
-    "static/js/2.185940be.chunk.js.LICENSE.txt": "/static/js/2.185940be.chunk.js.LICENSE.txt",
+    "static/css/main.46b85d1d.chunk.css.map": "/static/css/main.46b85d1d.chunk.css.map",
+    "static/js/2.565ad84e.chunk.js.LICENSE.txt": "/static/js/2.565ad84e.chunk.js.LICENSE.txt",
     "static/media/8k_earth_clouds.08fcd800.jpg": "/static/media/8k_earth_clouds.08fcd800.jpg",
     "static/media/8k_earth_daymap.54672c1f.jpg": "/static/media/8k_earth_daymap.54672c1f.jpg",
     "static/media/8k_earth_normal_map.930cf2e9.jpg": "/static/media/8k_earth_normal_map.930cf2e9.jpg",
     "static/media/8k_earth_specular_map.7b4efa59.jpg": "/static/media/8k_earth_specular_map.7b4efa59.jpg",
-    "static/media/Tonmoy's_CV.004296af.pdf": "/static/media/Tonmoy's_CV.004296af.pdf",
+    "static/media/Tonmoy's_CV.9bbc7ffd.pdf": "/static/media/Tonmoy's_CV.9bbc7ffd.pdf",
     "static/media/moon.a2edaf85.jpg": "/static/media/moon.a2edaf85.jpg",
     "static/media/moon_normal.573c0a93.jpg": "/static/media/moon_normal.573c0a93.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.2e649410.js",
-    "static/js/2.185940be.chunk.js",
-    "static/css/main.4c1b528b.chunk.css",
-    "static/js/main.be97ad37.chunk.js"
+    "static/js/runtime-main.bdba52ce.js",
+    "static/js/2.565ad84e.chunk.js",
+    "static/css/main.46b85d1d.chunk.css",
+    "static/js/main.bbfc54e0.chunk.js"
   ]
 }
