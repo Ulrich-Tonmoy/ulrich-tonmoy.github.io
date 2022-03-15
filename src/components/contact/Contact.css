@@ -75,7 +75,7 @@
     inset: -3px;
     filter: blur(10px);
 }
-.contact__button span {
+.contact__button button {
     position: absolute;
     top: 0;
     left: 0;
@@ -87,10 +87,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: var(--font-medium);
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     color: white;
     border: 1px solid #040a29;
     overflow: hidden;
@@ -139,6 +139,10 @@
 
 .contact__information .message {
     color: rgba(0, 255, 106, 0.966);
+}
+
+.contact__information .warning {
+    color: rgba(255, 0, 0, 0.966);
 }
 
 .contact__content {
