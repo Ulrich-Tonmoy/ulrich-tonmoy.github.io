@@ -102,6 +102,36 @@ export default function Projects() {
 
                 <div className="projects__content web">
                     <div className="projects__data">
+                        <h2 className="projects__title">Real State</h2>
+                        <span className="projects_subtitle">
+                            A Real state Website to search, buy and rent properties build with Next
+                            js and Rapid Api.
+                        </span>
+                        <a
+                            href="https://raw.githubusercontent.com/Ulrich-Tonmoy/website-nextjs/main/realstate/ss/ss1.png"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <img
+                                className="projects__img"
+                                src="https://raw.githubusercontent.com/Ulrich-Tonmoy/website-nextjs/main/realstate/ss/ss1.png"
+                                alt=""
+                            />
+                        </a>
+                        <hr />
+                        <a
+                            href="https://github.com/Ulrich-Tonmoy/website-nextjs/tree/main/realstate"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="button__link-source"
+                        >
+                            <span>Source</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div className="projects__content web">
+                    <div className="projects__data">
                         <h2 className="projects__title">Doogle</h2>
                         <span className="projects_subtitle">
                             A search engine built with google search api.

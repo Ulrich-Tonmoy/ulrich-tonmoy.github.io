@@ -31,6 +31,9 @@
     overflow: hidden;
     box-shadow: 0px 0px 4px rgba(1, 255, 43, 0.7);
     transition: all 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .projects__content:hover {
     transform: translateY(-10px);
