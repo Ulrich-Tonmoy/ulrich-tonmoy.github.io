@@ -39,13 +39,13 @@ export default function Projects() {
                             chats. sent image video files gif emojis and many more.
                         </span>
                         <a
-                            href="https://raw.githubusercontent.com/Ulrich-Tonmoy/chat-rooms/main/demo/chat.png"
+                            href="https://raw.githubusercontent.com/Ulrich-Tonmoy/website-reactjs/main/chat-rooms/demo/chat.png"
                             target="_blank"
                             rel="noreferrer"
                         >
                             <img
                                 className="projects__img"
-                                src="https://raw.githubusercontent.com/Ulrich-Tonmoy/chat-rooms/main/demo/chat.png"
+                                src="https://raw.githubusercontent.com/Ulrich-Tonmoy/website-reactjs/main/chat-rooms/demo/chat.png"
                                 alt=""
                             />
                         </a>
@@ -59,7 +59,7 @@ export default function Projects() {
                             <span>Live</span>
                         </a>
                         <a
-                            href="https://github.com/Ulrich-Tonmoy/chat-rooms"
+                            href="https://github.com/Ulrich-Tonmoy/website-reactjs/tree/main/chat-rooms"
                             target="_blank"
                             rel="noreferrer"
                             className="button__link-source"
@@ -78,19 +78,19 @@ export default function Projects() {
                             many buyers and many sellers. Its build with MERN stack.
                         </span>
                         <a
-                            href="https://raw.githubusercontent.com/Ulrich-Tonmoy/e-com/main/ss/client%20(2).png"
+                            href="https://raw.githubusercontent.com/Ulrich-Tonmoy/website-MERN/main/e-com/ss/client%20(2).png"
                             target="_blank"
                             rel="noreferrer"
                         >
                             <img
                                 className="projects__img"
-                                src="https://raw.githubusercontent.com/Ulrich-Tonmoy/e-com/main/ss/client%20(2).png"
+                                src="https://raw.githubusercontent.com/Ulrich-Tonmoy/website-MERN/main/e-com/ss/client%20(2).png"
                                 alt=""
                             />
                         </a>
                         <hr />
                         <a
-                            href="https://github.com/Ulrich-Tonmoy/e-com"
+                            href="https://github.com/Ulrich-Tonmoy/website-MERN/tree/main/e-com"
                             target="_blank"
                             rel="noreferrer"
                             className="button__link-source"
@@ -137,13 +137,13 @@ export default function Projects() {
                             A search engine built with google search api.
                         </span>
                         <a
-                            href="https://raw.githubusercontent.com/Ulrich-Tonmoy/doogle/main/demo/doogle.png"
+                            href="https://raw.githubusercontent.com/Ulrich-Tonmoy/website-reactjs/main/doogle/demo/doogle.png"
                             target="_blank"
                             rel="noreferrer"
                         >
                             <img
                                 className="projects__img"
-                                src="https://raw.githubusercontent.com/Ulrich-Tonmoy/doogle/main/demo/doogle.png"
+                                src="https://raw.githubusercontent.com/Ulrich-Tonmoy/website-reactjs/main/doogle/demo/doogle.png"
                                 alt=""
                             />
                         </a>
@@ -157,7 +157,7 @@ export default function Projects() {
                             <span>Live</span>
                         </a>
                         <a
-                            href="https://github.com/Ulrich-Tonmoy/doogle"
+                            href="https://github.com/Ulrich-Tonmoy/website-reactjs/tree/main/doogle"
                             target="_blank"
                             rel="noreferrer"
                             className="button__link-source"
@@ -211,13 +211,13 @@ export default function Projects() {
                             Websites build with react and APIs
                         </span>
                         <a
-                            href="https://raw.githubusercontent.com/Ulrich-Tonmoy/website-reactjs/main/website.png"
+                            href="https://raw.githubusercontent.com/Ulrich-Tonmoy/website-reactjs/main/templates/website.png"
                             target="_blank"
                             rel="noreferrer"
                         >
                             <img
                                 className="projects__img"
-                                src="https://raw.githubusercontent.com/Ulrich-Tonmoy/website-reactjs/main/website.png"
+                                src="https://raw.githubusercontent.com/Ulrich-Tonmoy/website-reactjs/main/templates/website.png"
                                 alt=""
                             />
                         </a>
@@ -231,7 +231,7 @@ export default function Projects() {
                             <span>Live</span>
                         </a>
                         <a
-                            href="https://github.com/Ulrich-Tonmoy/website-reactjs"
+                            href="https://github.com/Ulrich-Tonmoy/website-reactjs/tree/main/templates"
                             target="_blank"
                             rel="noreferrer"
                             className="button__link-source"
@@ -248,13 +248,13 @@ export default function Projects() {
                             A cryptocurrency information and news website
                         </span>
                         <a
-                            href="https://raw.githubusercontent.com/Ulrich-Tonmoy/cryptoverze/main/demo/demo1.png"
+                            href="https://raw.githubusercontent.com/Ulrich-Tonmoy/website-reactjs/main/cryptoverze/demo/demo1.png"
                             target="_blank"
                             rel="noreferrer"
                         >
                             <img
                                 className="projects__img"
-                                src="https://raw.githubusercontent.com/Ulrich-Tonmoy/cryptoverze/main/demo/demo1.png"
+                                src="https://raw.githubusercontent.com/Ulrich-Tonmoy/website-reactjs/main/cryptoverze/demo/demo1.png"
                                 alt=""
                             />
                         </a>
@@ -268,7 +268,7 @@ export default function Projects() {
                             <span>Live</span>
                         </a>
                         <a
-                            href="https://github.com/Ulrich-Tonmoy/cryptoverze"
+                            href="https://github.com/Ulrich-Tonmoy/website-reactjs/tree/main/cryptoverze"
                             target="_blank"
                             rel="noreferrer"
                             className="button__link-source"
