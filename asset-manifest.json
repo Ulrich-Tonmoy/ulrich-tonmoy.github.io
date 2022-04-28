@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.46b85d1d.chunk.css",
-    "main.js": "/static/js/main.bbfc54e0.chunk.js",
-    "main.js.map": "/static/js/main.bbfc54e0.chunk.js.map",
+    "main.js": "/static/js/main.c5da8919.chunk.js",
+    "main.js.map": "/static/js/main.c5da8919.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.bdba52ce.js",
     "runtime-main.js.map": "/static/js/runtime-main.bdba52ce.js.map",
     "static/js/2.565ad84e.chunk.js": "/static/js/2.565ad84e.chunk.js",
@@ -16,7 +16,7 @@
     "static/media/8k_earth_daymap.54672c1f.jpg": "/static/media/8k_earth_daymap.54672c1f.jpg",
     "static/media/8k_earth_normal_map.930cf2e9.jpg": "/static/media/8k_earth_normal_map.930cf2e9.jpg",
     "static/media/8k_earth_specular_map.7b4efa59.jpg": "/static/media/8k_earth_specular_map.7b4efa59.jpg",
-    "static/media/Tonmoy's_CV.9bbc7ffd.pdf": "/static/media/Tonmoy's_CV.9bbc7ffd.pdf",
+    "static/media/Tonmoy's_CV.f925d554.pdf": "/static/media/Tonmoy's_CV.f925d554.pdf",
     "static/media/moon.a2edaf85.jpg": "/static/media/moon.a2edaf85.jpg",
     "static/media/moon_normal.573c0a93.jpg": "/static/media/moon_normal.573c0a93.jpg"
   },
@@ -24,6 +24,6 @@
     "static/js/runtime-main.bdba52ce.js",
     "static/js/2.565ad84e.chunk.js",
     "static/css/main.46b85d1d.chunk.css",
-    "static/js/main.bbfc54e0.chunk.js"
+    "static/js/main.c5da8919.chunk.js"
   ]
 }
