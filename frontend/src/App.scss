@@ -112,10 +112,10 @@
         background-color: var(--white-color);
         margin: 0.25rem 0;
         border: 1px solid var(--lightGray-color);
-
         display: flex;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
 
         transition: all 0.3s ease-in-out;
 
@@ -162,6 +162,7 @@
         border-radius: 50%;
         background-color: #cbcbcb;
         margin: 0.5rem;
+        cursor: pointer;
 
         transition: background-color 0.2s ease-in-out;
 
