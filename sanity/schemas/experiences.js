@@ -4,8 +4,8 @@ export default {
     type: "document",
     fields: [
         {
-            name: "year",
-            title: "Year",
+            name: "company",
+            title: "Company",
             type: "string",
         },
         {
@@ -20,8 +20,8 @@ export default {
                     fields: [
                         { name: "name", title: "name", type: "string" },
                         {
-                            name: "company",
-                            title: "Company",
+                            name: "year",
+                            title: "Year",
                             type: "string",
                         },
                         {

@@ -9,6 +9,11 @@ export default {
             type: "string",
         },
         {
+            name: "sortId",
+            title: "SortId",
+            type: "number",
+        },
+        {
             name: "bgColor",
             title: "BgColor",
             type: "string",

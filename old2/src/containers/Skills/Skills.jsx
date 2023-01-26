@@ -73,19 +73,24 @@ const Skills = () => {
                             )
                         )}
                     </div>
-                    {filterSkills?.map((skill) => (
-                        <motion.div
-                            whileInView={{ opacity: [0, 1] }}
-                            transition={{ duration: 0.5 }}
-                            className="app__skills-item app__flex"
-                            key={skill?.name}
-                        >
-                            <div className="app__flex" style={{ backgroundColor: skill?.bgColor }}>
-                                <img src={urlFor(skill?.icon)} alt={skill?.name} />
-                            </div>
-                            <p className="p-text">{skill?.name}</p>
-                        </motion.div>
-                    ))}
+                    {filterSkills
+                        ?.sort((a, b) => a?.sortId - b?.sortId)
+                        .map((skill) => (
+                            <motion.div
+                                whileInView={{ opacity: [0, 1] }}
+                                transition={{ duration: 0.5 }}
+                                className="app__skills-item app__flex"
+                                key={skill?.name}
+                            >
+                                <div
+                                    className="app__flex"
+                                    style={{ backgroundColor: skill?.bgColor }}
+                                >
+                                    <img src={urlFor(skill?.icon)} alt={skill?.name} />
+                                </div>
+                                <p className="p-text">{skill?.name}</p>
+                            </motion.div>
+                        ))}
                 </motion.div>
                 <motion.div className="app__skills-exp">
                     <div className="app__skills-filter">
@@ -105,11 +110,20 @@ const Skills = () => {
                         ? experience?.map((exp) => (
                               <motion.div className="app__skills-epx-item" key={exp?.year}>
                                   <div className="app__skills-exp year">
-                                      <p className="bold-text">{exp?.year}</p>
+                                      <p className="bold-text">{exp?.company}</p>
                                   </div>
                                   <motion.div className="app__skills-exp-works">
-                                      {exp?.works?.map((work) => (
-                                          <div key={work?.name}>
+                                      {exp?.works?.map((work, i) => (
+                                          <div
+                                              key={work?.name}
+                                              className="app__skills-exp-work__container"
+                                          >
+                                              <div>
+                                                  <span className="app__skills-exp-work__rounder"></span>
+                                                  {exp?.works?.length !== i + 1 && (
+                                                      <span className="app__skills-exp-work__line"></span>
+                                                  )}
+                                              </div>
                                               <motion.div
                                                   whileInView={{ opacity: [0, 1] }}
                                                   transition={{ duration: 0.5 }}
@@ -117,8 +131,8 @@ const Skills = () => {
                                                   data-tip
                                                   data-for={work?.name}
                                               >
-                                                  <h4 className="bold-text">{work?.name}</h4>
-                                                  <p className="p-text">{work?.company}</p>
+                                                  <h4 className="bold-text">{work?.year}</h4>
+                                                  <p className="p-text">{work?.name}</p>
                                               </motion.div>
                                               <ReactTooltip
                                                   id={work?.name}
@@ -139,8 +153,17 @@ const Skills = () => {
                                       <p className="bold-text">{edu?.year}</p>
                                   </div>
                                   <motion.div className="app__skills-exp-works">
-                                      {edu?.educationInfo?.map((info) => (
-                                          <div key={info?.degree}>
+                                      {edu?.educationInfo?.map((info, i) => (
+                                          <div
+                                              key={info?.degree}
+                                              className="app__skills-exp-work__container"
+                                          >
+                                              <div>
+                                                  <span className="app__skills-exp-work__rounder"></span>
+                                                  {edu?.educationInfo?.length !== i + 1 && (
+                                                      <span className="app__skills-exp-work__line"></span>
+                                                  )}
+                                              </div>
                                               <motion.div
                                                   whileInView={{ opacity: [0, 1] }}
                                                   transition={{ duration: 0.5 }}
