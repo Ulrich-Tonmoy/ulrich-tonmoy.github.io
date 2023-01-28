@@ -17,18 +17,14 @@ const Github = () => {
                     <img
                         src="/favicon.ico"
                         className={styles.avatar}
-                        alt={user.login}
+                        // alt={user.login}
                         width={50}
                         height={50}
                     />
-                    <h3 className={styles.username}>{user.login}</h3>
+                    {/* <h3 className={styles.username}>{user.login}</h3> */}
                 </div>
-                <div>
-                    <h3>{user.public_repos} repos</h3>
-                </div>
-                <div>
-                    <h3>{user.followers} followers</h3>
-                </div>
+                <div>{/* <h3>{user.public_repos} repos</h3> */}</div>
+                <div>{/* <h3>{user.followers} followers</h3> */}</div>
             </div>
             <div className={styles.container}>
                 {/* {repos.map((repo) => (

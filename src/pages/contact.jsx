@@ -2,6 +2,9 @@ import { useRef, useState, useEffect } from "react";
 import ContactCode from "../components/ContactCode";
 import styles from "../styles/ContactPage.module.css";
 import emailjs from "@emailjs/browser";
+import { client } from "../client";
+import { motion } from "framer-motion";
+import "./z.css";
 
 const Contact = () => {
     const formRef = useRef();
@@ -30,10 +33,47 @@ const Contact = () => {
     }, []);
 
     return (
-        <div className={styles.container}>
+        <motion.div
+            whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
+            transition={{ duration: 0.5 }}
+            className={styles.container}
+        >
             <div>
                 <h3 className={styles.heading}>Reach Out Via Socials</h3>
                 <ContactCode />
+                <div className={styles.cards}>
+                    <div className={styles.card}>
+                        <img src="/resume.png" alt="resume" />
+                        {profile[0] && (
+                            <a download="" href={profile[0]?.cvURL} className="p-text">
+                                My Resume
+                            </a>
+                        )}
+                    </div>
+                    <div className={styles.card}>
+                        <img src="/location.png" alt="location" />
+                        <a
+                            href="https://www.google.com/maps/@23.8114631,90.4227104,16z"
+                            className="p-text"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Bashundhara R/A
+                        </a>
+                    </div>
+                    <div className={styles.card}>
+                        <img src="/email.png" alt="email" />
+                        <a href="mailto:ulrichtonmoy1@gmail.com" className="p-text">
+                            ulrichtonmoy1@gmail.com
+                        </a>
+                    </div>
+                    <div className={styles.card}>
+                        <img src="/mobile.png" alt="mobile" />
+                        <a href="tel:+8801850490430" className="p-text">
+                            01850490430
+                        </a>
+                    </div>
+                </div>
             </div>
             <div>
                 <h3 className={styles.heading}>Or Fill Out This Form</h3>
@@ -59,7 +99,7 @@ const Contact = () => {
                     <button type="submit">Submit</button>
                 </form>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

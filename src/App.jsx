@@ -19,10 +19,8 @@ function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="/home" element={<Home />} />
                     <Route path="/about" element={<About />} />
-                    {/* <Route path="/work" element={<Articles />} /> */}
-                    <Route path="/articles" element={<Articles />} />
+                    <Route path="/skills" element={<Articles />} />
                     <Route path="/projects" element={<Projects />} />
-                    {/* <Route path="/skills" element={<Github />} /> */}
                     <Route path="/github" element={<Github />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/settings" element={<Settings />} />
