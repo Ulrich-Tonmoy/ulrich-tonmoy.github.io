@@ -1,5 +1,5 @@
 import "react-tooltip/dist/react-tooltip.css";
-import styles from "../styles/ArticlesPage.module.css";
+import styles from "../styles/SkillsPage.module.css";
 import { motion } from "framer-motion";
 import { client, urlFor } from "./../client";
 import { useState, useEffect } from "react";
@@ -90,7 +90,7 @@ const Skills = () => {
                                     style={{ backgroundColor: skill?.bgColor }}
                                 >
                                     <img
-                                        src={skill?.icon ? urlFor(skill?.icon) : "/vscode_icon.svg"}
+                                        src={urlFor(skill?.icon)}
                                         alt={skill?.name}
                                     />
                                 </div>
