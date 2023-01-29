@@ -34,7 +34,7 @@
 .form textarea {
     font-family: "JetBrains Mono";
     margin-bottom: 1.5rem;
-    background: var(--article-bg);
+    background: var(--secondary-bg);
     color: var(--text-color);
     border: none;
     font-size: 1rem;

@@ -21,7 +21,7 @@
     --footer-hover-bg: #4f4f52;
     --scrollbar-track-bg: #24292e;
     --scrollbar-thumb-bg: #333536;
-    --article-bg: #1f2428;
+    --secondary-bg: #1f2428;
 }
 
 /* Dracula */
@@ -47,7 +47,7 @@
     --footer-hover-bg: #4f4f52;
     --scrollbar-track-bg: #282a36;
     --scrollbar-thumb-bg: #454647;
-    --article-bg: #21222c;
+    --secondary-bg: #21222c;
 }
 
 /* Ayu Dark */
@@ -73,7 +73,7 @@
     --footer-hover-bg: #4f4f52;
     --scrollbar-track-bg: #0a0e14;
     --scrollbar-thumb-bg: #454647;
-    --article-bg: #10121a;
+    --secondary-bg: #10121a;
 }
 
 /* Ayu Mirage */
@@ -99,7 +99,7 @@
     --footer-hover-bg: #4f4f52;
     --scrollbar-track-bg: #1f2430;
     --scrollbar-thumb-bg: #454647;
-    --article-bg: #252e3d;
+    --secondary-bg: #252e3d;
 }
 
 /* Nord */
@@ -125,7 +125,7 @@
     --footer-hover-bg: #4f4f52;
     --scrollbar-track-bg: #2e3440;
     --scrollbar-thumb-bg: #454647;
-    --article-bg: #363f50;
+    --secondary-bg: #363f50;
 }
 
 /* Night Owl */
@@ -151,5 +151,5 @@
     --footer-hover-bg: #1b222f;
     --scrollbar-track-bg: #011627;
     --scrollbar-thumb-bg: #043254;
-    --article-bg: #031d33;
+    --secondary-bg: #031d33;
 }

@@ -1,9 +1,9 @@
-import "./Skills.scss";
+import "react-tooltip/dist/react-tooltip.css";
+import styles from "../styles/ArticlesPage.module.css";
 import { motion } from "framer-motion";
-import { client, urlFor } from "./../../client";
+import { client, urlFor } from "./../client";
 import { useState, useEffect } from "react";
-import ReactTooltip from "react-tooltip";
-import { AppWrap, MotionWrap } from "./../../wrapper";
+import { Tooltip } from "react-tooltip";
 
 const Skills = () => {
     const [experience, setExperience] = useState([]);
@@ -54,22 +54,22 @@ const Skills = () => {
             whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
             transition={{ duration: 0.5 }}
         >
-            <h2 className="head-text">Skills & Qualifications</h2>
-            <div className="app__skills-container">
+            <h2 className={styles.headText}>Skills & Qualifications</h2>
+            <div className={styles.container}>
                 <motion.div
                     animate={animateCard}
                     transition={{ duration: 0.5, delayChildren: 0.5 }}
-                    className="app__skills-list"
+                    className={styles.list}
                 >
-                    <div className="app__skills-filter">
+                    <div className={styles.filter}>
                         {["Frontend", "Backend", "Game", "AI/ML", "Other", "All"].map(
                             (item, index) => (
                                 <div
                                     key={index}
                                     onClick={() => handleWorkFilter(item)}
-                                    className={`app__skills-filter-item app__flex p-text ${
-                                        activeFilter === item ? "item-active" : ""
-                                    }`}
+                                    className={`${styles.filterItem} ${styles.flex} ${
+                                        styles.text
+                                    } ${activeFilter === item ? `${styles.itemActive}` : ""}`}
                                 >
                                     {item}
                                 </div>
@@ -82,27 +82,30 @@ const Skills = () => {
                             <motion.div
                                 whileInView={{ opacity: [0, 1] }}
                                 transition={{ duration: 0.5 }}
-                                className="app__skills-item app__flex"
+                                className={`${styles.item} ${styles.flex}`}
                                 key={skill?.name}
                             >
                                 <div
-                                    className="app__flex"
+                                    className={`${styles.flex} ${styles.itemDiv}`}
                                     style={{ backgroundColor: skill?.bgColor }}
                                 >
-                                    <img src={urlFor(skill?.icon)} alt={skill?.name} />
+                                    <img
+                                        src={skill?.icon ? urlFor(skill?.icon) : "/vscode_icon.svg"}
+                                        alt={skill?.name}
+                                    />
                                 </div>
-                                <p className="p-text">{skill?.name}</p>
+                                <p className={styles.text}>{skill?.name}</p>
                             </motion.div>
                         ))}
                 </motion.div>
-                <motion.div className="app__skills-exp">
-                    <div className="app__skills-filter">
+                <motion.div className={styles.exp}>
+                    <div className={styles.filter}>
                         {["Education", "Work Experience"].map((item, index) => (
                             <div
                                 key={index}
                                 onClick={() => handleQualification(item)}
-                                className={`app__skills-filter-item app__flex p-text ${
-                                    activeQualification === item ? "item-active" : ""
+                                className={`${styles.filterItem} ${styles.flex} ${styles.text} ${
+                                    activeQualification === item ? `${styles.itemActive}` : ""
                                 }`}
                             >
                                 {item}
@@ -110,81 +113,79 @@ const Skills = () => {
                         ))}
                     </div>
                     {activeQualification === "Work Experience"
-                        ? experience?.map((exp) => (
-                              <motion.div className="app__skills-epx-item" key={exp?.year}>
-                                  <div className="app__skills-exp year">
-                                      <p className="bold-text">{exp?.company}</p>
+                        ? experience?.map((exp, index) => (
+                              <motion.div className={styles.expItem} key={index}>
+                                  <div className={styles.expYear}>
+                                      <p className={styles.boldText}>{exp?.company}</p>
                                   </div>
-                                  <motion.div className="app__skills-exp-works">
+                                  <motion.div className={styles.expWorks}>
                                       {exp?.works?.map((work, i) => (
-                                          <div
-                                              key={work?.name}
-                                              className="app__skills-exp-work__container"
-                                          >
+                                          <div key={i} className={styles.expWorkContainer}>
                                               <div>
-                                                  <span className="app__skills-exp-work__rounder"></span>
+                                                  <span className={styles.expWorkRounder}></span>
                                                   {exp?.works?.length !== i + 1 && (
-                                                      <span className="app__skills-exp-work__line"></span>
+                                                      <span className={styles.expWorkLine}></span>
                                                   )}
                                               </div>
                                               <motion.div
                                                   whileInView={{ opacity: [0, 1] }}
                                                   transition={{ duration: 0.5 }}
-                                                  className="app__skills-exp-work"
-                                                  data-tip
-                                                  data-for={work?.name}
-                                              >
-                                                  <h4 className="bold-text">{work?.year}</h4>
-                                                  <p className="p-text">{work?.name}</p>
-                                              </motion.div>
-                                              <ReactTooltip
+                                                  className={styles.expWork}
                                                   id={work?.name}
+                                              >
+                                                  <h4 className={styles.boldText}>{work?.year}</h4>
+                                                  <p className={styles.text}>{work?.name}</p>
+                                              </motion.div>
+                                              <Tooltip
+                                                  anchorId={work?.name}
                                                   effect="solid"
                                                   arrowColor="#fff"
-                                                  className="skills-tooltip"
+                                                  clickable
+                                                  className={styles.skillsTooltip}
                                               >
                                                   {work?.desc}
-                                              </ReactTooltip>
+                                              </Tooltip>
                                           </div>
                                       ))}
                                   </motion.div>
                               </motion.div>
                           ))
-                        : education?.map((edu) => (
-                              <motion.div className="app__skills-epx-item" key={edu?.year}>
-                                  <div className="app__skills-exp year">
-                                      <p className="bold-text">{edu?.year}</p>
+                        : education?.map((edu, index) => (
+                              <motion.div className={styles.expItem} key={index}>
+                                  <div className={styles.expYear}>
+                                      <p className={styles.boldText}>{edu?.year}</p>
                                   </div>
-                                  <motion.div className="app__skills-exp-works">
+                                  <motion.div className={styles.expWorks}>
                                       {edu?.educationInfo?.map((info, i) => (
-                                          <div
-                                              key={info?.degree}
-                                              className="app__skills-exp-work__container"
-                                          >
+                                          <div key={i} className={styles.expWorkContainer}>
                                               <div>
-                                                  <span className="app__skills-exp-work__rounder"></span>
+                                                  <span className={styles.expWorkRounder}></span>
                                                   {edu?.educationInfo?.length !== i + 1 && (
-                                                      <span className="app__skills-exp-work__line"></span>
+                                                      <span className={styles.expWorkLine}></span>
                                                   )}
                                               </div>
                                               <motion.div
                                                   whileInView={{ opacity: [0, 1] }}
                                                   transition={{ duration: 0.5 }}
-                                                  className="app__skills-exp-work"
-                                                  data-tip
-                                                  data-for={info?.degree}
-                                              >
-                                                  <h4 className="bold-text">{info?.degree}</h4>
-                                                  <p className="p-text">{info?.instituteName}</p>
-                                              </motion.div>
-                                              <ReactTooltip
+                                                  className={styles.expWork}
                                                   id={info?.degree}
+                                              >
+                                                  <h4 className={styles.boldText}>
+                                                      {info?.degree}
+                                                  </h4>
+                                                  <p className={styles.text}>
+                                                      {info?.instituteName}
+                                                  </p>
+                                              </motion.div>
+                                              <Tooltip
+                                                  anchorId={info?.degree}
                                                   effect="solid"
                                                   arrowColor="#fff"
-                                                  className="skills-tooltip"
+                                                  clickable
+                                                  className={styles.skillsTooltip}
                                               >
                                                   {info?.desc}
-                                              </ReactTooltip>
+                                              </Tooltip>
                                           </div>
                                       ))}
                                   </motion.div>
@@ -196,4 +197,4 @@ const Skills = () => {
     );
 };
 
-export default AppWrap(MotionWrap(Skills, "app__skills"), "skills", "app__whitebg");
+export default Skills;

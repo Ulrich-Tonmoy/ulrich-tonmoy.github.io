@@ -1,5 +1,5 @@
 export { default as About } from "./About";
-export { default as Articles } from "./Articles";
+export { default as Skills } from "./skills";
 export { default as Contact } from "./Contact";
 export { default as Github } from "./Github";
 export { default as Home } from "./Home";

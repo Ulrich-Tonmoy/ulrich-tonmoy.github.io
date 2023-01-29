@@ -3,7 +3,7 @@ import Layout from "./components/Layout";
 import "./styles/globals.css";
 import "./styles/themes.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { About, Articles, Contact, Github, Home, Projects, Settings } from "./pages";
+import { About, Skills, Contact, Github, Home, Projects, Settings } from "./pages";
 
 function App() {
     useEffect(() => {
@@ -19,7 +19,7 @@ function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="/home" element={<Home />} />
                     <Route path="/about" element={<About />} />
-                    <Route path="/skills" element={<Articles />} />
+                    <Route path="/skills" element={<Skills />} />
                     <Route path="/projects" element={<Projects />} />
                     <Route path="/github" element={<Github />} />
                     <Route path="/contact" element={<Contact />} />
