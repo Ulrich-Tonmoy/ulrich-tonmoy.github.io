@@ -28,10 +28,15 @@
 }
 
 .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: 1.5rem 0;
+}
+
+.container > p {
+    padding: 1rem;
 }
 
 .title {
@@ -40,6 +45,12 @@
 
 .contributions article {
     width: 100% !important;
+}
+
+@media screen and (max-width: 900px) {
+    .container {
+        display: block;
+    }
 }
 
 @media screen and (max-width: 900px) {
