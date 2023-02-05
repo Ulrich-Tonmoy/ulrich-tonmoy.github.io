@@ -4,7 +4,6 @@ import styles from "../styles/ContactPage.module.css";
 import emailjs from "@emailjs/browser";
 import { client } from "../client";
 import { motion } from "framer-motion";
-import "./z.css";
 
 const Contact = () => {
     const formRef = useRef();
