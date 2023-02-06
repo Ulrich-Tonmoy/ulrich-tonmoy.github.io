@@ -51,20 +51,20 @@
 .filterItem {
     padding: 0.5rem 0.5rem;
     border-radius: 0.5rem;
-    background-color: var(--secondary-bg);
-    color: #fff;
+    background-color: var(--explorer-bg);
+    color: var(--text-color);
     font-weight: 800;
     cursor: pointer;
     transition: all 0.3s ease;
     margin: 0.5rem;
 }
 .filterItem:hover {
-    background-color: #edf2f8;
-    color: #000;
+    background-color: var(--button-bg);
+    color: var(--text-color);
 }
 .itemActive {
     background-color: var(--accent-color);
-    color: #fff;
+    color: var(--text-color);
 }
 .item {
     flex-direction: column;
