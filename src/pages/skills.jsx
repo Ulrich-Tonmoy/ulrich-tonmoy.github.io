@@ -84,15 +84,13 @@ const Skills = () => {
                                 transition={{ duration: 0.5 }}
                                 className={`${styles.item} ${styles.flex}`}
                                 key={skill?.name}
+                                title={skill?.name}
                             >
                                 <div
                                     className={`${styles.flex} ${styles.itemDiv}`}
                                     style={{ backgroundColor: skill?.bgColor }}
                                 >
-                                    <img
-                                        src={urlFor(skill?.icon)}
-                                        alt={skill?.name}
-                                    />
+                                    <img src={urlFor(skill?.icon)} alt={skill?.name} />
                                 </div>
                                 <p className={styles.text}>{skill?.name}</p>
                             </motion.div>
