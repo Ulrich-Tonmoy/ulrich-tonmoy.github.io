@@ -3,7 +3,7 @@ import Layout from "./components/Layout";
 import "./styles/globals.css";
 import "./styles/themes.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { About, Skills, Contact, Github, Home, Projects, Settings } from "./pages";
+import { About, Skills, Contact, Github, Home, Projects, Settings, NotFound } from "./pages";
 
 function App() {
     useEffect(() => {
@@ -16,14 +16,15 @@ function App() {
         <Router>
             <Layout>
                 <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/home" element={<Home />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/skills" element={<Skills />} />
-                    <Route path="/projects" element={<Projects />} />
-                    <Route path="/github" element={<Github />} />
-                    <Route path="/contact" element={<Contact />} />
-                    <Route path="/settings" element={<Settings />} />
+                    <Route exact path="/" element={<Home />} />
+                    <Route exact path="/home" element={<Home />} />
+                    <Route exact path="/about" element={<About />} />
+                    <Route exact path="/skills" element={<Skills />} />
+                    <Route exact path="/projects" element={<Projects />} />
+                    <Route exact path="/github" element={<Github />} />
+                    <Route exact path="/contact" element={<Contact />} />
+                    <Route exact path="/settings" element={<Settings />} />
+                    <Route path="/*" element={<NotFound />} />
                 </Routes>
             </Layout>
         </Router>
