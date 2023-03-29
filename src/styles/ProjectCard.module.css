@@ -104,6 +104,11 @@
     font-size: 2rem;
   }
 }
+@media screen and (max-width: 450px) {
+  .projectItem {
+    margin: 0;
+  }
+}
 @media screen and (max-width: 300px) {
   .projectItem {
     width: 470px;
