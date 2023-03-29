@@ -1,4 +1,6 @@
-# [live](https://ulrich-tonmoy.github.io)
+# [live Github Page](https://ulrich-tonmoy.github.io)
+
+# [live Netlify](https://ulrich-tonmoy.netlify.app/)
 
 ## Description
 
