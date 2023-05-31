@@ -37,7 +37,7 @@
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: flex-start;
-  margin-right: 5rem;
+  margin-right: 3rem;
 }
 .filter {
   display: flex;
