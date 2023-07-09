@@ -2,7 +2,7 @@ import styles from "../styles/HomePage.module.css";
 import { useEffect, useState } from "react";
 import { client, urlFor } from "./../client";
 import { motion } from "framer-motion";
-import Hero from "../components/Hero";
+import { Hero } from "../components";
 
 export default function Home() {
   const [profile, setProfile] = useState([]);

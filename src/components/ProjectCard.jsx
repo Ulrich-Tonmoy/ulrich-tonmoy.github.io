@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { urlFor } from "./../client";
 import { EyeIcon, GithubIcon } from "./icons";
 import { useState } from "react";
-import Modal from "./Modal";
+import { Modal } from "./";
 
 const ProjectCard = ({ project }) => {
   const [showModal, setShowModal] = useState(false);

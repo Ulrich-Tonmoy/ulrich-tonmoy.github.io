@@ -1,4 +1,4 @@
-import ProjectCard from "../components/ProjectCard";
+import { ProjectCard } from "../components";
 import styles from "../styles/ProjectsPage.module.css";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";

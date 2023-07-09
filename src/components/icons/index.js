@@ -1,16 +1,37 @@
-export { default as AccountIcon } from "./AccountIcon";
-export { default as BellIcon } from "./BellIcon";
-export { default as CheckIcon } from "./CheckIcon";
-export { default as ChevronRight } from "./ChevronRight";
-export { default as CodeIcon } from "./CodeIcon";
-export { default as ErrorIcon } from "./ErrorIcon";
-export { default as FilesIcon } from "./FilesIcon";
-export { default as GithubIcon } from "./GithubIcon";
-export { default as EyeIcon } from "./EyeIcon";
-export { default as MailIcon } from "./MailIcon";
-export { default as PencilIcon } from "./PencilIcon";
-export { default as ReactIcon } from "./ReactIcon";
-export { default as SettingsIcon } from "./SettingsIcon";
-export { default as SourceControlIcon } from "./SourceControlIcon";
-export { default as WarningIcon } from "./WarningIcon";
-export { default as PersonIcon } from "./PersonIcon";
+import { lazy } from "react";
+
+const AccountIcon = lazy(() => import("./AccountIcon"));
+const BellIcon = lazy(() => import("./BellIcon"));
+const CheckIcon = lazy(() => import("./CheckIcon"));
+const ChevronRight = lazy(() => import("./ChevronRight"));
+const CodeIcon = lazy(() => import("./CodeIcon"));
+const ErrorIcon = lazy(() => import("./ErrorIcon"));
+const FilesIcon = lazy(() => import("./FilesIcon"));
+const GithubIcon = lazy(() => import("./GithubIcon"));
+const EyeIcon = lazy(() => import("./EyeIcon"));
+const MailIcon = lazy(() => import("./MailIcon"));
+const PencilIcon = lazy(() => import("./PencilIcon"));
+const ReactIcon = lazy(() => import("./ReactIcon"));
+const SettingsIcon = lazy(() => import("./SettingsIcon"));
+const SourceControlIcon = lazy(() => import("./SourceControlIcon"));
+const WarningIcon = lazy(() => import("./WarningIcon"));
+const PersonIcon = lazy(() => import("./PersonIcon"));
+
+export {
+  AccountIcon,
+  BellIcon,
+  CheckIcon,
+  ChevronRight,
+  CodeIcon,
+  ErrorIcon,
+  FilesIcon,
+  GithubIcon,
+  EyeIcon,
+  MailIcon,
+  PencilIcon,
+  ReactIcon,
+  SettingsIcon,
+  SourceControlIcon,
+  WarningIcon,
+  PersonIcon,
+};
