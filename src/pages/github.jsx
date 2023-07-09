@@ -84,7 +84,7 @@ const Github = () => {
         </a>
         <a href="https://github.com/anuraghazra/github-readme-stats">
           <img
-            src="https://github-readme-stats.vercel.app/api/top-langs/?username=Ulrich-Tonmoy&theme=blue-green&layout=compact"
+            src="https://github-readme-stats.vercel.app/api/top-langs/?username=Ulrich-Tonmoy&theme=blue-green&layout=compact&langs_count=30"
             alt="Top Langs"
             title="Top Langs"
           />
