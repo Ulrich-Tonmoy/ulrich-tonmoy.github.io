@@ -2,7 +2,6 @@ import styles from "../styles/HomePage.module.css";
 import { useEffect, useState } from "react";
 import { client, urlFor } from "./../client";
 import { motion } from "framer-motion";
-import { Hero } from "../components";
 
 export default function Home() {
   const [profile, setProfile] = useState([]);
@@ -23,7 +22,6 @@ export default function Home() {
     });
   }, []);
 
-  if (Math.floor(Math.random() * 2 && window.innerWidth >= 1024) === 1) return <Hero />;
   return (
     <div className={styles.header}>
       <motion.div

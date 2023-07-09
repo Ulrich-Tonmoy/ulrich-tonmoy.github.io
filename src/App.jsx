@@ -1,10 +1,10 @@
 import { useEffect } from "react";
-import { Layout } from "./components";
 import "./styles/globals.css";
 import "./styles/themes.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import { Suspense } from "react";
+import { Hero, Layout } from "./components";
 import { About, Contact, Github, Home, NotFound, Projects, Settings, Skills } from "./pages";
 
 function App() {
@@ -27,6 +27,7 @@ function App() {
             <Route exact path="/github" element={<Github />} />
             <Route exact path="/contact" element={<Contact />} />
             <Route exact path="/settings" element={<Settings />} />
+            <Route exact path="/3d" element={<Hero />} />
             <Route path="/*" element={<NotFound />} />
           </Routes>
         </Suspense>
