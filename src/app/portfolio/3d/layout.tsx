@@ -1,11 +1,10 @@
 import { Work_Sans } from "next/font/google";
-import "./globals.css";
 import { Metadata } from "next";
 
 const inter = Work_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Tonmoy",
+  title: "Tonmoy - 3D Portfolio",
   description: "Tonmoy's portfolio website",
 };
 
