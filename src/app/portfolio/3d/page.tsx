@@ -1,5 +1,7 @@
+import { Home } from "@/components";
+
 const Portfolio3D = () => {
-  return <div>Portfolio3D</div>;
+  return <Home />;
 };
 
 export default Portfolio3D;
