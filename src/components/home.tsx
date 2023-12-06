@@ -4,6 +4,7 @@ import Loader from "./loader";
 import { Bird, Island, Plane, Sky } from "@/models";
 import Image from "next/image";
 import { soundoff, soundon } from "@/lib/icon";
+import HomeInfo from "./home-info";
 
 const Home = () => {
   const audioRef = useRef(new Audio("/sakura.mp3"));
@@ -59,7 +60,7 @@ const Home = () => {
   return (
     <section className="w-full h-screen relative">
       <div className="absolute top-28 left-0 right-0 z-10 flex items-center justify-center">
-        {/* {currentStage && <HomeInfo currentStage={currentStage} />} */}
+        {currentStage && <HomeInfo currentStage={currentStage} />}
       </div>
       <Canvas
         className="w-full h-screen bg-transparent"
