@@ -15,13 +15,13 @@ const About = () => {
   return (
     <section className="max-container">
       <h1 className="head-text">
-        Hello, I&apos;m
+        Hello, II&apos;m
         <span className="blue-gradient_text font-semibold drop-shadow"> Tonmoy</span> 👋
       </h1>
 
       <div className="mt-5 flex flex-col gap-3 text-slate-500">
         <p>
-          Software Engineer & Game Developer, specializing in technical education through
+          Software Engineer based in Croatia, specializing in technical education through
           hands-on learning and building applications.
         </p>
       </div>
@@ -37,7 +37,6 @@ const About = () => {
                 <Image
                   src={skill.imageUrl}
                   alt={skill.name}
-                  title={skill.name}
                   className="w-1/2 h-1/2 object-contain"
                 />
               </div>
@@ -50,16 +49,17 @@ const About = () => {
         <h3 className="subhead-text">Work Experience.</h3>
         <div className="mt-5 flex flex-col gap-3 text-slate-500">
           <p>
-            I&apos;ve worked with all sorts of companies, leveling up my skills and
-            teaming up with smart people. Here&apos;s the rundown:
+            II&apos;ve worked with all sorts of companies, leveling up my skills and
+            teaming up with smart people. HereI&apos;s the rundown:
           </p>
         </div>
 
         <div className="mt-12 flex">
-          <VerticalTimeline animate={true}>
-            {experiences.map((experience) => (
+          <VerticalTimeline>
+            {experiences.map((experience, index) => (
               <VerticalTimelineElement
-                key={experience.company_name}
+                key={index}
+                visible={true}
                 date={experience.date}
                 iconStyle={{ background: experience.iconBg }}
                 icon={
