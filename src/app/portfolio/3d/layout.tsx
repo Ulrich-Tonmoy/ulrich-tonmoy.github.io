@@ -1,6 +1,6 @@
 import { Work_Sans } from "next/font/google";
 import { Metadata } from "next";
-import { Navbar } from "@/components";
+import { Footer, Navbar } from "@/components";
 
 const WorkSans = Work_Sans({ subsets: ["latin"] });
 
@@ -14,6 +14,7 @@ const Portfolio3DLayout = ({ children }: { children: React.ReactNode }) => {
     <main className={`${WorkSans.className} bg-slate-300/20`}>
       <Navbar />
       {children}
+      <Footer />
     </main>
   );
 };
