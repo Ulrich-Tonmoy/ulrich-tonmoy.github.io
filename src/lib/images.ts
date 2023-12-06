@@ -1,7 +1,7 @@
-import hero from "./hero.jpg";
-import meta from "./meta.png";
-import shopify from "./shopify.png";
-import starbucks from "./starbucks.png";
-import tesla from "./tesla.png";
+import hero from "../../public/images/hero.jpg";
+import meta from "../../public/images/meta.png";
+import shopify from "../../public/images/shopify.png";
+import starbucks from "../../public/images/starbucks.png";
+import tesla from "../../public/images/tesla.png";
 
 export { hero, meta, shopify, starbucks, tesla };
