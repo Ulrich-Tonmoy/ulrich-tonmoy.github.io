@@ -2,11 +2,10 @@
 
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useState, useRef, useEffect } from "react";
-import { Loader, HomeInfo } from "@/components";
+import { HomeInfo, CanvasLoader } from "@/components";
 import { Bird, Island, Plane, Sky } from "@/models";
 import Image from "next/image";
 import { soundoff, soundon } from "@/lib/icon";
-import { CanvasLoader } from "@/components/canvas";
 
 const Home = () => {
   const audioRef = useRef(new Audio("/sakura.mp3"));

@@ -9,14 +9,20 @@ interface HomeInfoProps {
 const HomeInfo = ({ currentStage }: HomeInfoProps) => {
   if (currentStage === 1)
     return (
-      <h1 className="sm:text-xl sm:leading-snug text-center neo-brutalism-blue py-4 px-8 text-white mx-5">
-        Hi, I&apos;m
-        <span className="font-semibold mx-2 text-white">Tonmoy</span>
-        👋
-        <br />A Software Engineer
-        <br />&
-        <br />A Game Developer
-      </h1>
+      <div className="info-box">
+        <h1 className="sm:text-xl sm:leading-snug text-center py-2 px-4 text-white mx-5">
+          Hi, I&apos;m
+          <span className="font-semibold mx-2 text-white">Tonmoy</span>
+          👋
+          <br />A Software Engineer
+          <br />&
+          <br />A Game Developer
+        </h1>
+        <Link href="/portfolio/3d/desk" className="neo-brutalism-white neo-btn">
+          My Desk
+          <Image src={arrow} alt="arrow" className="w-4 h-4 object-contain" />
+        </Link>
+      </div>
     );
 
   if (currentStage === 2) {
