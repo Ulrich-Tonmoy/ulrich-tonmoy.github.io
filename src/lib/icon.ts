@@ -23,7 +23,7 @@ import snapgram from "../../public/icons/snapgram.svg";
 import summiz from "../../public/icons/summiz.svg";
 import threads from "../../public/icons/threads.svg";
 import arrow from "../../public/icons/arrow.svg";
-import contact from "../../public/icons/contact.svg";
+import contact from "../../public/icons/contact.png";
 import soundon from "../../public/icons/soundon.png";
 import soundoff from "../../public/icons/soundoff.png";
 

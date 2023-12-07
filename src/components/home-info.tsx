@@ -15,8 +15,8 @@ const HomeInfo = ({ currentStage }: HomeInfoProps) => {
           <span className="font-semibold mx-2 text-white">Tonmoy</span>
           👋
           <br />A Software Engineer
-          <br />&
-          <br />A Game Developer
+          {/* <br />&
+          <br />A Game Developer */}
         </h1>
         <Link href="/portfolio/3d/desk" className="neo-brutalism-white neo-btn">
           My Desk

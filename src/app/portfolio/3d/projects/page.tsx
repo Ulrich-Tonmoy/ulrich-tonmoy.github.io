@@ -7,6 +7,7 @@ import Link from "next/link";
 const Projects = () => {
   return (
     <section className="max-container">
+      <title>Tonmoy - 3D Portfolio(Projects)</title>
       <h1 className="head-text">
         My&nbsp;
         <span className="blue-gradient_text drop-shadow font-semibold">Projects</span>

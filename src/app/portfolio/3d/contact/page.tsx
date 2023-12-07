@@ -6,7 +6,7 @@ import { Suspense, useRef, useState } from "react";
 
 import { Fox } from "@/models";
 import useAlert from "@/lib/hooks/use-alert";
-import { Alert, Loader } from "@/components";
+import { Alert, CanvasLoader } from "@/components";
 
 const Contact = () => {
   const formRef = useRef<any>();
@@ -73,6 +73,7 @@ const Contact = () => {
 
   return (
     <section className="relative flex lg:flex-row flex-col max-container">
+      <title>Tonmoy - 3D Portfolio(Contact)</title>
       {alert.show && <Alert {...alert} />}
 
       <div className="flex-1 min-w-[50%] flex flex-col">
@@ -89,7 +90,7 @@ const Contact = () => {
               type="text"
               name="name"
               className="input"
-              placeholder="John"
+              placeholder="Tonmoy"
               required
               value={form.name}
               onChange={handleChange}
@@ -103,7 +104,7 @@ const Contact = () => {
               type="email"
               name="email"
               className="input"
-              placeholder="John@gmail.com"
+              placeholder="tonmoy@gmail.com"
               required
               value={form.email}
               onChange={handleChange}
@@ -151,7 +152,7 @@ const Contact = () => {
           <pointLight position={[5, 10, 0]} intensity={2} />
           <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={2} />
 
-          <Suspense fallback={<Loader />}>
+          <Suspense fallback={<CanvasLoader />}>
             <Fox
               currentAnimation={currentAnimation}
               position={[0.5, 0.35, 0]}

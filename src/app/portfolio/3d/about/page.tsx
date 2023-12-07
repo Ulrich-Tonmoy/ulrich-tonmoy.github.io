@@ -14,6 +14,7 @@ import Image from "next/image";
 const About = () => {
   return (
     <section className="max-container">
+      <title>Tonmoy - 3D Portfolio(About)</title>
       <h1 className="head-text">
         Hello, I&apos;m
         <span className="blue-gradient_text font-semibold drop-shadow"> Tonmoy</span> 👋
