@@ -25,6 +25,12 @@ const Navbar = () => {
         >
           Projects
         </Link>
+        <Link
+          href="/portfolio/3d/desk"
+          className={`${path === "desk" ? "text-blue-500" : "text-black"}`}
+        >
+          Desk
+        </Link>
       </nav>
     </header>
   );
