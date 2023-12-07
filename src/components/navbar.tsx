@@ -10,9 +10,9 @@ const Navbar = () => {
         href="/portfolio/3d"
         className="w-20 h-10 rounded-lg bg-white items-center justify-center flex font-bold shadow-md"
       >
-        <p className="blue-gradient_text">Tonmoy</p>
+        <p className="blue-gradient_text px-1">Tonmoy</p>
       </Link>
-      <nav className="flex text-lg gap-7 font-medium">
+      <nav className="flex text-lg gap-2 md:gap-7 font-medium">
         <Link
           href="/portfolio/3d/about"
           className={`${path === "about" ? "text-blue-500" : "text-black"}`}
