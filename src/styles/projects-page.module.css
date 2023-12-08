@@ -73,7 +73,10 @@
 }
 @media screen and (max-width: 450px) {
   .headText {
-    font-size: 1.5rem;
+    font-size: 1rem;
+  }
+  .card {
+    width: 73vw;
   }
 }
 @media screen and (max-width: 300px) {
