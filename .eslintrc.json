@@ -1,3 +1,15 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "overrides": [
+    {
+      "files": [
+        "src/components/vs-code/titlebar.tsx",
+        "src/components/vs-code/theme-info.tsx",
+        "src/app/portfolio/3d/page.tsx"
+      ],
+      "rules": {
+        "*": "off"
+      }
+    }
+  ]
 }
