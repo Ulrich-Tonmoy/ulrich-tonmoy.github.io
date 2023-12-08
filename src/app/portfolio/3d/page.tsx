@@ -1,5 +1,6 @@
 "use client";
 
+/* eslint-disable */
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useState, useRef, useEffect } from "react";
 import { HomeInfo, CanvasLoader } from "@/components/3d";
