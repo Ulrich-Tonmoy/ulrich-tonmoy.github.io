@@ -1,0 +1,39 @@
+{
+  "name": "ulrich-tonmoy.github.io",
+  "version": "4.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^3.11.0",
+    "@react-spring/three": "^9.7.3",
+    "@react-three/drei": "^9.90.1",
+    "@react-three/fiber": "^8.15.12",
+    "@sanity/client": "^6.9.3",
+    "@sanity/image-url": "^1.0.2",
+    "framer-motion": "^10.16.15",
+    "maath": "^0.10.4",
+    "next": "14.0.4",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-tooltip": "^5.25.0",
+    "react-vertical-timeline-component": "^3.6.0",
+    "three": "^0.159.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/react-vertical-timeline-component": "^3.3.6",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.4",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.6",
+    "typescript": "^5"
+  }
+}

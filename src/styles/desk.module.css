@@ -1,0 +1,29 @@
+.deskSection {
+  position: relative;
+  width: 100%;
+  height: 78vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 72px;
+}
+
+.deskModelContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  top: calc(120px);
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.paddingX {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}

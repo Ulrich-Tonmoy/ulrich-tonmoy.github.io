@@ -1,0 +1,362 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* VS Code Start */
+
+/* GitHub Dark */
+:root {
+  --main-bg: #24292e;
+  --bg-text: rgba(56, 58, 61, 0.35);
+  --text-color: #efefef;
+  --accent-color: #f9826c;
+  --titlebar-bg: #1f2428;
+  --sidebar-bg: #24292e;
+  --sidebar-hover-bg: #1f2428;
+  --explorer-bg: #1f2428;
+  --explorer-hover-bg: #24292e;
+  --explorer-border: #161a1d;
+  --tabs-bg: #1f2428;
+  --tab-bg: #1f2428;
+  --tab-active-bg: #24292e;
+  --tab-border: #24292e;
+  --footer-bg: #24292e;
+  --footer-border: #1b1f23;
+  --button-bg: #176f2c;
+  --button-text: #dcffe4;
+  --footer-hover-bg: #4f4f52;
+  --scrollbar-track-bg: #24292e;
+  --scrollbar-thumb-bg: #333536;
+  --secondary-bg: #1f2428;
+}
+
+/* Dracula */
+[data-theme="dracula"] {
+  --main-bg: #282a36;
+  --bg-text: #313340;
+  --text-color: #efefef;
+  --accent-color: #bd93f9;
+  --titlebar-bg: #1e1f29;
+  --sidebar-bg: #343746;
+  --sidebar-hover-bg: #3c3d51;
+  --explorer-bg: #21222c;
+  --explorer-hover-bg: #313241;
+  --explorer-border: #161a1d;
+  --tabs-bg: #191a21;
+  --tab-bg: #21222c;
+  --tab-active-bg: #282a36;
+  --tab-border: #191a21;
+  --footer-bg: #191a21;
+  --footer-border: #191a21;
+  --button-bg: #44475a;
+  --button-text: #f8f8f2;
+  --footer-hover-bg: #4f4f52;
+  --scrollbar-track-bg: #282a36;
+  --scrollbar-thumb-bg: #454647;
+  --secondary-bg: #21222c;
+}
+
+/* Ayu Dark */
+[data-theme="ayu-dark"] {
+  --main-bg: #0a0e14;
+  --bg-text: #101620;
+  --text-color: #efefef;
+  --accent-color: #e6b450;
+  --titlebar-bg: #1f2428;
+  --sidebar-bg: #0a0e14;
+  --sidebar-hover-bg: #00010a;
+  --explorer-bg: #0a0e14;
+  --explorer-hover-bg: #00010a;
+  --explorer-border: transparent;
+  --tabs-bg: #0a0e14;
+  --tab-bg: #0a0e14;
+  --tab-active-bg: #0a0e14;
+  --tab-border: transparent;
+  --footer-bg: #0a0e14;
+  --footer-border: transparent;
+  --button-bg: #e6b450;
+  --button-text: #0a0e14;
+  --footer-hover-bg: #4f4f52;
+  --scrollbar-track-bg: #0a0e14;
+  --scrollbar-thumb-bg: #454647;
+  --secondary-bg: #10121a;
+}
+
+/* Ayu Mirage */
+[data-theme="ayu-mirage"] {
+  --main-bg: #1f2430;
+  --bg-text: #21242b;
+  --text-color: #efefef;
+  --accent-color: #e6b450;
+  --titlebar-bg: #1f2428;
+  --sidebar-bg: #1f2430;
+  --sidebar-hover-bg: #191e2a;
+  --explorer-bg: #1f2430;
+  --explorer-hover-bg: #191e2a;
+  --explorer-border: transparent;
+  --tabs-bg: #1f2430;
+  --tab-bg: #1f2430;
+  --tab-active-bg: #1f2430;
+  --tab-border: transparent;
+  --footer-bg: #1f2430;
+  --footer-border: transparent;
+  --button-bg: #e6b450;
+  --button-text: #1f2430;
+  --footer-hover-bg: #4f4f52;
+  --scrollbar-track-bg: #1f2430;
+  --scrollbar-thumb-bg: #454647;
+  --secondary-bg: #252e3d;
+}
+
+/* Nord */
+[data-theme="nord"] {
+  --main-bg: #2e3440;
+  --bg-text: #3b414d;
+  --text-color: #efefef;
+  --accent-color: #88c0d0;
+  --titlebar-bg: #1f2428;
+  --sidebar-bg: #2e3440;
+  --sidebar-hover-bg: #434c5e;
+  --explorer-bg: #2e3440;
+  --explorer-hover-bg: #434c5e;
+  --explorer-border: rgba(136, 192, 208, 0.2);
+  --tabs-bg: #2e3440;
+  --tab-bg: #2e3440;
+  --tab-active-bg: #3b4252;
+  --tab-border: transparent;
+  --footer-bg: #3b4252;
+  --footer-border: transparent;
+  --button-bg: #434c5e;
+  --button-text: #d8dee9;
+  --footer-hover-bg: #4f4f52;
+  --scrollbar-track-bg: #2e3440;
+  --scrollbar-thumb-bg: #454647;
+  --secondary-bg: #363f50;
+}
+
+/* Night Owl */
+[data-theme="night-owl"] {
+  --main-bg: #011627;
+  --bg-text: #031d33;
+  --text-color: #89a4bb;
+  --accent-color: rgb(95, 126, 151);
+  --titlebar-bg: #011627;
+  --sidebar-bg: #011627;
+  --sidebar-hover-bg: #0e293f;
+  --explorer-bg: #011627;
+  --explorer-hover-bg: #0e293f;
+  --explorer-border: transparent;
+  --tabs-bg: #011627;
+  --tab-bg: #01111d;
+  --tab-active-bg: #0b2942;
+  --tab-border: rgb(39, 43, 59);
+  --footer-bg: #011627;
+  --footer-border: #262a39;
+  --button-bg: rgb(95, 126, 151);
+  --button-text: #fff;
+  --footer-hover-bg: #1b222f;
+  --scrollbar-track-bg: #011627;
+  --scrollbar-thumb-bg: #043254;
+  --secondary-bg: #031d33;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  padding: 0.1rem 0.2rem;
+  border-radius: 0.3rem;
+  transition: all 0.5s ease;
+}
+button:hover {
+  background-color: var(--accent-color);
+}
+.disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+/* VS Code End */
+
+/* Portfolio 3d Start */
+:root {
+  --blue-rgb: 237 245 255;
+  --green-rgb: 125 161 35;
+}
+
+body:has(.card[data-color="blue"]:hover) {
+  background-color: rgb(var(--blue-rgb) / 25%);
+}
+
+body:has(.card[data-color="green"]:hover) {
+  background-color: rgb(var(--green-rgb) / 25%);
+}
+
+@layer utilities {
+  .max-container {
+    @apply max-w-5xl mx-auto sm:p-16 pb-12 !pt-[126px] px-8 min-h-[calc(100vh-80px)];
+  }
+
+  .head-text {
+    @apply sm:text-5xl text-3xl font-semibold sm:leading-snug font-poppins;
+  }
+
+  .subhead-text {
+    @apply font-semibold sm:text-3xl text-xl relative font-poppins;
+  }
+
+  .blue-gradient_text {
+    @apply bg-gradient-to-r from-[#00c6ff] to-[#0072ff] bg-clip-text text-transparent;
+  }
+
+  .input {
+    @apply bg-white border border-gray-200 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mt-2.5 font-normal shadow-card;
+  }
+
+  .textarea {
+    @apply block p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 focus:ring-blue-500 focus:border-blue-500 mt-2.5 font-normal shadow-card;
+  }
+
+  .btn {
+    @apply text-white bg-gradient-to-r from-[#00c6ff] to-[#0072ff] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center;
+  }
+
+  .header {
+    @apply flex justify-between items-center gap-7 px-8 py-4 max-w-5xl mx-auto absolute top-0 bg-transparent z-10 right-0 left-0;
+  }
+
+  .footer {
+    @apply max-w-5xl mx-auto sm:px-16 pb-6 px-8 flex flex-col gap-7;
+  }
+
+  .footer-container {
+    @apply flex flex-wrap gap-7 items-center justify-between;
+  }
+
+  .info-box {
+    @apply mx-5 relative flex text-white flex-col gap-3 max-w-2xl neo-brutalism-blue pt-4 pb-12 px-8;
+  }
+
+  .neo-btn {
+    @apply py-3 px-6 rounded-lg text-blue-500 text-center font-semibold sm:w-1/2 w-[90%] -bottom-5 absolute mx-auto right-0 left-0 flex justify-center items-center gap-3;
+  }
+
+  .cta {
+    @apply w-full flex items-center md:flex-row flex-col sm:mt-16 mt-8 gap-7;
+  }
+
+  .cta-text {
+    @apply text-black-500 font-extrabold flex-1 text-3xl max-md:text-center;
+  }
+}
+
+.glassmorphism {
+  background: rgba(8, 116, 239, 0.07);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.logo {
+  border-radius: 8.889px;
+  background: #fff;
+  box-shadow: 0px 10px 35px -4px rgba(67, 83, 255, 0.15),
+    0px 1.5px 4px -1px rgba(67, 83, 255, 0.2);
+}
+
+.block-container {
+  position: relative;
+  transition: 250ms;
+  perspective: 500px;
+}
+
+.block-container .btn-back {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: inherit;
+  height: inherit;
+  transition: 250ms;
+  transform-style: preserve-3d;
+  transform-origin: bottom right;
+  transform: rotateZ(15deg);
+  will-change: transform;
+  box-shadow: 16px 0 40px #e4e4e4;
+}
+
+.block-container .btn-back-red {
+  background: linear-gradient(135deg, #ff4b1f -20%, #ff9068 120%);
+}
+
+.block-container .btn-back-green {
+  background: linear-gradient(135deg, #adfda2 -20%, #11d3f3 120%);
+}
+
+.block-container .btn-back-yellow {
+  background: linear-gradient(135deg, #f7971e -20%, #ffd200 120%);
+}
+
+.block-container .btn-back-blue {
+  background: linear-gradient(135deg, #0061ff -20%, #60efff 120%);
+}
+
+.block-container .btn-back-orange {
+  background: linear-gradient(135deg, #ff0f7b -20%, #f89b29 120%);
+}
+
+.block-container .btn-back-pink {
+  background: linear-gradient(135deg, #e81cff -20%, #40c9ff 120%);
+}
+
+.block-container .btn-back-black {
+  background: linear-gradient(135deg, #0a1647 -20%, #e4e7e4 120%);
+}
+
+.block-container .btn-front {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: inherit;
+  height: inherit;
+  background-color: #ffffff33;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  transition: 250ms;
+  transform-style: preserve-3d;
+  transform-origin: top left;
+  overflow: hidden;
+}
+
+.block-container:hover > .btn-back {
+  transform: translateZ(20px) rotateZ(15deg) rotateX(-20deg) rotateY(-20deg);
+}
+
+.block-container:hover > .btn-front {
+  transform: translateZ(80px) translateY(-5px) rotateX(15deg) rotateY(15deg);
+}
+
+/* Neo Brutalism */
+.neo-brutalism-blue {
+  background: #2b77e7;
+  position: relative;
+  border-radius: 10px;
+  border: #2b77e7;
+  box-shadow: 0.6vmin 0.6vmin #336cc1, 1vmin 1vmin #0092db, 1vmin 1vmin #0092db,
+    0.65vmin 1vmin #0092db, 1vmin 0.65vmin #0092db;
+}
+
+.neo-brutalism-white {
+  background: #fff;
+  border: #fff;
+  box-shadow: 0.6vmin 0.6vmin #fff, 1vmin 1vmin #d2e4ff, 1vmin 1vmin #d2e4ff,
+    0.65vmin 1vmin #d2e4ff, 1vmin 0.65vmin #d2e4ff;
+}
+/* Portfolio 3d end */
