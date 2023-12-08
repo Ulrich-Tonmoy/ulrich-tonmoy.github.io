@@ -179,6 +179,10 @@ button {
 button:hover {
   background-color: var(--accent-color);
 }
+.disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
 /* VS Code End */
 
 /* Portfolio 3d Start */
