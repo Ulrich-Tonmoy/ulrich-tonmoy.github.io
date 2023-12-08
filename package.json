@@ -15,6 +15,7 @@
     "@react-three/fiber": "^8.15.12",
     "@sanity/client": "^6.9.3",
     "@sanity/image-url": "^1.0.2",
+    "framer-motion": "^10.16.15",
     "maath": "^0.10.4",
     "next": "14.0.3",
     "react": "^18",

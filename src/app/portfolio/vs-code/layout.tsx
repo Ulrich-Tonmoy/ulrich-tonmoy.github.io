@@ -1,6 +1,7 @@
 import { DM_Sans } from "next/font/google";
 import { Metadata } from "next";
 import styles from "@/styles/layout.module.css";
+import { Explorer, Sidebar, StatusBar, Tabs, TitleBar } from "@/components/vs-code";
 
 const DMSans = DM_Sans({ subsets: ["latin"] });
 
@@ -13,16 +14,16 @@ const VSCodeLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <main className={`${DMSans.className}`}>
       <link rel="shortcut icon" href="/vfavicon.ico" type="image/x-icon" />
-      {/* <Titlebar /> */}
+      <TitleBar />
       <div className={styles.main}>
-        {/* <Sidebar /> */}
-        {/* <Explorer /> */}
+        <Sidebar />
+        <Explorer />
         <div style={{ width: "100%" }}>
-          {/* <Tabs /> */}
+          <Tabs />
           <main className={styles.content}>{children}</main>
         </div>
       </div>
-      {/* <Footer /> */}
+      <StatusBar />
     </main>
   );
 };
