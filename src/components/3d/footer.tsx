@@ -24,7 +24,7 @@ const Footer = () => {
           © 2023 <strong>Tonmoy</strong>. All rights reserved.
         </p>
 
-        <div className="flex gap-3 justify-center items-center">
+        <div className="flex gap-3 justify-center items-center flex-wrap">
           <Link href="/portfolio/3d/contact">
             <Image src={contact} alt="Contact" className="w-6 h-6 object-contain" />
           </Link>
