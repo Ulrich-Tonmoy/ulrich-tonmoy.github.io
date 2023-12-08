@@ -12,7 +12,6 @@ const Footer = () => {
     const query = '*[_type == "profile"]';
     client.fetch(query).then((res) => {
       setSocialInfo(res[0].socialInfo);
-      console.log(res[0].socialInfo);
     });
   }, []);
 

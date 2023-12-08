@@ -22,31 +22,33 @@ const Contact = () => {
     setLoading(true);
     setCurrentAnimation("hit");
 
-    emailjs.sendForm("service_ucigc98", "template_fzfgxn6", formRef.current, "JJWmhn7B9fII3JveJ").then(
-      () => {
-        setLoading(false);
-        showAlert({
-          text: "Thank you for your message 😃",
-          type: "success",
-        });
+    emailjs
+      .sendForm("service_ucigc98", "template_fzfgxn6", formRef.current, "JJWmhn7B9fII3JveJ")
+      .then(
+        () => {
+          setLoading(false);
+          showAlert({
+            text: "Thank you for your message 😃",
+            type: "success",
+          });
 
-        setTimeout(() => {
-          hideAlert();
+          setTimeout(() => {
+            hideAlert();
+            setCurrentAnimation("idle");
+            formRef.current.reset();
+          }, 3000);
+        },
+        (error) => {
+          setLoading(false);
+          console.error(error);
           setCurrentAnimation("idle");
-          formRef.current.reset();
-        }, 3000);
-      },
-      (error) => {
-        setLoading(false);
-        console.error(error);
-        setCurrentAnimation("idle");
 
-        showAlert({
-          text: "I didn't receive your message 😢",
-          type: "danger",
-        });
-      }
-    );
+          showAlert({
+            text: "I didn't receive your message 😢",
+            type: "danger",
+          });
+        }
+      );
   };
 
   return (
