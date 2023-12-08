@@ -3,7 +3,7 @@ import {
   WarningIcon,
   BellIcon,
   CheckIcon,
-  ReactIcon,
+  NextIcon,
   SourceControlIcon,
 } from "@/components/icons";
 import styles from "@/styles/status-bar.module.css";
@@ -30,8 +30,8 @@ const StatusBar = () => {
       </div>
       <div className={styles.container}>
         <div className={styles.section}>
-          <ReactIcon className={styles.icon} />
-          <p>Powered by React.js</p>
+          <NextIcon className={styles.icon} />
+          <p className="ml-1">Powered by Next.js</p>
         </div>
         <div className={styles.section}>
           <CheckIcon className={styles.icon} />

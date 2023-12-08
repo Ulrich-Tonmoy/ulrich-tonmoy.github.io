@@ -9,7 +9,7 @@ export { default as GithubIcon } from "./github-icon";
 export { default as EyeIcon } from "./eye-icon";
 export { default as MailIcon } from "./mail-icon";
 export { default as PencilIcon } from "./pencil-icon";
-export { default as ReactIcon } from "./react-icon";
+export { default as NextIcon } from "./next-icon";
 export { default as SettingsIcon } from "./settings-icon";
 export { default as SourceControlIcon } from "./source-control-icon";
 export { default as WarningIcon } from "./warning-icon";
