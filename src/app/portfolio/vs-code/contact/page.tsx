@@ -15,12 +15,7 @@ const Contact = () => {
   const submitForm = (e: any) => {
     e.preventDefault();
     emailjs
-      .sendForm(
-        "service_ucigc98",
-        "template_fzfgxn6",
-        formRef.current,
-        "JJWmhn7B9fII3JveJ",
-      )
+      .sendForm("service_ucigc98", "template_fzfgxn6", formRef.current, "JJWmhn7B9fII3JveJ")
       .then(
         (result) => {
           alert("Your response has been received!");
@@ -28,7 +23,7 @@ const Contact = () => {
         },
         (error) => {
           alert("There was an error. Please try again in a while.");
-        },
+        }
       );
   };
 
@@ -96,7 +91,7 @@ const Contact = () => {
             </div>
           </div>
           <div>
-            <label htmlFor="name">Subject</label>
+            <label htmlFor="subject">Subject</label>
             <input type="text" name="subject" required />
           </div>
           <div>

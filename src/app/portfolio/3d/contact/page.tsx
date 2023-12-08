@@ -10,14 +10,9 @@ import { Alert, CanvasLoader } from "@/components/3d";
 
 const Contact = () => {
   const formRef = useRef<any>();
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
   const { alert, showAlert, hideAlert } = useAlert();
   const [loading, setLoading] = useState(false);
   const [currentAnimation, setCurrentAnimation] = useState("idle");
-
-  const handleChange = ({ target: { name, value } }: any) => {
-    setForm({ ...form, [name]: value });
-  };
 
   const handleFocus = () => setCurrentAnimation("walk");
   const handleBlur = () => setCurrentAnimation("idle");
@@ -27,48 +22,31 @@ const Contact = () => {
     setLoading(true);
     setCurrentAnimation("hit");
 
-    emailjs
-      .send(
-        `import.meta.env.VITE_APP_EMAILJS_SERVICE_ID`,
-        `import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID`,
-        {
-          from_name: form.name,
-          to_name: "JavaScript Mastery",
-          from_email: form.email,
-          to_email: "sujata@jsmastery.pro",
-          message: form.message,
-        },
-        `import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY`
-      )
-      .then(
-        () => {
-          setLoading(false);
-          showAlert({
-            text: "Thank you for your message 😃",
-            type: "success",
-          });
+    emailjs.sendForm("service_ucigc98", "template_fzfgxn6", formRef.current, "JJWmhn7B9fII3JveJ").then(
+      () => {
+        setLoading(false);
+        showAlert({
+          text: "Thank you for your message 😃",
+          type: "success",
+        });
 
-          setTimeout(() => {
-            hideAlert();
-            setCurrentAnimation("idle");
-            setForm({
-              name: "",
-              email: "",
-              message: "",
-            });
-          }, 3000);
-        },
-        (error) => {
-          setLoading(false);
-          console.error(error);
+        setTimeout(() => {
+          hideAlert();
           setCurrentAnimation("idle");
+          formRef.current.reset();
+        }, 3000);
+      },
+      (error) => {
+        setLoading(false);
+        console.error(error);
+        setCurrentAnimation("idle");
 
-          showAlert({
-            text: "I didn't receive your message 😢",
-            type: "danger",
-          });
-        }
-      );
+        showAlert({
+          text: "I didn't receive your message 😢",
+          type: "danger",
+        });
+      }
+    );
   };
 
   return (
@@ -88,8 +66,18 @@ const Contact = () => {
               className="input"
               placeholder="Tonmoy"
               required
-              value={form.name}
-              onChange={handleChange}
+              onFocus={handleFocus}
+              onBlur={handleBlur}
+            />
+          </label>
+          <label className="text-black-500 font-semibold">
+            Subject
+            <input
+              type="text"
+              name="subject"
+              className="input"
+              placeholder="Topic name"
+              required
               onFocus={handleFocus}
               onBlur={handleBlur}
             />
@@ -102,8 +90,6 @@ const Contact = () => {
               className="input"
               placeholder="tonmoy@gmail.com"
               required
-              value={form.email}
-              onChange={handleChange}
               onFocus={handleFocus}
               onBlur={handleBlur}
             />
@@ -115,8 +101,6 @@ const Contact = () => {
               rows={4}
               className="textarea"
               placeholder="Write your thoughts here..."
-              value={form.message}
-              onChange={handleChange}
               onFocus={handleFocus}
               onBlur={handleBlur}
             />
