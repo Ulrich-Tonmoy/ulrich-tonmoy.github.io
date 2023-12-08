@@ -4,7 +4,7 @@ import emailjs from "@emailjs/browser";
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useRef, useState } from "react";
 
-import { Fox } from "@/models";
+import { Fox } from "@/components/models";
 import useAlert from "@/lib/hooks/use-alert";
 import { Alert, CanvasLoader } from "@/components/3d";
 
@@ -38,7 +38,7 @@ const Contact = () => {
           to_email: "sujata@jsmastery.pro",
           message: form.message,
         },
-        `import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY`,
+        `import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY`
       )
       .then(
         () => {
@@ -67,7 +67,7 @@ const Contact = () => {
             text: "I didn't receive your message 😢",
             type: "danger",
           });
-        },
+        }
       );
   };
 
@@ -79,11 +79,7 @@ const Contact = () => {
       <div className="flex-1 min-w-[50%] flex flex-col">
         <h1 className="head-text">Get in Touch</h1>
 
-        <form
-          ref={formRef}
-          onSubmit={handleSubmit}
-          className="w-full flex flex-col gap-7 mt-14"
-        >
+        <form ref={formRef} onSubmit={handleSubmit} className="w-full flex flex-col gap-7 mt-14">
           <label className="text-black-500 font-semibold">
             Name
             <input
