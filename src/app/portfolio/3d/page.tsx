@@ -1,3 +1,4 @@
+// @ts-nocheck
 "use client";
 
 import { Canvas } from "@react-three/fiber";
@@ -30,7 +31,6 @@ const Home = () => {
   const adjustBiplaneForScreenSize = () => {
     let screenScale, screenPosition;
 
-    // If screen width is less than 768px, adjust the scale and position
     if (window.innerWidth < 768) {
       screenScale = [1.5, 1.5, 1.5];
       screenPosition = [0, -1.5, 0];

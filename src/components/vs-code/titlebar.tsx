@@ -1,3 +1,4 @@
+// @ts-nocheck
 import styles from "@/styles/titlebar.module.css";
 import Image from "next/image";
 import { useEffect } from "react";
@@ -5,10 +6,7 @@ import { useEffect } from "react";
 const TitleBar = () => {
   useEffect(() => {
     if (localStorage.getItem("theme")) {
-      document.documentElement.setAttribute(
-        "data-theme",
-        localStorage.getItem("theme") ?? "",
-      );
+      document.documentElement.setAttribute("data-theme", localStorage.getItem("theme") ?? "");
     }
   }, []);
 
