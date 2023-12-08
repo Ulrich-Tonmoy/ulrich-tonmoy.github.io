@@ -9,19 +9,13 @@ import soundon from "../../../../public/soundon.png";
 import soundoff from "../../../../public/soundoff.png";
 
 const Home = () => {
-  const audioRef = useRef<any>(null);
+  const audioRef = useRef<any>(new Audio("/sakura.mp3"));
+  audioRef.current.volume = 0.4;
+  audioRef.current.loop = true;
 
   const [currentStage, setCurrentStage] = useState(1);
   const [isRotating, setIsRotating] = useState(false);
   const [isPlayingMusic, setIsPlayingMusic] = useState(false);
-
-  useEffect(() => {
-    if (typeof window !== undefined) {
-      audioRef.current = new Audio("/sakura.mp3");
-      audioRef.current.volume = 0.4;
-      audioRef.current.loop = true;
-    }
-  }, []);
 
   useEffect(() => {
     if (isPlayingMusic) {
