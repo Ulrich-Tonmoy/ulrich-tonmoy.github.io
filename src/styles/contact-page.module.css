@@ -1,129 +1,129 @@
 .container {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
 }
 
 .container > * {
-    flex: 1;
+  flex: 1;
 }
 
 .container > div:first-child {
-    border-right: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
 }
 
 .container h1 {
-    margin-bottom: 2rem;
-    font-size: 1.5rem;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
 }
 
 .flex {
-    display: flex;
-    gap: 1rem;
+  display: flex;
+  gap: 1rem;
 }
 
 .form label {
-    display: block;
-    margin-bottom: 0.5rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 0.8rem;
+  display: block;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
 }
 
 .form input,
 .form textarea {
-    font-family: "JetBrains Mono";
-    margin-bottom: 1.5rem;
-    background: var(--secondary-bg);
-    color: var(--text-color);
-    border: none;
-    font-size: 1rem;
-    padding: 0.75rem;
-    width: 100%;
-    resize: none;
+  font-family: "JetBrains Mono";
+  margin-bottom: 1.5rem;
+  background: var(--secondary-bg);
+  color: var(--text-color);
+  border: none;
+  font-size: 1rem;
+  padding: 0.75rem;
+  width: 100%;
+  resize: none;
 }
 
 .form input:focus,
 .form textarea:focus {
-    outline: 1px solid var(--accent-color);
+  outline: 1px solid var(--accent-color);
 }
 
 .form button {
-    background-color: var(--button-bg);
-    color: var(--button-text);
-    border: none;
-    cursor: pointer;
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: all 0.5s ease;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.5s ease;
 }
 .form button:hover {
-    background: var(--accent-color);
+  background: var(--accent-color);
 }
 
 .heading {
-    margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .cards {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 0.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0.5rem;
 }
 .card {
-    min-width: 265px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 0.3rem;
-    padding: 0.3rem;
-    border-radius: 10px;
-    cursor: pointer;
-    background-color: var(--button-bg);
-    transition: all 0.3s ease-in-out;
+  min-width: 265px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0.3rem;
+  padding: 0.3rem;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: var(--button-bg);
+  transition: all 0.3s ease-in-out;
 }
 .card img {
-    width: 20px;
-    height: 20px;
-    margin: 0 0.3rem;
+  width: 20px;
+  height: 20px;
+  margin: 0 0.3rem;
 }
 .card a {
-    font-weight: 500;
-    text-decoration: none;
-    color: var(--button-text);
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--button-text);
 }
 .card:hover {
-    box-shadow: 0 0 25px #fef4f5;
+  box-shadow: 0 0 25px #fef4f5;
 }
 .card:nth-child(even) {
-    background-color: var(--accent-color);
+  background-color: var(--accent-color);
 }
 @media screen and (max-width: 450px) {
-    .card {
-        width: 60vw;
-    }
+  .cards {
+    width: 73vw;
+  }
 }
 
 @media screen and (max-width: 1200px) {
-    .container {
-        display: block;
-    }
-    .container > div:first-child {
-        border-right: none;
-        margin-bottom: 2.5rem;
-    }
+  .container {
+    display: block;
+  }
+  .container > div:first-child {
+    border-right: none;
+    margin-bottom: 2.5rem;
+  }
 }
 
 @media screen and (max-width: 600px) {
-    .flex {
-        display: block;
-    }
-    .form input {
-        font-size: 0.85rem;
-    }
+  .flex {
+    display: block;
+  }
+  .form input {
+    font-size: 0.85rem;
+  }
 }
