@@ -1,17 +1,45 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
+import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-
 import { CTA } from "@/components/3d";
-import { experiences, skills } from "@/lib/constants";
-
 import Image from "next/image";
+import { useEffect, useState } from "react";
+import { client, urlFor } from "@/lib/client";
+import { randomNumber } from "@/lib/utils";
+import { binary } from "@/lib/icon";
 
 const About = () => {
+  const color = ["red", "green", "yellow", "blue", "orange", "pink", "black"];
+  const [experience, setExperience] = useState([]);
+  const [skills, setSkills] = useState([]);
+
+  useEffect(() => {
+    const query = '*[_type == "experiences"]';
+    const skillsQuery = '*[_type == "skills"]';
+
+    client.fetch(query).then((res) => {
+      setExperience(transformData(res));
+    });
+    client.fetch(skillsQuery).then((res) => {
+      setSkills(res);
+    });
+  }, []);
+
+  function transformData(inputData: any) {
+    return inputData.flatMap((experience: any) => {
+      const company = experience.company;
+
+      return experience.works.map((work: any) => ({
+        name: work.name,
+        company: company,
+        year: work.year,
+        desc: work.desc,
+      }));
+    });
+  }
+
   return (
     <section className="max-container">
       <title>Tonmoy - 3D Portfolio(About)</title>
@@ -22,8 +50,8 @@ const About = () => {
 
       <div className="mt-5 flex flex-col gap-3 text-slate-500">
         <p>
-          Software Engineer & Game Developer, specializing in technical education through
-          hands-on learning and building applications.
+          Software Engineer & Game Developer, specializing in technical education through hands-on
+          learning and building applications.
         </p>
       </div>
 
@@ -31,43 +59,39 @@ const About = () => {
         <h3 className="subhead-text">My Skills</h3>
 
         <div className="mt-16 flex flex-wrap gap-12">
-          {skills.map((skill) => (
-            <div className="block-container w-20 h-20" key={skill.name}>
-              <div className="btn-back rounded-xl" />
-              <div className="btn-front rounded-xl flex justify-center items-center">
-                <Image
-                  src={skill.imageUrl}
-                  alt={skill.name}
-                  className="w-1/2 h-1/2 object-contain"
-                />
+          {skills
+            ?.sort((a: any, b: any) => a?.sortId - b?.sortId)
+            .map((skill: any) => (
+              <div className="block-container w-20 h-20" key={skill.name} title={skill?.name}>
+                <div className={`btn-back btn-back-${color[randomNumber()]} rounded-xl`} />
+                <div className="btn-front rounded-xl flex justify-center items-center">
+                  <img
+                    src={urlFor(skill?.icon)}
+                    alt={skill.name}
+                    className="w-1/2 h-1/2 object-contain"
+                  />
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
         </div>
       </div>
 
       <div className="py-16">
-        <h3 className="subhead-text">Work Experience.</h3>
-        <div className="mt-5 flex flex-col gap-3 text-slate-500">
-          <p>
-            II&apos;ve worked with all sorts of companies, leveling up my skills and
-            teaming up with smart people. HereI&apos;s the rundown:
-          </p>
-        </div>
+        <h3 className="subhead-text">Work Experience</h3>
 
         <div className="mt-12 flex">
           <VerticalTimeline animate={true}>
-            {experiences.map((experience, index) => (
+            {experience.map((exp: any, index) => (
               <VerticalTimelineElement
                 key={index}
                 visible={true}
-                date={experience.date}
-                iconStyle={{ background: experience.iconBg }}
+                date={exp.year}
+                iconStyle={{ background: "linear-gradient(135deg, #adfda2 -20%, #11d3f3 120%)" }}
                 icon={
                   <div className="flex justify-center items-center w-full h-full">
                     <Image
-                      src={experience.icon}
-                      alt={experience.company_name}
+                      src={binary}
+                      alt={exp.company}
                       className="w-[60%] h-[60%] object-contain"
                     />
                   </div>
@@ -75,32 +99,18 @@ const About = () => {
                 contentStyle={{
                   borderBottom: "8px",
                   borderStyle: "solid",
-                  borderBottomColor: experience.iconBg,
                   boxShadow: "none",
+                  borderBottomColor: color[randomNumber()],
                 }}
               >
                 <div>
-                  <h3 className="text-black text-xl font-poppins font-semibold">
-                    {experience.title}
-                  </h3>
-                  <p
-                    className="text-black-500 font-medium text-base"
-                    style={{ margin: 0 }}
-                  >
-                    {experience.company_name}
+                  <h3 className="text-black text-xl font-poppins font-semibold">{exp.name}</h3>
+                  <p className="text-black-500 font-medium text-base" style={{ margin: 0 }}>
+                    {exp.company}
                   </p>
                 </div>
 
-                <ul className="my-5 list-disc ml-5 space-y-2">
-                  {experience.points.map((point, index) => (
-                    <li
-                      key={`experience-point-${index}`}
-                      className="text-black-500/50 font-normal pl-1 text-sm"
-                    >
-                      {point}
-                    </li>
-                  ))}
-                </ul>
+                <div className="my-5 list-disc ml-5 space-y-2">{exp.desc}</div>
               </VerticalTimelineElement>
             ))}
           </VerticalTimeline>

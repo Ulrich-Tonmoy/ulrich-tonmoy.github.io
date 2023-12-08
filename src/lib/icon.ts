@@ -25,6 +25,7 @@ import arrow from "../../public/icons/arrow.svg";
 import contact from "../../public/icons/contact.png";
 import soundon from "../../public/icons/soundon.png";
 import soundoff from "../../public/icons/soundoff.png";
+import binary from "../../public/icons/binary.png";
 
 export {
   css,
@@ -54,4 +55,5 @@ export {
   contact,
   soundon,
   soundoff,
+  binary,
 };
