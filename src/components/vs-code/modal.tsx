@@ -1,8 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
 import styles from "@/styles/modal.module.css";
 import { motion } from "framer-motion";
 import { urlFor } from "@/lib/client";
 import { EyeIcon, GithubIcon } from "@/components/icons";
-import Image from "next/image";
 
 const dropIn = {
   hidden: {
@@ -51,8 +51,7 @@ const Modal = ({ project, handleClose }: any) => {
         </button>
         <p className={styles.titleText}>{project?.title}</p>
         <div className={`${styles.img} ${styles.flex}`}>
-          {/* @ts-ignore */}
-          <Image src={urlFor(project?.imgUrl)} alt={project?.name} />
+          <img src={urlFor(project?.imgUrl)} alt={project?.name} />
           <motion.div
             whileHover={{ opacity: [0, 1] }}
             transition={{

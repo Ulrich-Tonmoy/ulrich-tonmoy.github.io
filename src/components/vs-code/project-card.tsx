@@ -1,10 +1,10 @@
+/* eslint-disable @next/next/no-img-element */
 import styles from "@/styles/project-card.module.css";
 import { motion, AnimatePresence } from "framer-motion";
 import { urlFor } from "@/lib/client";
 import { EyeIcon, GithubIcon } from "@/components/icons";
 import { useState } from "react";
 import { Modal } from "./";
-import Image from "next/image";
 
 const ProjectCard = ({ project }: any) => {
   const [showModal, setShowModal] = useState(false);
@@ -18,8 +18,7 @@ const ProjectCard = ({ project }: any) => {
         className={`${styles.projectItem} ${styles.flex}`}
       >
         <div className={`${styles.img} ${styles.flex}`}>
-          {/* @ts-ignore */}
-          <Image src={urlFor(project?.imgUrl)} alt={project?.name} />
+          <img src={urlFor(project?.imgUrl)} alt={project?.name} />
           <motion.div
             whileHover={{ opacity: [0, 1] }}
             transition={{

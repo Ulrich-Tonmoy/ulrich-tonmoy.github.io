@@ -66,4 +66,8 @@
   .title {
     flex: 4;
   }
+
+  .title {
+    font-size: 0.8rem;
+  }
 }
