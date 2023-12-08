@@ -16,7 +16,7 @@ const Home = () => {
   const [isPlayingMusic, setIsPlayingMusic] = useState(false);
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
+    if (typeof window !== undefined) {
       audioRef.current = new Audio("/sakura.mp3");
       audioRef.current.volume = 0.4;
       audioRef.current.loop = true;
