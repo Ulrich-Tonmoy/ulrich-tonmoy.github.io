@@ -3,25 +3,6 @@
 @tailwind utilities;
 
 /* VS Code Start */
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
-
-button {
-  background-color: var(--button-bg);
-  color: var(--button-text);
-  padding: 0.1rem 0.2rem;
-  border-radius: 0.3rem;
-  transition: all 0.5s ease;
-}
-button:hover {
-  background-color: var(--accent-color);
-}
 
 /* GitHub Dark */
 :root {
@@ -177,6 +158,26 @@ button:hover {
   --scrollbar-track-bg: #011627;
   --scrollbar-thumb-bg: #043254;
   --secondary-bg: #031d33;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  padding: 0.1rem 0.2rem;
+  border-radius: 0.3rem;
+  transition: all 0.5s ease;
+}
+button:hover {
+  background-color: var(--accent-color);
 }
 /* VS Code End */
 

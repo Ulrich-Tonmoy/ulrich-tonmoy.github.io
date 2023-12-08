@@ -1,9 +1,5 @@
 const PortfolioTerminal = () => {
-  return (
-    <div>
-      <link rel="shortcut icon" href="/vfavicon.ico" type="image/x-icon" />
-    </div>
-  );
+  return <div></div>;
 };
 
 export default PortfolioTerminal;
