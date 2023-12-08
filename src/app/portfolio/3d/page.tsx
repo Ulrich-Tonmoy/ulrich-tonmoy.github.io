@@ -2,7 +2,7 @@
 
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useState, useRef, useEffect } from "react";
-import { HomeInfo, CanvasLoader } from "@/components";
+import { HomeInfo, CanvasLoader } from "@/components/3d";
 import { Bird, Island, Plane, Sky } from "@/models";
 import Image from "next/image";
 import { soundoff, soundon } from "@/lib/icon";

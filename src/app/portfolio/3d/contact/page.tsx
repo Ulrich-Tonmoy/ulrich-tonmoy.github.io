@@ -6,7 +6,7 @@ import { Suspense, useRef, useState } from "react";
 
 import { Fox } from "@/models";
 import useAlert from "@/lib/hooks/use-alert";
-import { Alert, CanvasLoader } from "@/components";
+import { Alert, CanvasLoader } from "@/components/3d";
 
 const Contact = () => {
   const formRef = useRef<any>();

@@ -1,6 +1,6 @@
 import { Work_Sans } from "next/font/google";
 import { Metadata } from "next";
-import { Footer, Navbar } from "@/components";
+import { Footer, Navbar } from "@/components/3d";
 
 const WorkSans = Work_Sans({ subsets: ["latin"] });
 

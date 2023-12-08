@@ -1,4 +1,4 @@
-import { CTA } from "@/components";
+import { CTA } from "@/components/3d";
 import { projects } from "@/lib/constants";
 import { arrow } from "@/lib/icon";
 import Image from "next/image";

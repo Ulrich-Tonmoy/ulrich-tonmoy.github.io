@@ -6,7 +6,7 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 
-import { CTA } from "@/components";
+import { CTA } from "@/components/3d";
 import { experiences, skills } from "@/lib/constants";
 
 import Image from "next/image";
