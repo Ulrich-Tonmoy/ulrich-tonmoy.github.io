@@ -2,12 +2,10 @@ import Image from "next/image";
 import styles from "@/styles/theme-info.module.css";
 
 const ThemeInfo = ({ icon, name, publisher, theme }: any) => {
-  // @ts-ignore
   const currentTheme = localStorage.getItem("theme");
 
   const setTheme = (theme: string) => {
     document.documentElement.setAttribute("data-theme", theme);
-    // @ts-ignore
     localStorage.setItem("theme", theme);
   };
 

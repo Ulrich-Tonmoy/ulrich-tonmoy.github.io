@@ -9,7 +9,6 @@ import soundon from "../../../../public/soundon.png";
 import soundoff from "../../../../public/soundoff.png";
 
 const Home = () => {
-  // @ts-ignore
   const audioRef = useRef(new Audio("/sakura.mp3"));
   audioRef.current.volume = 0.4;
   audioRef.current.loop = true;
