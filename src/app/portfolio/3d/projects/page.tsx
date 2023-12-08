@@ -2,14 +2,12 @@
 "use client";
 
 import { CTA } from "@/components/3d";
-import { projects } from "@/lib/constants";
 import arrow from "../../../../../public/arrow.svg";
 import Image from "next/image";
 import Link from "next/link";
 import { randomNumber } from "@/lib/utils";
 import { useEffect, useState } from "react";
 import { client, urlFor } from "@/lib/client";
-import binary from "../../../../../public/binary.png";
 
 const Projects = () => {
   const color = ["red", "green", "yellow", "blue", "orange", "pink", "black"];
