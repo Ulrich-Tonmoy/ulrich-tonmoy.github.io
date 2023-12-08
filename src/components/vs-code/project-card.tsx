@@ -57,11 +57,14 @@ const ProjectCard = ({ project }: any) => {
         <div className={`${styles.content} ${styles.flex}`}>
           <h4 className={styles.boldText}>{project?.title}</h4>
           <p className={styles.text} style={{ marginTop: 10 }}>
-            {project?.description.substring(0, 70)}...
+            {project?.description.length > 80
+              ? `${project?.description.substring(0, 80)}...`
+              : project?.description}
             <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={() => setShowModal(!showModal)}
+              className="ml-1"
             >
               show more
             </motion.button>
