@@ -2,13 +2,14 @@ import Image from "next/image";
 import styles from "@/styles/theme-info.module.css";
 
 const ThemeInfo = ({ icon, name, publisher, theme }: any) => {
-  // @ts-ignore
-  const currentTheme = localStorage.getItem("theme");
+  const isBrowser = typeof window !== "undefined";
+  const currentTheme = isBrowser ? localStorage.getItem("theme") : null;
 
   const setTheme = (theme: string) => {
-    document.documentElement.setAttribute("data-theme", theme);
-    // @ts-ignore
-    localStorage.setItem("theme", theme);
+    if (isBrowser) {
+      document.documentElement.setAttribute("data-theme", theme);
+      localStorage.setItem("theme", theme);
+    }
   };
 
   return (

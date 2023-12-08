@@ -9,10 +9,7 @@ import soundon from "../../../../public/soundon.png";
 import soundoff from "../../../../public/soundoff.png";
 
 const Home = () => {
-  // @ts-ignore
-  const audioRef = useRef(new Audio("/sakura.mp3"));
-  audioRef.current.volume = 0.4;
-  audioRef.current.loop = true;
+  const audioRef = useRef<any>(null);
 
   const [currentStage, setCurrentStage] = useState(1);
   const [isRotating, setIsRotating] = useState(false);
@@ -27,6 +24,14 @@ const Home = () => {
       audioRef.current.pause();
     };
   }, [isPlayingMusic]);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      audioRef.current = new Audio("/sakura.mp3");
+      audioRef.current.volume = 0.4;
+      audioRef.current.loop = true;
+    }
+  }, []);
 
   const adjustBiplaneForScreenSize = () => {
     let screenScale, screenPosition;
