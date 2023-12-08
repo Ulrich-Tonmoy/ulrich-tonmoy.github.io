@@ -4,10 +4,12 @@ import { useEffect } from "react";
 
 const TitleBar = () => {
   useEffect(() => {
+    // @ts-ignore
     if (localStorage.getItem("theme")) {
       document.documentElement.setAttribute(
         "data-theme",
-        localStorage.getItem("theme") ?? "",
+        // @ts-ignore
+        localStorage.getItem("theme") ?? ""
       );
     }
   }, []);
