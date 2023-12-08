@@ -1,7 +1,6 @@
 import { meta, shopify, starbucks, tesla } from "./images";
 import {
   car,
-  contact,
   css,
   estate,
   express,
@@ -9,7 +8,6 @@ import {
   github,
   html,
   javascript,
-  linkedin,
   mongodb,
   motion,
   mui,
@@ -161,24 +159,6 @@ export const experiences = [
       "Implementing responsive design and ensuring cross-browser compatibility.",
       "Participating in code reviews and providing constructive feedback to other developers.",
     ],
-  },
-];
-
-export const socialLinks = [
-  {
-    name: "Contact",
-    iconUrl: contact,
-    link: "/portfolio/3d/contact",
-  },
-  {
-    name: "GitHub",
-    iconUrl: github,
-    link: "https://github.com/ulrich-tonmoy",
-  },
-  {
-    name: "LinkedIn",
-    iconUrl: linkedin,
-    link: "https://www.linkedin.com/in/ulrich-tonmoy",
   },
 ];
 

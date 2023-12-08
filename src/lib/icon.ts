@@ -14,7 +14,6 @@ import redux from "../../public/icons/redux.svg";
 import sass from "../../public/icons/sass.svg";
 import tailwindcss from "../../public/icons/tailwindcss.svg";
 import typescript from "../../public/icons/typescript.svg";
-import linkedin from "../../public/icons/linkedin.svg";
 import twitter from "../../public/icons/twitter.svg";
 import car from "../../public/icons/car.svg";
 import estate from "../../public/icons/estate.svg";
@@ -44,7 +43,6 @@ export {
   sass,
   tailwindcss,
   typescript,
-  linkedin,
   twitter,
   car,
   estate,
