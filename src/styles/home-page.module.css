@@ -1,0 +1,226 @@
+.header {
+    position: fixed;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.info {
+    flex: 0.65;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100vh;
+}
+.badge {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+}
+.badgeCmp,
+.tagCmp {
+    padding: 1rem 2rem;
+    border: var(--footer-hover-bg);
+    background-color: var(--titlebar-bg);
+    border-radius: 15px;
+    flex-direction: row;
+    width: auto;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.badgeCmp:hover,
+.tagCmp:hover {
+    box-shadow: 0 0 25px #fef4f5;
+}
+.tagCmp {
+    flex-direction: column;
+    margin-top: 3rem;
+}
+.bio {
+    width: 100%;
+    text-transform: uppercase;
+    text-align: right;
+    color: #eee;
+    font-weight: 300;
+    position: relative;
+}
+.bio::before,
+.bio::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.bio::before {
+    background: var(--main-bg);
+    animation: typewriter 2.5s steps(24) 500ms forwards;
+}
+.bio::after {
+    margin-left: 0.4rem;
+    width: 0.125em;
+    background: var(--accent-color);
+    animation: typewriter 2.5s steps(24) 500ms forwards, blink 750ms steps(24) infinite;
+}
+@keyframes typewriter {
+    to {
+        left: 100%;
+    }
+}
+@keyframes blink {
+    to {
+        background: transparent;
+    }
+}
+.badge span {
+    font-size: 2.5rem;
+}
+.circleCmp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.headText {
+    font-size: 2.75rem;
+    font-weight: 800;
+    text-align: center;
+    color: var(--text-color);
+    text-transform: capitalize;
+}
+.text {
+    font-size: 0.8rem;
+    text-align: left;
+    color: var(--text-color);
+    line-height: 1.5;
+}
+.headerCircles {
+    flex: 0.75;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin-top: -10rem;
+    margin-left: 1rem;
+}
+.headerCircles div {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: var(--titlebar-bg);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+    transition: all 0.3s ease-in-out;
+}
+.headerCircles div img {
+    width: 60%;
+    height: 60%;
+}
+.headerCircles div:hover {
+    box-shadow: 0 0 25px #fef4f5;
+}
+.headerCircles div:nth-child(1) {
+    width: 100px;
+    height: 100px;
+}
+.headerCircles div:nth-child(2) {
+    margin: 1.75rem;
+    width: 150px;
+    height: 150px;
+}
+.headerCircles div:nth-child(3) {
+    width: 80px;
+    height: 80px;
+}
+.img {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: relative;
+    margin-top: -10rem;
+}
+.img img {
+    width: 100%;
+    object-fit: contain;
+    z-index: 1;
+}
+.img .circle {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    width: 100%;
+    height: 90%;
+}
+@media screen and (min-width: 2000px) {
+    .header {
+        margin-top: 8rem;
+    }
+    .info {
+        width: 100%;
+        margin-right: 0;
+    }
+    .badge span {
+        font-size: 5rem;
+    }
+    .headText {
+        font-size: 4rem;
+    }
+    .text {
+        font-size: 1.75rem;
+    }
+    .headerCircles div:nth-child(1) {
+        width: 200px;
+        height: 200px;
+    }
+    .headerCircles div:nth-child(2) {
+        width: 300px;
+        height: 300px;
+    }
+    .headerCircles div:nth-child(3) {
+        width: 160px;
+        height: 160px;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .header {
+        flex-direction: column;
+        position: relative;
+    }
+    .img {
+        margin: 2rem 0;
+    }
+    .badge {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .headerCircles {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-left: 0;
+        margin-top: -8rem;
+    }
+    .headerCircles div {
+        margin: 1rem;
+    }
+}
+@media screen and (max-width: 450px) {
+    .header {
+        padding: 0;
+        width: 70vw;
+    }
+    .headText {
+        font-size: 2rem;
+    }
+    .headerCircles {
+        margin-top: 0;
+    }
+}

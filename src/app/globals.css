@@ -2,17 +2,188 @@
 @tailwind components;
 @tailwind utilities;
 
+/* VS Code Start */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  padding: 0.1rem 0.2rem;
+  border-radius: 0.3rem;
+  transition: all 0.5s ease;
+}
+button:hover {
+  background-color: var(--accent-color);
+}
+
+/* GitHub Dark */
+:root {
+  --main-bg: #24292e;
+  --bg-text: rgba(56, 58, 61, 0.35);
+  --text-color: #efefef;
+  --accent-color: #f9826c;
+  --titlebar-bg: #1f2428;
+  --sidebar-bg: #24292e;
+  --sidebar-hover-bg: #1f2428;
+  --explorer-bg: #1f2428;
+  --explorer-hover-bg: #24292e;
+  --explorer-border: #161a1d;
+  --tabs-bg: #1f2428;
+  --tab-bg: #1f2428;
+  --tab-active-bg: #24292e;
+  --tab-border: #24292e;
+  --footer-bg: #24292e;
+  --footer-border: #1b1f23;
+  --button-bg: #176f2c;
+  --button-text: #dcffe4;
+  --footer-hover-bg: #4f4f52;
+  --scrollbar-track-bg: #24292e;
+  --scrollbar-thumb-bg: #333536;
+  --secondary-bg: #1f2428;
+}
+
+/* Dracula */
+[data-theme="dracula"] {
+  --main-bg: #282a36;
+  --bg-text: #313340;
+  --text-color: #efefef;
+  --accent-color: #bd93f9;
+  --titlebar-bg: #1e1f29;
+  --sidebar-bg: #343746;
+  --sidebar-hover-bg: #3c3d51;
+  --explorer-bg: #21222c;
+  --explorer-hover-bg: #313241;
+  --explorer-border: #161a1d;
+  --tabs-bg: #191a21;
+  --tab-bg: #21222c;
+  --tab-active-bg: #282a36;
+  --tab-border: #191a21;
+  --footer-bg: #191a21;
+  --footer-border: #191a21;
+  --button-bg: #44475a;
+  --button-text: #f8f8f2;
+  --footer-hover-bg: #4f4f52;
+  --scrollbar-track-bg: #282a36;
+  --scrollbar-thumb-bg: #454647;
+  --secondary-bg: #21222c;
+}
+
+/* Ayu Dark */
+[data-theme="ayu-dark"] {
+  --main-bg: #0a0e14;
+  --bg-text: #101620;
+  --text-color: #efefef;
+  --accent-color: #e6b450;
+  --titlebar-bg: #1f2428;
+  --sidebar-bg: #0a0e14;
+  --sidebar-hover-bg: #00010a;
+  --explorer-bg: #0a0e14;
+  --explorer-hover-bg: #00010a;
+  --explorer-border: transparent;
+  --tabs-bg: #0a0e14;
+  --tab-bg: #0a0e14;
+  --tab-active-bg: #0a0e14;
+  --tab-border: transparent;
+  --footer-bg: #0a0e14;
+  --footer-border: transparent;
+  --button-bg: #e6b450;
+  --button-text: #0a0e14;
+  --footer-hover-bg: #4f4f52;
+  --scrollbar-track-bg: #0a0e14;
+  --scrollbar-thumb-bg: #454647;
+  --secondary-bg: #10121a;
+}
+
+/* Ayu Mirage */
+[data-theme="ayu-mirage"] {
+  --main-bg: #1f2430;
+  --bg-text: #21242b;
+  --text-color: #efefef;
+  --accent-color: #e6b450;
+  --titlebar-bg: #1f2428;
+  --sidebar-bg: #1f2430;
+  --sidebar-hover-bg: #191e2a;
+  --explorer-bg: #1f2430;
+  --explorer-hover-bg: #191e2a;
+  --explorer-border: transparent;
+  --tabs-bg: #1f2430;
+  --tab-bg: #1f2430;
+  --tab-active-bg: #1f2430;
+  --tab-border: transparent;
+  --footer-bg: #1f2430;
+  --footer-border: transparent;
+  --button-bg: #e6b450;
+  --button-text: #1f2430;
+  --footer-hover-bg: #4f4f52;
+  --scrollbar-track-bg: #1f2430;
+  --scrollbar-thumb-bg: #454647;
+  --secondary-bg: #252e3d;
+}
+
+/* Nord */
+[data-theme="nord"] {
+  --main-bg: #2e3440;
+  --bg-text: #3b414d;
+  --text-color: #efefef;
+  --accent-color: #88c0d0;
+  --titlebar-bg: #1f2428;
+  --sidebar-bg: #2e3440;
+  --sidebar-hover-bg: #434c5e;
+  --explorer-bg: #2e3440;
+  --explorer-hover-bg: #434c5e;
+  --explorer-border: rgba(136, 192, 208, 0.2);
+  --tabs-bg: #2e3440;
+  --tab-bg: #2e3440;
+  --tab-active-bg: #3b4252;
+  --tab-border: transparent;
+  --footer-bg: #3b4252;
+  --footer-border: transparent;
+  --button-bg: #434c5e;
+  --button-text: #d8dee9;
+  --footer-hover-bg: #4f4f52;
+  --scrollbar-track-bg: #2e3440;
+  --scrollbar-thumb-bg: #454647;
+  --secondary-bg: #363f50;
+}
+
+/* Night Owl */
+[data-theme="night-owl"] {
+  --main-bg: #011627;
+  --bg-text: #031d33;
+  --text-color: #89a4bb;
+  --accent-color: rgb(95, 126, 151);
+  --titlebar-bg: #011627;
+  --sidebar-bg: #011627;
+  --sidebar-hover-bg: #0e293f;
+  --explorer-bg: #011627;
+  --explorer-hover-bg: #0e293f;
+  --explorer-border: transparent;
+  --tabs-bg: #011627;
+  --tab-bg: #01111d;
+  --tab-active-bg: #0b2942;
+  --tab-border: rgb(39, 43, 59);
+  --footer-bg: #011627;
+  --footer-border: #262a39;
+  --button-bg: rgb(95, 126, 151);
+  --button-text: #fff;
+  --footer-hover-bg: #1b222f;
+  --scrollbar-track-bg: #011627;
+  --scrollbar-thumb-bg: #043254;
+  --secondary-bg: #031d33;
+}
+/* VS Code End */
+
 /* Portfolio 3d Start */
 :root {
   --blue-rgb: 237 245 255;
   --green-rgb: 125 161 35;
-}
-
-body {
-  font-family: "Work Sans", sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 body:has(.card[data-color="blue"]:hover) {
