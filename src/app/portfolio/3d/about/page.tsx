@@ -8,7 +8,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { client, urlFor } from "@/lib/client";
 import { randomNumber } from "@/lib/utils";
-import { binary } from "@/lib/icon";
+import binary from "../../../../../public/binary.png";
 
 const About = () => {
   const color = ["red", "green", "yellow", "blue", "orange", "pink", "black"];

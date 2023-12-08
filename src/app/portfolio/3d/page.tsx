@@ -5,7 +5,8 @@ import { Suspense, useState, useRef, useEffect } from "react";
 import { HomeInfo, CanvasLoader } from "@/components/3d";
 import { Bird, Island, Plane, Sky } from "@/components/models";
 import Image from "next/image";
-import { soundoff, soundon } from "@/lib/icon";
+import soundon from "../../../../public/soundon.png";
+import soundoff from "../../../../public/soundoff.png";
 
 const Home = () => {
   const audioRef = useRef(new Audio("/sakura.mp3"));

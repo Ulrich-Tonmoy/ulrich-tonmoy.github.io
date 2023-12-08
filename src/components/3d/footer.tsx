@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { client, urlFor } from "@/lib/client";
-import { contact } from "@/lib/icon";
+import contact from "../../../public/contact.png";
 
 const Footer = () => {
   const [socialInfo, setSocialInfo] = useState<any>([]);

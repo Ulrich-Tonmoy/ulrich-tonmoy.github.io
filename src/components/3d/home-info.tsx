@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { arrow } from "@/lib/icon";
 import Link from "next/link";
+import arrow from "../../../public/arrow.svg";
 
 interface HomeInfoProps {
   currentStage: number;
@@ -44,8 +44,7 @@ const HomeInfo = ({ currentStage }: HomeInfoProps) => {
     return (
       <div className="info-box">
         <p className="font-medium text-center sm:text-xl">
-          Led multiple projects to success over the years. <br /> Curious about the
-          impact?
+          Led multiple projects to success over the years. <br /> Curious about the impact?
         </p>
 
         <Link href="/portfolio/3d/projects" className="neo-brutalism-white neo-btn">
@@ -60,8 +59,7 @@ const HomeInfo = ({ currentStage }: HomeInfoProps) => {
     return (
       <div className="info-box">
         <p className="font-medium sm:text-xl text-center">
-          Need a project done or looking for a dev? <br /> I&apos;m just a few keystrokes
-          away
+          Need a project done or looking for a dev? <br /> I&apos;m just a few keystrokes away
         </p>
 
         <Link href="/portfolio/3d/contact" className="neo-brutalism-white neo-btn">
