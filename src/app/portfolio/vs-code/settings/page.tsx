@@ -1,5 +1,3 @@
-"use client";
-
 import { ThemeInfo } from "@/components/vs-code";
 import styles from "@/styles/settings-page.module.css";
 
