@@ -1,12 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import "react-tooltip/dist/react-tooltip.css";
 import styles from "@/styles/skills-page.module.css";
 import { motion } from "framer-motion";
 import { client, urlFor } from "@/lib/client";
 import { useState, useEffect } from "react";
-import { Tooltip } from "react-tooltip";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 const Skills = () => {
   const [experience, setExperience] = useState([]);
@@ -131,22 +130,23 @@ const Skills = () => {
                             <span className={styles.expWorkLine}></span>
                           )}
                         </div>
-                        <motion.div
-                          whileInView={{ opacity: [0, 1] }}
-                          transition={{ duration: 0.5 }}
-                          className={styles.expWork}
-                          data-tooltip-id={work?.name}
-                          data-tooltip-content={work?.desc}
-                        >
-                          <h4 className={styles.boldText}>{work?.year}</h4>
-                          <p className={styles.text}>{work?.name}</p>
-                        </motion.div>
-                        <Tooltip
-                          id={work?.name}
-                          arrowColor="#fff"
-                          clickable
-                          className={styles.skillsTooltip}
-                        />
+                        <TooltipProvider>
+                          <Tooltip>
+                            <TooltipTrigger asChild>
+                              <motion.div
+                                whileInView={{ opacity: [0, 1] }}
+                                transition={{ duration: 0.5 }}
+                                className={styles.expWork}
+                              >
+                                <h4 className={styles.boldText}>{work?.year}</h4>
+                                <p className={styles.text}>{work?.name}</p>
+                              </motion.div>
+                            </TooltipTrigger>
+                            <TooltipContent className={styles.skillsTooltip}>
+                              <p>{work?.desc}</p>
+                            </TooltipContent>
+                          </Tooltip>
+                        </TooltipProvider>
                       </div>
                     ))}
                   </motion.div>
@@ -166,22 +166,23 @@ const Skills = () => {
                             <span className={styles.expWorkLine}></span>
                           )}
                         </div>
-                        <motion.div
-                          whileInView={{ opacity: [0, 1] }}
-                          transition={{ duration: 0.5 }}
-                          className={styles.expWork}
-                          data-tooltip-id={info?.degree}
-                          data-tooltip-content={info?.desc}
-                        >
-                          <h4 className={styles.boldText}>{info?.degree}</h4>
-                          <p className={styles.text}>{info?.instituteName}</p>
-                        </motion.div>
-                        <Tooltip
-                          id={info?.degree}
-                          arrowColor="#fff"
-                          clickable
-                          className={styles.skillsTooltip}
-                        />
+                        <TooltipProvider>
+                          <Tooltip>
+                            <TooltipTrigger asChild>
+                              <motion.div
+                                whileInView={{ opacity: [0, 1] }}
+                                transition={{ duration: 0.5 }}
+                                className={styles.expWork}
+                              >
+                                <h4 className={styles.boldText}>{info?.degree}</h4>
+                                <p className={styles.text}>{info?.instituteName}</p>
+                              </motion.div>
+                            </TooltipTrigger>
+                            <TooltipContent className={styles.skillsTooltip}>
+                              <p>{info?.desc}</p>
+                            </TooltipContent>
+                          </Tooltip>
+                        </TooltipProvider>
                       </div>
                     ))}
                   </motion.div>

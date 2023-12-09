@@ -6,7 +6,7 @@ import { ComputerCanvas, EarthCanvas, StarsCanvas } from "@/components/canvas";
 
 const Desk = () => {
   return (
-    <section className={`${styles.deskSection} ${styles.paddingX} bg-black-500`}>
+    <section className={`${styles.deskSection} ${styles.paddingX} bg-slate-900`}>
       <title>Tonmoy - 3D Portfolio(Desk)</title>
       <div className={styles.deskModelContainer}>
         <StarsCanvas />
