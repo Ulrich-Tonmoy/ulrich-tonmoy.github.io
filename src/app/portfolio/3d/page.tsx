@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
 import { Canvas } from "@react-three/fiber";
@@ -9,13 +10,18 @@ import soundon from "../../../../public/soundon.png";
 import soundoff from "../../../../public/soundoff.png";
 
 const Home = () => {
-  const audioRef = useRef(new Audio("/sakura.mp3"));
-  audioRef.current.volume = 0.4;
-  audioRef.current.loop = true;
+  const audioRef = useRef<any>(null);
 
   const [currentStage, setCurrentStage] = useState(1);
   const [isRotating, setIsRotating] = useState(false);
   const [isPlayingMusic, setIsPlayingMusic] = useState(false);
+
+  useEffect(() => {
+    const audio = new Audio("/sakura.mp3");
+    audio.volume = 0.4;
+    audio.loop = true;
+    audioRef.current = audio;
+  }, []);
 
   useEffect(() => {
     if (isPlayingMusic) {
@@ -27,37 +33,49 @@ const Home = () => {
     };
   }, [isPlayingMusic]);
 
-  const adjustBiplaneForScreenSize = () => {
-    let screenScale, screenPosition;
+  let biplaneScale = [3, 3, 3];
+  let biplanePosition = [0, -4, -4];
+  let islandScale = [1, 1, 1];
+  let islandPosition = [0, -6.5, -43.4];
 
-    // If screen width is less than 768px, adjust the scale and position
-    if (window.innerWidth < 768) {
-      screenScale = [1.5, 1.5, 1.5];
-      screenPosition = [0, -1.5, 0];
-    } else {
-      screenScale = [3, 3, 3];
-      screenPosition = [0, -4, -4];
-    }
+  useEffect(() => {
+    const adjustBiplaneForScreenSize = () => {
+      let screenScale, screenPosition;
 
-    return [screenScale, screenPosition];
-  };
+      // If screen width is less than 768px, adjust the scale and position
+      if (window.innerWidth < 768) {
+        screenScale = [1.5, 1.5, 1.5];
+        screenPosition = [0, -1.5, 0];
+      } else {
+        screenScale = [3, 3, 3];
+        screenPosition = [0, -4, -4];
+      }
 
-  const adjustIslandForScreenSize = () => {
-    let screenScale, screenPosition;
+      return [screenScale, screenPosition];
+    };
 
-    if (window.innerWidth < 768) {
-      screenScale = [0.9, 0.9, 0.9];
-      screenPosition = [0, -6.5, -43.4];
-    } else {
-      screenScale = [1, 1, 1];
-      screenPosition = [0, -6.5, -43.4];
-    }
+    const adjustIslandForScreenSize = () => {
+      let screenScale, screenPosition;
 
-    return [screenScale, screenPosition];
-  };
+      if (window.innerWidth < 768) {
+        screenScale = [0.9, 0.9, 0.9];
+        screenPosition = [0, -6.5, -43.4];
+      } else {
+        screenScale = [1, 1, 1];
+        screenPosition = [0, -6.5, -43.4];
+      }
 
-  const [biplaneScale, biplanePosition] = adjustBiplaneForScreenSize();
-  const [islandScale, islandPosition] = adjustIslandForScreenSize();
+      return [screenScale, screenPosition];
+    };
+
+    const [bScale, bPosition] = adjustBiplaneForScreenSize();
+    const [lScale, lPosition] = adjustIslandForScreenSize();
+
+    biplaneScale = bScale;
+    biplanePosition = bPosition;
+    islandScale = lScale;
+    islandPosition = lPosition;
+  }, []);
 
   return (
     <section className="w-full h-screen relative">
