@@ -1,14 +1,17 @@
 import {defineConfig} from 'sanity'
-import {structureTool} from 'sanity/structure'
+import {deskTool} from 'sanity/desk'
 import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemas'
 
 export default defineConfig({
   name: 'default',
-  title: ' Tonmoy\'s Portfolio',
+  title: ' Tonmoy Portfolio',
+
   projectId: 'jpwqlm1c',
   dataset: 'production',
-  plugins: [structureTool(), visionTool()],
+
+  plugins: [deskTool(), visionTool()],
+
   schema: {
     types: schemaTypes,
   },
