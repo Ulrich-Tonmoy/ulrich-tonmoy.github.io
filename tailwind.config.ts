@@ -70,8 +70,11 @@ const config: Config = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       fontFamily: {
-        worksans: ["Work Sans", "sans-serif"],
-        poppins: ["Poppins", "sans-serif"],
+        Argon: ["Argon"],
+        Krypton: ["Krypton"],
+        Neon: ["Neon"],
+        Radon: ["Radon"],
+        Xenon: ["Xenon"],
       },
       boxShadow: {
         card: "0px 1px 2px 0px rgba(0, 0, 0, 0.05)",

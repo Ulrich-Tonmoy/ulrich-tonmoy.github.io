@@ -1,9 +1,6 @@
-import { DM_Sans } from "next/font/google";
 import { Metadata } from "next";
 import styles from "@/styles/layout.module.css";
 import { Explorer, Sidebar, StatusBar, Tabs, TitleBar } from "@/components/vs-code";
-
-const DMSans = DM_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Tonmoy - VS Code Portfolio",
@@ -12,7 +9,7 @@ export const metadata: Metadata = {
 
 const VSCodeLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <main className={`${DMSans.className}`}>
+    <main className="font-Krypton">
       <link rel="shortcut icon" href="/vfavicon.ico" type="image/x-icon" />
       <TitleBar />
       <div className={styles.main}>

@@ -16,12 +16,12 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="footer font-poppins">
+    <footer className="footer">
       <hr className="border-slate-200" />
 
       <div className="footer-container">
         <p>
-          © 2023 <strong>Tonmoy</strong>. All rights reserved.
+          ©{new Date().getFullYear()} <strong>Tonmoy</strong>. All rights reserved.
         </p>
 
         <div className="flex gap-3 justify-center items-center flex-wrap">
