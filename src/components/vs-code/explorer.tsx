@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { ChevronRight } from "@/components/icons";
-import styles from "@/styles/explorer.module.css";
+import { ChevronRight } from "@/components/vs-code/icons";
+import styles from "@/styles/vs-code/explorer.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";

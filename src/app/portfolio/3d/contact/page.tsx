@@ -4,7 +4,7 @@ import emailjs from "@emailjs/browser";
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useRef, useState } from "react";
 
-import { Fox } from "@/components/models";
+import { Fox } from "@/components/3d/models";
 import useAlert from "@/lib/hooks/use-alert";
 import { Alert, CanvasLoader } from "@/components/3d";
 
@@ -23,7 +23,12 @@ const Contact = () => {
     setCurrentAnimation("hit");
 
     emailjs
-      .sendForm("service_ucigc98", "template_fzfgxn6", formRef.current, "JJWmhn7B9fII3JveJ")
+      .sendForm(
+        "service_ucigc98",
+        "template_fzfgxn6",
+        formRef.current,
+        "JJWmhn7B9fII3JveJ",
+      )
       .then(
         () => {
           setLoading(false);
@@ -47,7 +52,7 @@ const Contact = () => {
             text: "I didn't receive your message 😢",
             type: "danger",
           });
-        }
+        },
       );
   };
 
@@ -59,7 +64,11 @@ const Contact = () => {
       <div className="flex-1 min-w-[50%] flex flex-col">
         <h1 className="head-text">Get in Touch</h1>
 
-        <form ref={formRef} onSubmit={handleSubmit} className="w-full flex flex-col gap-7 mt-14">
+        <form
+          ref={formRef}
+          onSubmit={handleSubmit}
+          className="w-full flex flex-col gap-7 mt-14"
+        >
           <label className="text-slate-700 font-semibold">
             Name
             <input

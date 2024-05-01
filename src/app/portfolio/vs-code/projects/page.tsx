@@ -1,7 +1,7 @@
 "use client";
 
 import { ProjectCard } from "@/components/vs-code";
-import styles from "@/styles/projects-page.module.css";
+import styles from "@/styles/vs-code/projects-page.module.css";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { client } from "@/lib/client";

@@ -1,8 +1,7 @@
 "use client";
 
-import { Fragment } from "react";
-import styles from "@/styles/desk.module.css";
-import { ComputerCanvas, EarthCanvas, StarsCanvas } from "@/components/canvas";
+import styles from "@/styles/3d/desk.module.css";
+import { ComputerCanvas, EarthCanvas, StarsCanvas } from "@/components/3d/canvas";
 
 const Desk = () => {
   return (

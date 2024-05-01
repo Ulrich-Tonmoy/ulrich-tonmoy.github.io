@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "@/styles/tab.module.css";
+import styles from "@/styles/vs-code/tab.module.css";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 

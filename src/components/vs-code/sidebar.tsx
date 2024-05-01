@@ -7,8 +7,8 @@ import {
   MailIcon,
   AccountIcon,
   SettingsIcon,
-} from "@/components/icons";
-import styles from "@/styles/sidebar.module.css";
+} from "@/components/vs-code/icons";
+import styles from "@/styles/vs-code/sidebar.module.css";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 

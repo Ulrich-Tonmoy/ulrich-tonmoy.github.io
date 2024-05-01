@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
-import styles from "@/styles/project-card.module.css";
+import styles from "@/styles/vs-code/project-card.module.css";
 import { motion, AnimatePresence } from "framer-motion";
 import { urlFor } from "@/lib/client";
-import { EyeIcon, GithubIcon } from "@/components/icons";
+import { EyeIcon, GithubIcon } from "@/components/vs-code/icons";
 import { useState } from "react";
 import { Modal } from "./";
 

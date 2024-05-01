@@ -5,8 +5,8 @@ import {
   CheckIcon,
   NextIcon,
   SourceControlIcon,
-} from "@/components/icons";
-import styles from "@/styles/status-bar.module.css";
+} from "@/components/vs-code/icons";
+import styles from "@/styles/vs-code/status-bar.module.css";
 
 const StatusBar = () => {
   return (

@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import styles from "@/styles/layout.module.css";
+import styles from "@/styles/vs-code/layout.module.css";
 import { Explorer, Sidebar, StatusBar, Tabs, TitleBar } from "@/components/vs-code";
 
 export const metadata: Metadata = {

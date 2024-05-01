@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import styles from "@/styles/home-page.module.css";
+import styles from "@/styles/vs-code/home-page.module.css";
 import { useEffect, useState } from "react";
 import { client, urlFor } from "@/lib/client";
 import { motion } from "framer-motion";

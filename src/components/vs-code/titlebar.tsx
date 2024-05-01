@@ -1,4 +1,4 @@
-import styles from "@/styles/titlebar.module.css";
+import styles from "@/styles/vs-code/titlebar.module.css";
 import Image from "next/image";
 import { useEffect } from "react";
 
