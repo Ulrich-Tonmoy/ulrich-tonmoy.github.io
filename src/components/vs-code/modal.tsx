@@ -47,7 +47,7 @@ const Modal = ({ project, handleClose }: any) => {
         exit="exit"
       >
         <button className={styles.closeButton} onClick={handleClose}>
-          X
+          x
         </button>
         <p className={styles.titleText}>{project?.title}</p>
         <div className={`${styles.img} ${styles.flex}`}>

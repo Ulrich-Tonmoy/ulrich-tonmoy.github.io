@@ -64,7 +64,7 @@ const ProjectCard = ({ project }: any) => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={() => setShowModal(!showModal)}
-              className="ml-1"
+              className="ml-1 py-0"
             >
               show more
             </motion.button>
