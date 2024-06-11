@@ -1,4 +1,4 @@
-import styles from "@/styles/contact-code.module.css";
+import styles from "@/styles/vs-code/contact-code.module.css";
 import { useState, useEffect } from "react";
 import { client } from "@/lib/client";
 

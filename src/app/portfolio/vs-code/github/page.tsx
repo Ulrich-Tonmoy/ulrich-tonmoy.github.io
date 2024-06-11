@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import styles from "@/styles/github-page.module.css";
+import styles from "@/styles/vs-code/github-page.module.css";
 import { useEffect, useState } from "react";
 
 const Github = () => {

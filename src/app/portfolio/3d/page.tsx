@@ -4,7 +4,7 @@
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useState, useRef, useEffect } from "react";
 import { HomeInfo, CanvasLoader } from "@/components/3d";
-import { Bird, Island, Plane, Sky } from "@/components/models";
+import { Bird, Island, Plane, Sky } from "@/components/3d/models";
 import Image from "next/image";
 import soundon from "../../../../public/soundon.png";
 import soundoff from "../../../../public/soundoff.png";
@@ -82,7 +82,10 @@ const Home = () => {
       <div className="absolute top-28 left-0 right-0 z-10 flex items-center justify-center">
         {currentStage && <HomeInfo currentStage={currentStage} />}
       </div>
-      <Canvas className="w-full h-screen bg-transparent" camera={{ near: 0.1, far: 1000 }}>
+      <Canvas
+        className="w-full h-screen bg-transparent"
+        camera={{ near: 0.1, far: 1000 }}
+      >
         <Suspense fallback={<CanvasLoader />}>
           <directionalLight position={[1, 1, 1]} intensity={2} />
           <ambientLight intensity={0.5} />

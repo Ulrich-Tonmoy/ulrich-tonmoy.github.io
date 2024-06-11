@@ -1,5 +1,5 @@
 import { ThemeInfo } from "@/components/vs-code";
-import styles from "@/styles/settings-page.module.css";
+import styles from "@/styles/vs-code/settings-page.module.css";
 
 const Settings = () => {
   return (

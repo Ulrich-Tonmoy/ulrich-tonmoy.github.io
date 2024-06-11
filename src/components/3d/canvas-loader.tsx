@@ -1,4 +1,4 @@
-import styles from "@/styles/canvas-loader.module.css";
+import styles from "@/styles/3d/canvas-loader.module.css";
 import { Html, useProgress } from "@react-three/drei";
 
 const CanvasLoader = () => {

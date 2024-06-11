@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
-import styles from "@/styles/modal.module.css";
+import styles from "@/styles/vs-code/modal.module.css";
 import { motion } from "framer-motion";
 import { urlFor } from "@/lib/client";
-import { EyeIcon, GithubIcon } from "@/components/icons";
+import { EyeIcon, GithubIcon } from "@/components/vs-code/icons";
 
 const dropIn = {
   hidden: {
@@ -47,7 +47,7 @@ const Modal = ({ project, handleClose }: any) => {
         exit="exit"
       >
         <button className={styles.closeButton} onClick={handleClose}>
-          X
+          x
         </button>
         <p className={styles.titleText}>{project?.title}</p>
         <div className={`${styles.img} ${styles.flex}`}>

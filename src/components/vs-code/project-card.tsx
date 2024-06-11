@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
-import styles from "@/styles/project-card.module.css";
+import styles from "@/styles/vs-code/project-card.module.css";
 import { motion, AnimatePresence } from "framer-motion";
 import { urlFor } from "@/lib/client";
-import { EyeIcon, GithubIcon } from "@/components/icons";
+import { EyeIcon, GithubIcon } from "@/components/vs-code/icons";
 import { useState } from "react";
 import { Modal } from "./";
 
@@ -64,7 +64,7 @@ const ProjectCard = ({ project }: any) => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={() => setShowModal(!showModal)}
-              className="ml-1"
+              className="ml-1 py-0"
             >
               show more
             </motion.button>

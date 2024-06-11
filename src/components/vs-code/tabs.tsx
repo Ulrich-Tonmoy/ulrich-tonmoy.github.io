@@ -1,5 +1,5 @@
 import { Tab } from "./";
-import styles from "@/styles/tabs.module.css";
+import styles from "@/styles/vs-code/tabs.module.css";
 
 const Tabs = () => {
   return (

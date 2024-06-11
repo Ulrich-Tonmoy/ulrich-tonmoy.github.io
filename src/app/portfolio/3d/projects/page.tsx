@@ -29,10 +29,11 @@ const Projects = () => {
       </h1>
 
       <p className="text-slate-500 mt-2 leading-relaxed">
-        I&apos;ve embarked on numerous projects throughout the years, but these are the ones I hold
-        closest to my heart. Many of them are open-source, so if you come across something that
-        piques your interest, feel free to explore the codebase and contribute your ideas for
-        further enhancements. Your collaboration is highly valued!
+        I&apos;ve embarked on numerous projects throughout the years, but these are the
+        ones I hold closest to my heart. Many of them are open-source, so if you come
+        across something that piques your interest, feel free to explore the codebase and
+        contribute your ideas for further enhancements. Your collaboration is highly
+        valued!
       </p>
 
       <div className="flex flex-wrap my-20 gap-16">
@@ -40,7 +41,11 @@ const Projects = () => {
           <div className="lg:w-[400px] w-full" key={index}>
             <div className="block-container w-12 h-12">
               <div className={`btn-back rounded-xl btn-back-${color[randomNumber()]}`} />
-              <Link href={urlFor(project?.imgUrl)} target="_blank" rel="noopener noreferrer">
+              <Link
+                href={urlFor(project?.imgUrl)}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <div className="btn-front rounded-xl flex justify-center items-center">
                   <img
                     src={urlFor(project?.imgUrl)}
@@ -52,14 +57,14 @@ const Projects = () => {
             </div>
 
             <div className="mt-5 flex flex-col">
-              <h4 className="text-2xl font-poppins font-semibold">{project.title}</h4>
+              <h4 className="text-2xl font-semibold">{project.title}</h4>
               <p className="mt-2 text-slate-500">
                 {project?.description.length > 200
                   ? `${project?.description.substring(0, 200)}...`
                   : project?.description}
               </p>
               {project?.projectLink && (
-                <div className="mt-5 flex items-center gap-2 font-poppins">
+                <div className="mt-5 flex items-center gap-2">
                   <Link
                     href={project.projectLink}
                     target="_blank"
@@ -72,7 +77,7 @@ const Projects = () => {
                 </div>
               )}
               {project?.codeLink && (
-                <div className="mt-5 flex items-center gap-2 font-poppins">
+                <div className="mt-5 flex items-center gap-2">
                   <Link
                     href={project.codeLink}
                     target="_blank"

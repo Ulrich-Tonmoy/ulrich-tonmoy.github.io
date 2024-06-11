@@ -1,7 +1,7 @@
 "use client";
 
 /* eslint-disable @next/next/no-img-element */
-import styles from "@/styles/about-page.module.css";
+import styles from "@/styles/vs-code/about-page.module.css";
 import { useEffect, useState } from "react";
 import { urlFor, client } from "@/lib/client";
 import { motion } from "framer-motion";

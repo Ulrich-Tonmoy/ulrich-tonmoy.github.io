@@ -28,7 +28,7 @@
   position: fixed;
   top: 10px;
   right: 10px;
-  padding: 0.3rem;
+  padding: 0 0.4rem;
   cursor: pointer;
 }
 
@@ -82,7 +82,6 @@
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
   margin: 1rem;
-  font-family: "DM Sans", sans-serif;
   font-weight: 800;
   cursor: pointer;
   transition: all 0.3s ease;

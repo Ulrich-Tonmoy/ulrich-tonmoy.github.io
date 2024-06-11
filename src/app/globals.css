@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Argon";
+  src: url("/fonts/MonaspaceArgonVarVF[wght,wdth,slnt].ttf") format("truetype");
+}
+@font-face {
+  font-family: "Krypton";
+  src: url("/fonts/MonaspaceKryptonVarVF[wght,wdth,slnt].ttf") format("truetype");
+}
+@font-face {
+  font-family: "Neon";
+  src: url("/fonts/MonaspaceNeonVarVF[wght,wdth,slnt].ttf") format("truetype");
+}
+@font-face {
+  font-family: "Radon";
+  src: url("/fonts/MonaspaceRadonVarVF[wght,wdth,slnt].ttf") format("truetype");
+}
+@font-face {
+  font-family: "Xenon";
+  src: url("/fonts/MonaspaceXenonVarVF[wght,wdth,slnt].ttf") format("truetype");
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -269,11 +290,11 @@ body:has(.card[data-color="green"]:hover) {
   }
 
   .head-text {
-    @apply sm:text-5xl text-3xl font-semibold sm:leading-snug font-poppins;
+    @apply sm:text-5xl text-3xl font-semibold sm:leading-snug;
   }
 
   .subhead-text {
-    @apply font-semibold sm:text-3xl text-xl relative font-poppins;
+    @apply font-semibold sm:text-3xl text-xl relative;
   }
 
   .blue-gradient_text {
@@ -328,7 +349,8 @@ body:has(.card[data-color="green"]:hover) {
 .logo {
   border-radius: 8.889px;
   background: #fff;
-  box-shadow: 0px 10px 35px -4px rgba(67, 83, 255, 0.15), 0px 1.5px 4px -1px rgba(67, 83, 255, 0.2);
+  box-shadow: 0px 10px 35px -4px rgba(67, 83, 255, 0.15),
+    0px 1.5px 4px -1px rgba(67, 83, 255, 0.2);
 }
 
 .block-container {
@@ -415,7 +437,7 @@ body:has(.card[data-color="green"]:hover) {
 .neo-brutalism-white {
   background: #fff;
   border: #fff;
-  box-shadow: 0.6vmin 0.6vmin #fff, 1vmin 1vmin #d2e4ff, 1vmin 1vmin #d2e4ff, 0.65vmin 1vmin #d2e4ff,
-    1vmin 0.65vmin #d2e4ff;
+  box-shadow: 0.6vmin 0.6vmin #fff, 1vmin 1vmin #d2e4ff, 1vmin 1vmin #d2e4ff,
+    0.65vmin 1vmin #d2e4ff, 1vmin 0.65vmin #d2e4ff;
 }
 /* Portfolio 3d end */

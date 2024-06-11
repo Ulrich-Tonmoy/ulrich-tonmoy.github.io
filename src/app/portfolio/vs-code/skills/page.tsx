@@ -1,11 +1,16 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import styles from "@/styles/skills-page.module.css";
+import styles from "@/styles/vs-code/skills-page.module.css";
 import { motion } from "framer-motion";
 import { client, urlFor } from "@/lib/client";
 import { useState, useEffect } from "react";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 const Skills = () => {
   const [experience, setExperience] = useState([]);
