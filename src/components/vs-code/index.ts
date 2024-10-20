@@ -9,4 +9,5 @@ export { default as Sidebar } from "./sidebar";
 export { default as Tab } from "./tab";
 export { default as Tabs } from "./tabs";
 export { default as ThemeInfo } from "./theme-info";
+export { default as FontInfo } from "./font-info";
 export { default as TitleBar } from "./titlebar";

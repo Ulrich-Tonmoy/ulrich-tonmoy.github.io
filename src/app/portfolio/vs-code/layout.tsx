@@ -8,8 +8,9 @@ export const metadata: Metadata = {
 };
 
 const VSCodeLayout = ({ children }: { children: React.ReactNode }) => {
+  const font = "font-Krypton"
   return (
-    <main className="font-Krypton">
+    <main className={font}>
       <link rel="shortcut icon" href="/vfavicon.ico" type="image/x-icon" />
       <TitleBar />
       <div className={styles.main}>
