@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 const Portfolio3DLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <main className="bg-slate-300/20 font-Radon">
-      <link rel="shortcut icon" href="/3favicon.ico" type="image/x-icon" />
+      <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
       <Navbar />
       {children}
       <Footer />

@@ -1,6 +1,12 @@
 import { Metadata } from "next";
 import styles from "@/styles/vs-code/layout.module.css";
-import { Explorer, Sidebar, StatusBar, Tabs, TitleBar } from "@/components/vs-code";
+import {
+  Explorer,
+  Sidebar,
+  StatusBar,
+  Tabs,
+  TitleBar,
+} from "@/components/vs-code";
 
 export const metadata: Metadata = {
   title: "Tonmoy - VS Code Portfolio",
@@ -8,10 +14,10 @@ export const metadata: Metadata = {
 };
 
 const VSCodeLayout = ({ children }: { children: React.ReactNode }) => {
-  const font = "font-Krypton"
+  const font = "font-Krypton";
   return (
     <main className={font}>
-      <link rel="shortcut icon" href="/vfavicon.ico" type="image/x-icon" />
+      <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
       <TitleBar />
       <div className={styles.main}>
         <Sidebar />
