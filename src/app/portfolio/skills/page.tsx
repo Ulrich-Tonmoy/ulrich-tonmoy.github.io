@@ -11,11 +11,9 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { randomNumber } from "@/lib/utils";
+import { color, randomNumber } from "@/lib/utils";
 
 const Skills = () => {
-  const color = ["red", "green", "yellow", "blue", "orange", "pink", "black"];
-
   const [experience, setExperience] = useState([]);
   const [education, setEducation] = useState([]);
   const [skills, setSkills] = useState([]);

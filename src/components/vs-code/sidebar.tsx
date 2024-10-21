@@ -15,38 +15,38 @@ import { usePathname } from "next/navigation";
 const sidebarTopItems = [
   {
     Icon: FilesIcon,
-    path: "/portfolio/vs-code",
+    path: "/portfolio",
   },
   {
     Icon: PersonIcon,
-    path: "/portfolio/vs-code/about",
+    path: "/portfolio/about",
   },
   {
     Icon: PencilIcon,
-    path: "/portfolio/vs-code/skills",
+    path: "/portfolio/skills",
   },
   {
     Icon: CodeIcon,
-    path: "/portfolio/vs-code/projects",
+    path: "/portfolio/projects",
   },
   {
     Icon: GithubIcon,
-    path: "/portfolio/vs-code/github",
+    path: "/portfolio/github",
   },
   {
     Icon: MailIcon,
-    path: "/portfolio/vs-code/contact",
+    path: "/portfolio/contact",
   },
 ];
 
 const sidebarBottomItems = [
   {
     Icon: AccountIcon,
-    path: "/portfolio/vs-code/about",
+    path: "/portfolio/about",
   },
   {
     Icon: SettingsIcon,
-    path: "/portfolio/vs-code/settings",
+    path: "/portfolio/settings",
   },
 ];
 
