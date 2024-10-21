@@ -7,7 +7,7 @@ const TitleBar = () => {
     if (localStorage.getItem("theme")) {
       document.documentElement.setAttribute(
         "data-theme",
-        localStorage.getItem("theme") ?? "",
+        localStorage.getItem("theme") ?? "github-dark"
       );
     }
   }, []);
