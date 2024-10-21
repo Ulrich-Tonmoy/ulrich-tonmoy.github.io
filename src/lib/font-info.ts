@@ -2,26 +2,26 @@ export const fontInfo = [
   {
     name: "Neon",
     icon: "/Neon.png",
-    font: "font-Neon",
+    font: "neon",
   },
   {
     name: "Argon",
     icon: "/Argon.png",
-    font: "font-Argon",
+    font: "argon",
   },
   {
     name: "Xenon",
     icon: "/Xenon.png",
-    font: "font-Xenon",
+    font: "xenon",
   },
   {
     name: "Radon",
     icon: "/Radon.png",
-    font: "font-Radon",
+    font: "radon",
   },
   {
     name: "Krypton",
     icon: "/Krypton.png",
-    font: "font-Krypton",
+    font: "krypton",
   },
 ];

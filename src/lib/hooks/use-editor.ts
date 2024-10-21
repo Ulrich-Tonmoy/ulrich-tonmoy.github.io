@@ -9,16 +9,13 @@ interface Tabs {
 
 interface EditorStore {
   showSidebar: boolean;
-  fontName: string;
   openedTabs: Tabs[];
   closeTabs: (filename: string) => void;
   toggleSidebar: (show: boolean) => void;
-  changeFont: (fontName: string) => void;
 }
 
 export const useEditor = create<EditorStore>((set) => ({
   showSidebar: true,
-  fontName: "font-Krypton",
   openedTabs: tabInfo,
   closeTabs: (filename: string) => {
     set((state) => ({
@@ -27,8 +24,5 @@ export const useEditor = create<EditorStore>((set) => ({
   },
   toggleSidebar: (show: boolean) => {
     set({ showSidebar: show });
-  },
-  changeFont: (fontName: string) => {
-    set({ fontName: fontName });
   },
 }));

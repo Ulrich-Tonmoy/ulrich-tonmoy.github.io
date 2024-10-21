@@ -8,11 +8,10 @@ import styles from "@/styles/vs-code/vs-code.module.css";
 import { useEditor } from "@/lib/hooks/use-editor";
 
 const VSCode = ({ children }: { children: React.ReactNode }) => {
-  const { fontName, showSidebar } = useEditor();
-  console.log(fontName);
+  const { showSidebar } = useEditor();
 
   return (
-    <main className={fontName}>
+    <main>
       <TitleBar />
       <div className={styles.main}>
         <Sidebar />

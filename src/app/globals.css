@@ -8,7 +8,8 @@
 }
 @font-face {
   font-family: "Krypton";
-  src: url("/fonts/MonaspaceKryptonVarVF[wght,wdth,slnt].ttf") format("truetype");
+  src: url("/fonts/MonaspaceKryptonVarVF[wght,wdth,slnt].ttf")
+    format("truetype");
 }
 @font-face {
   font-family: "Neon";
@@ -243,6 +244,22 @@
   --scrollbar-track-bg: #011627;
   --scrollbar-thumb-bg: #043254;
   --secondary-bg: #031d33;
+}
+
+[data-font="argon"] {
+  @apply font-argon;
+}
+[data-font="krypton"] {
+  @apply font-krypton;
+}
+[data-font="neon"] {
+  @apply font-neon;
+}
+[data-font="radon"] {
+  @apply font-radon;
+}
+[data-font="xenon"] {
+  @apply font-xenon;
 }
 
 *,

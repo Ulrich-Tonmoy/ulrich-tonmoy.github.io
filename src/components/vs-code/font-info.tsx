@@ -3,6 +3,7 @@ import Image from "next/image";
 import styles from "@/styles/vs-code/theme-info.module.css";
 import { fontInfo } from "@/lib/font-info";
 import { useEditor } from "@/lib/hooks/use-editor";
+import { useEffect, useState } from "react";
 
 const Font = ({ icon, name, font, currentFont, setFont }: any) => {
   return (
@@ -24,16 +25,26 @@ const Font = ({ icon, name, font, currentFont, setFont }: any) => {
 };
 
 const FontInfo = () => {
-  const { fontName, changeFont } = useEditor();
+  const [currentFont, setCurrentFont] = useState<String>();
 
   const setFont = (font: string) => {
     document.documentElement.setAttribute("data-font", font);
     localStorage.setItem("font", font);
-    changeFont(font);
+    setCurrentFont(font);
   };
 
+  useEffect(() => {
+    const local = localStorage.getItem("font");
+    setCurrentFont(local ?? "krypton");
+  }, []);
+
   return fontInfo.map((font: any) => (
-    <Font {...font} key={font.name} currentFont={fontName} setFont={setFont} />
+    <Font
+      {...font}
+      key={font.name}
+      currentFont={currentFont}
+      setFont={setFont}
+    />
   ));
 };
 

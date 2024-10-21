@@ -1,21 +1,15 @@
-import { useEditor } from "@/lib/hooks/use-editor";
 import styles from "@/styles/vs-code/titlebar.module.css";
 import Image from "next/image";
 import { useEffect } from "react";
 
 const TitleBar = () => {
-  const { changeFont } = useEditor();
-
   useEffect(() => {
-    if (localStorage.getItem("theme")) {
-      document.documentElement.setAttribute(
-        "data-theme",
-        localStorage.getItem("theme") ?? "github-dark"
-      );
-    }
-
-    changeFont(localStorage.getItem("font") ?? "font-Krypton");
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    const theme = localStorage.getItem("theme") ?? "github-dark";
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+    const font = localStorage.getItem("font") ?? "krypton";
+    document.documentElement.setAttribute("data-font", font);
+    localStorage.setItem("font", font);
   }, []);
 
   return (
