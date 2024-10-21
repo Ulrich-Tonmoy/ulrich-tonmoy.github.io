@@ -18,7 +18,7 @@ interface EditorStore {
 
 export const useEditor = create<EditorStore>((set) => ({
   showSidebar: true,
-  fontName: localStorage.getItem("font") ?? "font-Krypton",
+  fontName: "font-Krypton",
   openedTabs: tabInfo,
   closeTabs: (filename: string) => {
     set((state) => ({

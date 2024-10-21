@@ -1,8 +1,11 @@
+import { useEditor } from "@/lib/hooks/use-editor";
 import styles from "@/styles/vs-code/titlebar.module.css";
 import Image from "next/image";
 import { useEffect } from "react";
 
 const TitleBar = () => {
+  const { changeFont } = useEditor();
+
   useEffect(() => {
     if (localStorage.getItem("theme")) {
       document.documentElement.setAttribute(
@@ -10,6 +13,9 @@ const TitleBar = () => {
         localStorage.getItem("theme") ?? "github-dark"
       );
     }
+
+    changeFont(localStorage.getItem("font") ?? "font-Krypton");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
