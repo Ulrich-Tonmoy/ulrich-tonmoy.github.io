@@ -56,7 +56,7 @@ const Sidebar = () => {
   const pathname = usePathname();
 
   const onClickIcon = (isActive: boolean) => {
-    const show = isActive ? (showSidebar ? false : true) : false;
+    const show = !isActive || !showSidebar;
     toggleSidebar(show);
   };
 
