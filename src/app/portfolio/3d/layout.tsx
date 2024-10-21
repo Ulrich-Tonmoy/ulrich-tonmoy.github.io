@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { Footer, Navbar } from "@/components/3d";
+import { Navbar } from "@/components/3d";
 
 export const metadata: Metadata = {
   title: "Tonmoy - 3D Portfolio",
@@ -12,7 +12,6 @@ const Portfolio3DLayout = ({ children }: { children: React.ReactNode }) => {
       <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
       <Navbar />
       {children}
-      <Footer />
     </main>
   );
 };

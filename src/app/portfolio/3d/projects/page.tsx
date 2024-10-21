@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import { CTA } from "@/components/3d";
 import arrow from "../../../../../public/arrow.svg";
 import Image from "next/image";
 import Link from "next/link";
@@ -25,22 +24,28 @@ const Projects = () => {
       <title>Tonmoy - 3D Portfolio(Projects)</title>
       <h1 className="head-text">
         My&nbsp;
-        <span className="blue-gradient_text drop-shadow font-semibold">Projects</span>
+        <span className="blue-gradient_text drop-shadow font-semibold">
+          Projects
+        </span>
       </h1>
 
       <p className="text-slate-500 mt-2 leading-relaxed">
-        I&apos;ve embarked on numerous projects throughout the years, but these are the
-        ones I hold closest to my heart. Many of them are open-source, so if you come
-        across something that piques your interest, feel free to explore the codebase and
-        contribute your ideas for further enhancements. Your collaboration is highly
-        valued!
+        I&apos;ve embarked on numerous projects throughout the years, but these
+        are the ones I hold closest to my heart. Many of them are open-source,
+        so if you come across something that piques your interest, feel free to
+        explore the codebase and contribute your ideas for further enhancements.
+        Your collaboration is highly valued!
       </p>
 
       <div className="flex flex-wrap my-20 gap-16">
         {projects.map((project: any, index: any) => (
           <div className="lg:w-[400px] w-full" key={index}>
             <div className="block-container w-12 h-12">
-              <div className={`btn-back rounded-xl btn-back-${color[randomNumber()]}`} />
+              <div
+                className={`btn-back rounded-xl btn-back-${
+                  color[randomNumber()]
+                }`}
+              />
               <Link
                 href={urlFor(project?.imgUrl)}
                 target="_blank"
@@ -73,7 +78,11 @@ const Projects = () => {
                   >
                     Live Link
                   </Link>
-                  <Image src={arrow} alt="arrow" className="w-4 h-4 object-contain" />
+                  <Image
+                    src={arrow}
+                    alt="arrow"
+                    className="w-4 h-4 object-contain"
+                  />
                 </div>
               )}
               {project?.codeLink && (
@@ -86,7 +95,11 @@ const Projects = () => {
                   >
                     Github Link
                   </Link>
-                  <Image src={arrow} alt="arrow" className="w-4 h-4 object-contain" />
+                  <Image
+                    src={arrow}
+                    alt="arrow"
+                    className="w-4 h-4 object-contain"
+                  />
                 </div>
               )}
             </div>
@@ -95,8 +108,6 @@ const Projects = () => {
       </div>
 
       <hr className="border-slate-200" />
-
-      <CTA />
     </section>
   );
 };

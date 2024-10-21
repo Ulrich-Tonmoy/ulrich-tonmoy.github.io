@@ -11,8 +11,11 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { randomNumber } from "@/lib/utils";
 
 const Skills = () => {
+  const color = ["red", "green", "yellow", "blue", "orange", "pink", "black"];
+
   const [experience, setExperience] = useState([]);
   const [education, setEducation] = useState([]);
   const [skills, setSkills] = useState([]);
@@ -21,7 +24,8 @@ const Skills = () => {
   const [activeFilter, setActiveFilter] = useState("All");
   const [filterSkills, setFilterSkills] = useState([]);
 
-  const [activeQualification, setActiveQualification] = useState("Work Experience");
+  const [activeQualification, setActiveQualification] =
+    useState("Work Experience");
 
   useEffect(() => {
     const query = '*[_type == "experiences"]';
@@ -78,33 +82,38 @@ const Skills = () => {
               <div
                 key={index}
                 onClick={() => handleWorkFilter(item)}
-                className={`${styles.filterItem} ${styles.flex} ${styles.text} ${
-                  activeFilter === item ? `${styles.itemActive}` : ""
-                }`}
+                className={`${styles.filterItem} ${styles.flex} ${
+                  styles.text
+                } ${activeFilter === item ? `${styles.itemActive}` : ""}`}
               >
                 {item}
               </div>
             ))}
           </div>
-          {filterSkills
-            ?.sort((a: any, b: any) => a?.sortId - b?.sortId)
-            .map((skill: any) => (
-              <motion.div
-                whileInView={{ opacity: [0, 1] }}
-                transition={{ duration: 0.5 }}
-                className={`${styles.item} ${styles.flex}`}
-                key={skill?.name}
-                title={skill?.name}
-              >
+          <div className="flex flex-wrap gap-8">
+            {filterSkills
+              ?.sort((a: any, b: any) => a?.sortId - b?.sortId)
+              .map((skill: any) => (
                 <div
-                  className={`${styles.flex} ${styles.itemDiv}`}
-                  style={{ backgroundColor: skill?.bgColor }}
+                  className="block-container w-16 h-16"
+                  key={skill.name}
+                  title={skill?.name}
                 >
-                  <img src={urlFor(skill?.icon)} alt={skill?.name} />
+                  <div
+                    className={`btn-back btn-back-${
+                      color[randomNumber()]
+                    } rounded-xl`}
+                  />
+                  <div className="btn-front rounded-xl flex justify-center items-center">
+                    <img
+                      src={urlFor(skill?.icon)}
+                      alt={skill.name}
+                      className="w-1/2 h-1/2 object-contain"
+                    />
+                  </div>
                 </div>
-                <p className={styles.text}>{skill?.name}</p>
-              </motion.div>
-            ))}
+              ))}
+          </div>
         </motion.div>
         <motion.div className={styles.exp}>
           <div className={styles.filter}>
@@ -112,7 +121,9 @@ const Skills = () => {
               <div
                 key={index}
                 onClick={() => handleQualification(item)}
-                className={`${styles.filterItem} ${styles.flex} ${styles.text} ${
+                className={`${styles.filterItem} ${styles.flex} ${
+                  styles.text
+                } ${
                   activeQualification === item ? `${styles.itemActive}` : ""
                 }`}
               >
@@ -143,7 +154,9 @@ const Skills = () => {
                                 transition={{ duration: 0.5 }}
                                 className={styles.expWork}
                               >
-                                <h4 className={styles.boldText}>{work?.year}</h4>
+                                <h4 className={styles.boldText}>
+                                  {work?.year}
+                                </h4>
                                 <p className={styles.text}>{work?.name}</p>
                               </motion.div>
                             </TooltipTrigger>
@@ -179,8 +192,12 @@ const Skills = () => {
                                 transition={{ duration: 0.5 }}
                                 className={styles.expWork}
                               >
-                                <h4 className={styles.boldText}>{info?.degree}</h4>
-                                <p className={styles.text}>{info?.instituteName}</p>
+                                <h4 className={styles.boldText}>
+                                  {info?.degree}
+                                </h4>
+                                <p className={styles.text}>
+                                  {info?.instituteName}
+                                </p>
                               </motion.div>
                             </TooltipTrigger>
                             <TooltipContent className={styles.skillsTooltip}>

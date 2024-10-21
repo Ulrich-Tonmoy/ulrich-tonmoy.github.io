@@ -6,7 +6,6 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import { CTA } from "@/components/3d";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { client, urlFor } from "@/lib/client";
@@ -48,13 +47,17 @@ const About = () => {
       <title>Tonmoy - 3D Portfolio(About)</title>
       <h1 className="head-text">
         Hello, I&apos;m
-        <span className="blue-gradient_text font-semibold drop-shadow"> Tonmoy</span> 👋
+        <span className="blue-gradient_text font-semibold drop-shadow">
+          {" "}
+          Tonmoy
+        </span>{" "}
+        👋
       </h1>
 
       <div className="mt-5 flex flex-col gap-3 text-slate-500">
         <p>
-          Software Engineer & Game Developer, specializing in technical education through
-          hands-on learning and building applications.
+          Software Engineer & Game Developer, specializing in technical
+          education through hands-on learning and building applications.
         </p>
       </div>
 
@@ -66,12 +69,14 @@ const About = () => {
             ?.sort((a: any, b: any) => a?.sortId - b?.sortId)
             .map((skill: any) => (
               <div
-                className="block-container w-20 h-20"
+                className="block-container w-16 h-16"
                 key={skill.name}
                 title={skill?.name}
               >
                 <div
-                  className={`btn-back btn-back-${color[randomNumber()]} rounded-xl`}
+                  className={`btn-back btn-back-${
+                    color[randomNumber()]
+                  } rounded-xl`}
                 />
                 <div className="btn-front rounded-xl flex justify-center items-center">
                   <img
@@ -96,7 +101,8 @@ const About = () => {
                 visible={true}
                 date={exp.year}
                 iconStyle={{
-                  background: "linear-gradient(135deg, #adfda2 -20%, #11d3f3 120%)",
+                  background:
+                    "linear-gradient(135deg, #adfda2 -20%, #11d3f3 120%)",
                 }}
                 icon={
                   <div className="flex justify-center items-center w-full h-full">
@@ -115,7 +121,9 @@ const About = () => {
                 }}
               >
                 <div>
-                  <h3 className="text-black text-xl font-semibold">{exp.name}</h3>
+                  <h3 className="text-black text-xl font-semibold">
+                    {exp.name}
+                  </h3>
                   <p
                     className="text-slate-500 font-medium text-base"
                     style={{ margin: 0 }}
@@ -132,8 +140,6 @@ const About = () => {
       </div>
 
       <hr className="border-slate-200" />
-
-      <CTA />
     </section>
   );
 };
