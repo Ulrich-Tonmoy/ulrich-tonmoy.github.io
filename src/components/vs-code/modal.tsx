@@ -3,6 +3,7 @@ import styles from "@/styles/vs-code/modal.module.css";
 import { motion } from "framer-motion";
 import { urlFor } from "@/lib/client";
 import { EyeIcon, GithubIcon } from "@/components/vs-code/icons";
+import ReactDOM from "react-dom";
 
 const dropIn = {
   hidden: {
@@ -30,7 +31,7 @@ const Modal = ({ project, handleClose }: any) => {
     return Math.floor(Math.random() * 16777215).toString(16);
   };
 
-  return (
+  return ReactDOM.createPortal(
     <motion.div
       onClick={handleClose}
       className={styles.backdrop}
@@ -106,12 +107,13 @@ const Modal = ({ project, handleClose }: any) => {
           ))}
         </div>
         <div className={`${styles.content} ${styles.flex}`}>
-          <p className={styles.text} style={{ marginTop: 10 }}>
+          <p className={styles.desc} style={{ marginTop: 10 }}>
             {project?.description}
           </p>
         </div>
       </motion.div>
-    </motion.div>
+    </motion.div>,
+    document.body // Append the modal to the body
   );
 };
 
