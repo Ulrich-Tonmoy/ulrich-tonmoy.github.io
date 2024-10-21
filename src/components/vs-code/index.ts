@@ -11,3 +11,4 @@ export { default as Tabs } from "./tabs";
 export { default as ThemeInfo } from "./theme-info";
 export { default as FontInfo } from "./font-info";
 export { default as TitleBar } from "./titlebar";
+export { default as VSCode } from "./vs-code";

@@ -2,7 +2,7 @@
 import Image from "next/image";
 import styles from "@/styles/vs-code/theme-info.module.css";
 import { useEffect, useState } from "react";
-import { themes } from "@/lib/theme";
+import { themeInfo } from "@/lib/theme-info";
 
 const Theme = ({
   icon,
@@ -45,7 +45,7 @@ const ThemeInfo = () => {
     setCurrentTheme(local ?? "github-dark");
   }, []);
 
-  return themes.map((theme: any) => (
+  return themeInfo.map((theme: any) => (
     <Theme
       {...theme}
       key={theme.theme}

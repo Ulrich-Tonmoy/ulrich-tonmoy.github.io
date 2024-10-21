@@ -1,4 +1,4 @@
-export const themes = [
+export const themeInfo = [
   {
     name: "GitHub Dark",
     icon: "/github-dark.png",
