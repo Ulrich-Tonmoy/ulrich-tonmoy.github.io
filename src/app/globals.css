@@ -302,7 +302,7 @@ body:has(.card[data-color="green"]:hover) {
   }
 
   .input {
-    @apply bg-white border border-gray-200 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mt-2.5 font-normal shadow-card;
+    @apply border border-gray-200 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mt-2.5 font-normal shadow-card;
   }
 
   .textarea {
@@ -370,7 +370,8 @@ body:has(.card[data-color="green"]:hover) {
   transform-origin: bottom right;
   transform: rotateZ(15deg);
   will-change: transform;
-  box-shadow: 16px 0 40px #e4e4e4;
+  /* box-shadow: 16px 0 40px #e4e4e4; */
+  box-shadow: 4px 0 20px #e4e4e4;
 }
 
 .block-container .btn-back-red {

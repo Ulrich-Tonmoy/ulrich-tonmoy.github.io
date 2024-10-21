@@ -8,33 +8,38 @@ import { usePathname } from "next/navigation";
 const explorerItems = [
   {
     name: "home.jsx",
-    path: "/portfolio/vs-code",
+    path: "/portfolio",
     icon: "react_icon.svg",
   },
   {
     name: "about.html",
-    path: "/portfolio/vs-code/about",
+    path: "/portfolio/about",
     icon: "html_icon.svg",
   },
   {
     name: "skills.json",
-    path: "/portfolio/vs-code/skills",
+    path: "/portfolio/skills",
     icon: "json_icon.svg",
   },
   {
     name: "projects.js",
-    path: "/portfolio/vs-code/projects",
+    path: "/portfolio/projects",
     icon: "js_icon.svg",
   },
   {
     name: "github.md",
-    path: "/portfolio/vs-code/github",
+    path: "/portfolio/github",
     icon: "markdown_icon.svg",
   },
   {
     name: "contact.css",
-    path: "/portfolio/vs-code/contact",
+    path: "/portfolio/contact",
     icon: "css_icon.svg",
+  },
+  {
+    name: "desk.blend",
+    path: "/portfolio/desk",
+    icon: "blender.png",
   },
 ];
 

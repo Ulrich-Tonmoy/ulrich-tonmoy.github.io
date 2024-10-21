@@ -14,11 +14,6 @@ export default {
             type: "number",
         },
         {
-            name: "bgColor",
-            title: "BgColor",
-            type: "string",
-        },
-        {
             name: "icon",
             title: "Icon",
             type: "image",

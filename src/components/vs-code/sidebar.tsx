@@ -8,6 +8,7 @@ import {
   AccountIcon,
   SettingsIcon,
 } from "@/components/vs-code/icons";
+import { useEditor } from "@/lib/hooks/use-editor";
 import styles from "@/styles/vs-code/sidebar.module.css";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -15,43 +16,49 @@ import { usePathname } from "next/navigation";
 const sidebarTopItems = [
   {
     Icon: FilesIcon,
-    path: "/portfolio/vs-code",
+    path: "/portfolio",
   },
   {
     Icon: PersonIcon,
-    path: "/portfolio/vs-code/about",
+    path: "/portfolio/about",
   },
   {
     Icon: PencilIcon,
-    path: "/portfolio/vs-code/skills",
+    path: "/portfolio/skills",
   },
   {
     Icon: CodeIcon,
-    path: "/portfolio/vs-code/projects",
+    path: "/portfolio/projects",
   },
   {
     Icon: GithubIcon,
-    path: "/portfolio/vs-code/github",
+    path: "/portfolio/github",
   },
   {
     Icon: MailIcon,
-    path: "/portfolio/vs-code/contact",
+    path: "/portfolio/contact",
   },
 ];
 
 const sidebarBottomItems = [
   {
     Icon: AccountIcon,
-    path: "/portfolio/vs-code/about",
+    path: "/portfolio/about",
   },
   {
     Icon: SettingsIcon,
-    path: "/portfolio/vs-code/settings",
+    path: "/portfolio/settings",
   },
 ];
 
 const Sidebar = () => {
+  const { showSidebar, toggleSidebar } = useEditor();
   const pathname = usePathname();
+
+  const onClickIcon = (isActive: boolean) => {
+    const show = isActive ? (showSidebar ? false : true) : false;
+    toggleSidebar(show);
+  };
 
   return (
     <aside className={styles.sidebar}>
@@ -59,10 +66,17 @@ const Sidebar = () => {
         {sidebarTopItems.map(({ Icon, path }) => (
           <Link href={path} key={path}>
             <div
-              className={`${styles.iconContainer} ${pathname === path && styles.active}`}
+              className={`${styles.iconContainer} ${
+                pathname === path && styles.active
+              }`}
             >
               <Icon
-                fill={pathname === path ? "rgb(225, 228, 232)" : "rgb(106, 115, 125)"}
+                onClick={() => onClickIcon(pathname === path)}
+                fill={
+                  pathname === path
+                    ? "rgb(225, 228, 232)"
+                    : "rgb(106, 115, 125)"
+                }
                 className={styles.icon}
               />
             </div>
@@ -74,7 +88,12 @@ const Sidebar = () => {
           <div className={styles.iconContainer} key={path}>
             <Link href={path}>
               <Icon
-                fill={pathname === path ? "rgb(225, 228, 232)" : "rgb(106, 115, 125)"}
+                onClick={() => onClickIcon(pathname === path)}
+                fill={
+                  pathname === path
+                    ? "rgb(225, 228, 232)"
+                    : "rgb(106, 115, 125)"
+                }
                 className={styles.icon}
               />
             </Link>

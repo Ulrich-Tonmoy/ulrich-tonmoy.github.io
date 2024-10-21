@@ -15,14 +15,6 @@
   margin: 2rem;
 }
 
-.img {
-  width: 100%;
-  height: 170px;
-  border-radius: 15px;
-  object-fit: cover;
-  background-color: gray;
-}
-
 .text {
   font-size: 0.8rem;
   text-align: left;
@@ -40,7 +32,7 @@
 }
 
 .headText {
-  font-size: 2.75rem;
+  font-size: 2rem;
   font-weight: 800;
   text-align: center;
   color: var(--text-color);
@@ -58,9 +50,6 @@
     width: 100%;
     width: 370px;
     margin: 2rem 4rem;
-  }
-  .img {
-    height: 320px;
   }
   .boldText {
     font-size: 2rem;

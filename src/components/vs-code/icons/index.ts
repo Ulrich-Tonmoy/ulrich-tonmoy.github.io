@@ -14,3 +14,4 @@ export { default as SettingsIcon } from "./settings-icon";
 export { default as SourceControlIcon } from "./source-control-icon";
 export { default as WarningIcon } from "./warning-icon";
 export { default as PersonIcon } from "./person-icon";
+export { default as CloseIcon } from "./close-icon";
