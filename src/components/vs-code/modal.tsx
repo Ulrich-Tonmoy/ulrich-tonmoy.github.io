@@ -2,7 +2,7 @@
 import styles from "@/styles/vs-code/modal.module.css";
 import { motion } from "framer-motion";
 import { urlFor } from "@/lib/client";
-import { EyeIcon, GithubIcon } from "@/components/vs-code/icons";
+import { CloseIcon, EyeIcon, GithubIcon } from "@/components/vs-code/icons";
 import ReactDOM from "react-dom";
 
 const dropIn = {
@@ -47,9 +47,9 @@ const Modal = ({ project, handleClose }: any) => {
         animate="visible"
         exit="exit"
       >
-        <button className={styles.closeButton} onClick={handleClose}>
-          x
-        </button>
+        <span className={styles.closeButton} onClick={handleClose}>
+          <CloseIcon />
+        </span>
         <p className={styles.titleText}>{project?.title}</p>
         <div className={`${styles.img} ${styles.flex}`}>
           <img src={urlFor(project?.imgUrl)} alt={project?.name} />

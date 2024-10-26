@@ -9,11 +9,15 @@ const Github = () => {
   const [followers, setFollowers] = useState<any>();
 
   const getRepos = async () => {
-    const response = await fetch("https://api.github.com/users/Ulrich-Tonmoy/repos");
+    const response = await fetch(
+      "https://api.github.com/users/Ulrich-Tonmoy/repos"
+    );
     return await response.json();
   };
   const getFollowers = async () => {
-    const response = await fetch("https://api.github.com/users/Ulrich-Tonmoy/followers");
+    const response = await fetch(
+      "https://api.github.com/users/Ulrich-Tonmoy/followers"
+    );
     return await response.json();
   };
 
@@ -93,6 +97,16 @@ const Github = () => {
             title="Top Langs"
           />
         </a>
+        <img
+          src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=ulrich-tonmoy&theme=2077"
+          alt="Top Langs"
+          title="Top Langs"
+        />
+        <img
+          src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=ulrich-tonmoy&theme=2077"
+          alt="Top Langs"
+          title="Top Langs"
+        />
       </div>
       <div className={styles.container}>
         <h1> 🔥 Contributions 🔥</h1>
@@ -103,6 +117,11 @@ const Github = () => {
             title="Contributions"
           />
         </a>
+        <img
+          src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ulrich-tonmoy&theme=2077"
+          alt="Contributions"
+          title="Contributions"
+        />
         <a href="https://github.com/Ashutosh00710/github-readme-activity-graph">
           <img
             src="https://github-readme-activity-graph.vercel.app/graph?username=Ulrich-Tonmoy&theme=react-dark&hide_border=true"
