@@ -22,14 +22,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 
 .closeButton {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  padding: 0 0.4rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: var(--button-bg);
+  padding: 0.2rem;
+  border-radius: 3px;
   cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.closeButton:hover {
+  background-color: var(--accent-color);
 }
 
 .titleText {
@@ -147,6 +155,9 @@
   width: 100%;
   position: relative;
   flex-direction: column;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 @media screen and (min-width: 2000px) {
