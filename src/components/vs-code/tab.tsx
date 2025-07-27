@@ -1,5 +1,4 @@
 import Link from "next/link";
-import styles from "@/styles/vs-code/tab.module.css";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { CloseIcon } from "./icons";
@@ -13,13 +12,16 @@ const Tab = ({ icon, filename, path }: any) => {
   return (
     <span
       className={cn(
-        `${styles.tab} ${pathname === path && styles.active}`,
-        "group"
+        `flex items-center cursor-pointer text-[#ececec] text-base bg-[var(--tab-bg)] border border-[var(--tab-border)] pt-2 pr-1 pb-2 pl-5 hover:bg-[var(--tab-active-bg)] hover:border-b-0 ${
+          pathname === path &&
+          "border-t border-t-[var(--accent-color)] bg-[var(--tab-active-bg)] border-b-0 "
+        }`,
+        "group",
       )}
     >
       <Link href={path} className="flex">
         <Image src={icon} alt={filename} height={18} width={18} />
-        <p>{filename}</p>
+        <p className="ml-1">{filename}</p>
       </Link>
       <span
         className="ml-2 p-1 rounded-md flex items-center group-hover:visible invisible hover:bg-white/20"

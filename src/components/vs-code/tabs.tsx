@@ -1,19 +1,13 @@
 import { useEditor } from "@/lib/hooks/use-editor";
 import { Tab } from "./";
-import styles from "@/styles/vs-code/tabs.module.css";
 
 const Tabs = () => {
   const { openedTabs } = useEditor();
 
   return (
-    <div className={styles.tabs}>
+    <div className="bg-[var(--tabs-bg)] overflow-x-auto hidden xl:flex">
       {openedTabs.map((tab) => (
-        <Tab
-          key={tab.filename}
-          icon={tab.icon}
-          filename={tab.filename}
-          path={tab.path}
-        />
+        <Tab key={tab.filename} icon={tab.icon} filename={tab.filename} path={tab.path} />
       ))}
     </div>
   );
