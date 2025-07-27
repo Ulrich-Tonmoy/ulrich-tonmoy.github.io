@@ -1,11 +1,10 @@
 import { ThemeInfo, FontInfo } from "@/components/vs-code";
-import styles from "@/styles/vs-code/settings-page.module.css";
 
 const Settings = () => {
   return (
     <>
       <h2>Manage Themes</h2>
-      <div className={styles.container}>
+      <div className="grid items-center [grid-template-columns:repeat(auto-fit,minmax(200px,1fr))] my-4">
         <ThemeInfo />
         <FontInfo />
       </div>
