@@ -58,6 +58,7 @@
 
 .active {
   border-left: 2px solid var(--accent-color);
+  background-color: var(--tab-active-bg);
 }
 
 .chevron {

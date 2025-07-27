@@ -12,7 +12,7 @@ const Tab = ({ icon, filename, path }: any) => {
   return (
     <span
       className={cn(
-        `flex items-center cursor-pointer text-[#ececec] text-base bg-[var(--tab-bg)] border border-[var(--tab-border)] pt-2 pr-1 pb-2 pl-5 hover:bg-[var(--tab-active-bg)] hover:border-b-0 ${
+        `flex items-center cursor-pointer text-[#ececec] text-sm bg-[var(--tab-bg)] border border-[var(--tab-border)] pt-2 pr-1 pb-2 pl-5 hover:bg-[var(--tab-active-bg)] hover:border-b-0 ${
           pathname === path &&
           "border-t border-t-[var(--accent-color)] bg-[var(--tab-active-bg)] border-b-0 "
         }`,
