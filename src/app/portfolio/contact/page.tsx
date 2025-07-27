@@ -60,7 +60,7 @@ const Contact = () => {
           {profile[0] && (
             <a className={styles.card} download="" href={profile[0]?.cvURL}>
               <img src="/resume.png" alt="resume" />
-              <span className="p-text">My Resume</span>
+              <span>My Resume</span>
             </a>
           )}
           <a
@@ -70,15 +70,15 @@ const Contact = () => {
             rel="noopener noreferrer"
           >
             <img src="/location.png" alt="location" />
-            <span className="p-text">Bashundhara R/A</span>
+            <span>Dhaka,Bangladesh</span>
           </a>
           <a className={styles.card} href="mailto:ulrichtonmoy1@gmail.com">
             <img src="/email.png" alt="email" />
-            <span className="p-text">ulrichtonmoy1@gmail.com</span>
+            <span>ulrichtonmoy1@gmail.com</span>
           </a>
           <a className={styles.card} href="tel:+8801850490430">
             <img src="/mobile.png" alt="mobile" />
-            <span className="p-text">01850490430</span>
+            <span>01850490430</span>
           </a>
         </div>
       </div>
@@ -91,7 +91,7 @@ const Contact = () => {
               <input
                 type="text"
                 name="name"
-                className="border border-gray-200 text-gray-900 text-sm rounded-lg block w-full p-2.5 mt-2.5 font-normal shadow-card"
+                className="border border-gray-200 text-gray-900 text-sm rounded-lg block w-full p-1.5 mt-1.5 font-normal shadow-xs shadow-card"
                 required
               />
             </div>
@@ -100,7 +100,7 @@ const Contact = () => {
               <input
                 type="email"
                 name="email"
-                className="border border-gray-200 text-gray-900 text-sm rounded-lg block w-full p-2.5 mt-2.5 font-normal shadow-card"
+                className="border border-gray-200 text-gray-900 text-sm rounded-lg block w-full p-1.5 mt-1.5 font-normal shadow-xs shadow-card"
                 required
               />
             </div>
@@ -110,7 +110,7 @@ const Contact = () => {
             <input
               type="text"
               name="subject"
-              className="border border-gray-200 text-gray-900 text-sm rounded-lg block w-full p-2.5 mt-2.5 font-normal shadow-card"
+              className="border border-gray-200 text-gray-900 text-sm rounded-lg block w-full p-1.5 mt-1.5 font-normal shadow-xs shadow-card"
               required
             />
           </div>
@@ -118,14 +118,14 @@ const Contact = () => {
             <label htmlFor="message">Message</label>
             <textarea
               name="message"
-              className="border border-gray-200 text-gray-900 text-sm rounded-lg block w-full p-2.5 mt-2.5 font-normal shadow-card"
+              className="border border-gray-200 text-gray-900 text-sm rounded-lg block w-full p-1.5 mt-1.5 font-normal shadow-xs shadow-card"
               rows={5}
               required
             ></textarea>
           </div>
           <button type="submit">Submit</button>
         </form>
-        <div className="mt-10 flex gap-3">
+        <div className="mt-8 flex gap-3">
           {contactItems?.map((social: any, index: number) => (
             <Link key={index} href={social.link} target="_blank">
               <div className="block-container w-10 h-10">

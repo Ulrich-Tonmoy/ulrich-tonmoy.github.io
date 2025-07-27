@@ -32,7 +32,7 @@
 
 .form input,
 .form textarea {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   background: var(--secondary-bg);
   color: var(--text-color);
   border: none;
@@ -72,15 +72,15 @@
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  margin: 0.5rem;
+  margin: 0.5rem 0.25rem;
 }
 .card {
   min-width: 265px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin: 0.3rem;
-  padding: 0.3rem;
+  margin: 0.3rem 0.125rem;
+  padding: 0.3rem 0.125rem;
   border-radius: 5px;
   cursor: pointer;
   background-color: var(--button-bg);
