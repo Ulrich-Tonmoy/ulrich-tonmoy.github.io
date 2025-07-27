@@ -1,21 +1,24 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import Image from "next/image";
-import styles from "@/styles/vs-code/theme-info.module.css";
 import { fontInfo } from "@/lib/font-info";
-import { useEditor } from "@/lib/hooks/use-editor";
 import { useEffect, useState } from "react";
+import { cn } from "@/lib/utils";
 
 const Font = ({ icon, name, font, currentFont, setFont }: any) => {
   return (
-    <div className={styles.container}>
+    <div className="flex flex-col items-center my-6 text-center px-6">
       <Image src={icon} alt={name} height={100} width={100} />
-      <div className={styles.info}>
+      <div className="flex flex-col justify-between mt-4">
         <div>
           <h3>{name}</h3>
         </div>
         <button
           onClick={() => setFont(font)}
-          className={`${currentFont === font ? "disabled" : ""}`}
+          className={cn(
+            `mt-3 border-none bg-[var(--button-bg)] text-[var(--button-text)] px-2 py-0.5 font-semibold cursor-pointer transition-all duration-500 ease-in-out hover:bg-[var(--accent-color)] focus:outline focus:outline-[var(--accent-color)] ${
+              currentFont === font ? "disabled" : ""
+            }`,
+          )}
         >
           Set Color Font
         </button>
@@ -25,7 +28,7 @@ const Font = ({ icon, name, font, currentFont, setFont }: any) => {
 };
 
 const FontInfo = () => {
-  const [currentFont, setCurrentFont] = useState<String>();
+  const [currentFont, setCurrentFont] = useState<string>();
 
   const setFont = (font: string) => {
     document.documentElement.setAttribute("data-font", font);
@@ -39,12 +42,7 @@ const FontInfo = () => {
   }, []);
 
   return fontInfo.map((font: any) => (
-    <Font
-      {...font}
-      key={font.name}
-      currentFont={currentFont}
-      setFont={setFont}
-    />
+    <Font {...font} key={font.name} currentFont={currentFont} setFont={setFont} />
   ));
 };
 
