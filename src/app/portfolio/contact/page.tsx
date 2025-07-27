@@ -9,6 +9,7 @@ import { client, urlFor } from "@/lib/client";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import { color, randomNumber } from "@/lib/utils";
 
 const Contact = () => {
   const formRef = useRef<any>();
@@ -22,7 +23,7 @@ const Contact = () => {
         "service_ucigc98",
         "template_fzfgxn6",
         formRef.current,
-        "JJWmhn7B9fII3JveJ"
+        "JJWmhn7B9fII3JveJ",
       )
       .then(
         (result) => {
@@ -31,7 +32,7 @@ const Contact = () => {
         },
         (error) => {
           alert("There was an error. Please try again in a while.");
-        }
+        },
       );
   };
 
@@ -43,9 +44,7 @@ const Contact = () => {
     });
 
     const profileQuery = '*[_type == "profile"]';
-    client
-      .fetch(profileQuery)
-      .then((res) => setContactItems(res[0].socialInfo));
+    client.fetch(profileQuery).then((res) => setContactItems(res[0].socialInfo));
   }, []);
 
   return (
@@ -89,22 +88,37 @@ const Contact = () => {
           <div className={styles.flex}>
             <div>
               <label htmlFor="name">Name</label>
-              <input type="text" name="name" className="input" required />
+              <input
+                type="text"
+                name="name"
+                className="border border-gray-200 text-gray-900 text-sm rounded-lg block w-full p-2.5 mt-2.5 font-normal shadow-card"
+                required
+              />
             </div>
             <div>
               <label htmlFor="email">Email</label>
-              <input type="email" name="email" className="input" required />
+              <input
+                type="email"
+                name="email"
+                className="border border-gray-200 text-gray-900 text-sm rounded-lg block w-full p-2.5 mt-2.5 font-normal shadow-card"
+                required
+              />
             </div>
           </div>
           <div>
             <label htmlFor="subject">Subject</label>
-            <input type="text" name="subject" className="input" required />
+            <input
+              type="text"
+              name="subject"
+              className="border border-gray-200 text-gray-900 text-sm rounded-lg block w-full p-2.5 mt-2.5 font-normal shadow-card"
+              required
+            />
           </div>
           <div>
             <label htmlFor="message">Message</label>
             <textarea
               name="message"
-              className="input"
+              className="border border-gray-200 text-gray-900 text-sm rounded-lg block w-full p-2.5 mt-2.5 font-normal shadow-card"
               rows={5}
               required
             ></textarea>
@@ -114,13 +128,20 @@ const Contact = () => {
         <div className="mt-10 flex gap-3">
           {contactItems?.map((social: any, index: number) => (
             <Link key={index} href={social.link} target="_blank">
-              <Image
-                width={36}
-                height={36}
-                src={urlFor(social.websiteLogo)}
-                alt={social.websiteName}
-                className="w-9 h-9 object-contain"
-              />
+              <div className="block-container w-10 h-10">
+                <div
+                  className={`btn-back btn-back-${color[randomNumber()]} rounded-xl`}
+                />
+                <div className="btn-front rounded-xl flex justify-center items-center">
+                  <Image
+                    width={36}
+                    height={36}
+                    src={urlFor(social.websiteLogo)}
+                    alt={social.websiteName}
+                    className="w-3/4 h-3/4 object-contain"
+                  />
+                </div>
+              </div>
             </Link>
           ))}
         </div>

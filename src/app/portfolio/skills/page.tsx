@@ -22,8 +22,7 @@ const Skills = () => {
   const [activeFilter, setActiveFilter] = useState("All");
   const [filterSkills, setFilterSkills] = useState([]);
 
-  const [activeQualification, setActiveQualification] =
-    useState("Work Experience");
+  const [activeQualification, setActiveQualification] = useState("Work Experience");
 
   useEffect(() => {
     const query = '*[_type == "experiences"]';
@@ -80,9 +79,9 @@ const Skills = () => {
               <div
                 key={index}
                 onClick={() => handleWorkFilter(item)}
-                className={`${styles.filterItem} ${styles.flex} ${
-                  styles.text
-                } ${activeFilter === item ? `${styles.itemActive}` : ""}`}
+                className={`${styles.filterItem} ${styles.flex} ${styles.text} ${
+                  activeFilter === item ? `${styles.itemActive}` : ""
+                }`}
               >
                 {item}
               </div>
@@ -98,15 +97,13 @@ const Skills = () => {
                   title={skill?.name}
                 >
                   <div
-                    className={`btn-back btn-back-${
-                      color[randomNumber()]
-                    } rounded-xl`}
+                    className={`btn-back btn-back-${color[randomNumber()]} rounded-xl`}
                   />
                   <div className="btn-front rounded-xl flex justify-center items-center">
                     <img
                       src={urlFor(skill?.icon)}
                       alt={skill.name}
-                      className="w-1/2 h-1/2 object-contain"
+                      className="w-3/4 h-3/4 object-contain"
                     />
                   </div>
                 </div>
@@ -119,9 +116,7 @@ const Skills = () => {
               <div
                 key={index}
                 onClick={() => handleQualification(item)}
-                className={`${styles.filterItem} ${styles.flex} ${
-                  styles.text
-                } ${
+                className={`${styles.filterItem} ${styles.flex} ${styles.text} ${
                   activeQualification === item ? `${styles.itemActive}` : ""
                 }`}
               >
@@ -152,9 +147,7 @@ const Skills = () => {
                                 transition={{ duration: 0.5 }}
                                 className={styles.expWork}
                               >
-                                <h4 className={styles.boldText}>
-                                  {work?.year}
-                                </h4>
+                                <h4 className={styles.boldText}>{work?.year}</h4>
                                 <p className={styles.text}>{work?.name}</p>
                               </motion.div>
                             </TooltipTrigger>
@@ -190,12 +183,8 @@ const Skills = () => {
                                 transition={{ duration: 0.5 }}
                                 className={styles.expWork}
                               >
-                                <h4 className={styles.boldText}>
-                                  {info?.degree}
-                                </h4>
-                                <p className={styles.text}>
-                                  {info?.instituteName}
-                                </p>
+                                <h4 className={styles.boldText}>{info?.degree}</h4>
+                                <p className={styles.text}>{info?.instituteName}</p>
                               </motion.div>
                             </TooltipTrigger>
                             <TooltipContent className={styles.skillsTooltip}>
